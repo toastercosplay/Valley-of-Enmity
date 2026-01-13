@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/TitleScreen.unity
+    guid: 2336a44aaf55e644eb8bb6d6ff198de2
+  - enabled: 1
+    path: Assets/Scenes/Table.unity
+    guid: 62e68c01e80b66e4ab93614583daeb57
+  - enabled: 1
+    path: Assets/Scenes/Scoring.unity
+    guid: 427723da027567145a5bbff165b71dc5
+  - enabled: 1
+    path: Assets/Scenes/0TheFool.unity
+    guid: 90cf77bb1a747c544bc0404ccb581311
+  - enabled: 1
+    path: Assets/Scenes/14Temperance.unity
+    guid: 806cff501a75de6489bdb860382e2cc4
+  - enabled: 1
+    path: Assets/Scenes/19TheSun.unity
+    guid: ed23b4d7bf1e1e745a8bd215268506c4
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 26a0f76101db837468845513a740acef, type: 2}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: a609e50d64272f54ca987a2093dfe58c, type: 3}
+  m_UseUCBPForAssetBundles: 0
