@@ -13,6 +13,7 @@ public class ShuffleAndDraw : MonoBehaviour
 
     public void Draw()
     {
-      gameManager.MakeSelection();  
+      gameManager.MakeSelection();
+      //Debug.Log("Draw button pressed");
     }
 }

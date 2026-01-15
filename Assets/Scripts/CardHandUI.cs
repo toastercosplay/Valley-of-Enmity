@@ -23,10 +23,13 @@ public class CardHandUI : MonoBehaviour
 
     PlayerInput playerInput;
 
+    AudioSource audioSource;
+
     void Start()
     {
         //set playerdata to first object with the tag playerName
         playerData = GameObject.FindGameObjectWithTag(playerName).GetComponent<PlayerData>();
+        audioSource = GetComponent<AudioSource>();
 
         playerInput = GetComponent<PlayerInput>();
 
@@ -76,7 +79,10 @@ public class CardHandUI : MonoBehaviour
             playerData.SetCharacter(0);
         }
 
-        playerInput.user.UnpairDevices();
+        if (playerName == "Player2Data")
+        {
+            playerInput.user.UnpairDevices();
+        }
         objectToOn.SetActive(true);
         this.gameObject.SetActive(false);
 
@@ -86,6 +92,7 @@ public class CardHandUI : MonoBehaviour
     {
         selectedIndex = Mathf.Clamp(selectedIndex + direction, 0, cards.Length - 1);
         moveTimer = moveCooldown;
+        PlaySound();
         UpdateLayout();
     }
 
@@ -101,5 +108,10 @@ public class CardHandUI : MonoBehaviour
             cards[i].anchoredPosition = new Vector2(x, y);
             cards[i].SetAsLastSibling(); // ensures selected renders on top
         }
+    }
+
+    public void PlaySound()
+    {
+        audioSource.Play();
     }
 }

@@ -1,14 +1,32 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Card : MonoBehaviour
 {
     [SerializeField] string cardName;
 
     Transform cardTransform;
+    SpriteRenderer cardSpriteRenderer;
 
     void Start()
     {
         cardTransform = GetComponent<Transform>();
+        cardSpriteRenderer = GetComponent<SpriteRenderer>();
+        DontDestroyOnLoad(gameObject);
+    }
+
+    void Update()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        
+        if (scene.name == "Table")
+        {
+            cardSpriteRenderer.enabled = true;
+        }
+        else
+        {
+            cardSpriteRenderer.enabled = false;
+        }
     }
 
     public void setSlot(int slotNum)

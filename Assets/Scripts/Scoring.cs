@@ -20,14 +20,19 @@ public class Scoring : MonoBehaviour
 
     int updateTimer = 0;
 
+    GameManager gameManager;
+    AudioSource audioSource;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         swordsPlayerData = GameObject.FindGameObjectWithTag("Player2Data").GetComponent<PlayerData>();
         wandsPlayerData = GameObject.FindGameObjectWithTag("Player1Data").GetComponent<PlayerData>();
+        audioSource = GetComponent<AudioSource>();
 
         swordsTotal = swordsPlayerData.GetTotalScore();
         wandsTotal = wandsPlayerData.GetTotalScore(); //these will display initial scores
+        gameManager = GameManager.Instance;
 
         retrieveFromBuffer();
         DrawScoreCards();
@@ -35,7 +40,7 @@ public class Scoring : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {  
         //update scores once a second
         updateTimer++;
         if (updateTimer <= 30)
@@ -47,21 +52,27 @@ public class Scoring : MonoBehaviour
         swordsGainedText.text = "+" + swordsScore;
 
         wandsTotalText.text = "" + wandsTotal;
-        wandsGainedText.text = "+" + wandsScore;
+        wandsGainedText.text = "+" + wandsScore;  
 
         updateTimer = 0;
+
+        //CHANGE LATER TO RANDOMIZE FROM THREE
+        //PlaySound();
         
         //update totals one by one
         if (swordsTotal < swordsPlayerData.GetTotalScore())
         {
             swordsTotal++;
-            swordsScore--;
+            //swordsScore--;
         }
         if (wandsTotal < wandsPlayerData.GetTotalScore())
         {
             wandsTotal++;
-            wandsScore--;
+            //wandsScore--;
         }
+
+        swordsScore--;
+        wandsScore--;
 
         if (swordsScore < 1)
         {
@@ -70,6 +81,12 @@ public class Scoring : MonoBehaviour
         if (wandsScore < 1)
         {
             wandsGainedText.text = "";
+        }
+
+        if (wandsScore < -2 && swordsScore < -2)
+        {
+            //both done updating
+            gameManager.BackToTable();
         }
 
     }
@@ -112,5 +129,10 @@ public class Scoring : MonoBehaviour
         }
         wandsPlayerData.SetBufferState(0);
         wandsPlayerData.SetTotalScore(wandsTotal + wandsScore);
+    }
+
+    public void PlaySound()
+    {
+        audioSource.Play();
     }
 }
