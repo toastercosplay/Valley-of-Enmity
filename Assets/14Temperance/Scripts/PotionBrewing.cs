@@ -52,7 +52,7 @@ public class PotionBrewing : MonoBehaviour
 
         int seed = Random.Range(0, 11);
 
-        Debug.Log("Potion seed: " + seed);
+        //Debug.Log("Potion seed: " + seed);
 
         //half flower 1 and half flower 2
         if (seed % 2 == 0)

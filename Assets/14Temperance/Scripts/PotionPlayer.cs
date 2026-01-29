@@ -18,7 +18,7 @@ public class PotionPlayer : MonoBehaviour
     {
         //Debug.Log("PotionPlayer collided with " + other.gameObject.name);
         
-        if (other.gameObject.CompareTag("Item"))
+        if (other.gameObject.CompareTag("Item") && !isHoldingItem)
         {
             isHoldingItem = true;
             currentItem = other.gameObject.GetComponent<Collectible>();
