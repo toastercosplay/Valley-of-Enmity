@@ -5,6 +5,21 @@ TextureImporter:
   - first:
       213: -2625413054868621545
     second: deatheffect-17_0
+  - first:
+      213: -573193974221335769
+    second: deatheffect-17_1
+  - first:
+      213: 3424781229795988125
+    second: deatheffect-17_2
+  - first:
+      213: -7781530452446966994
+    second: deatheffect-17_3
+  - first:
+      213: -224599226559091324
+    second: deatheffect-17_4
+  - first:
+      213: -9102679420360981076
+    second: deatheffect-17_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,10 +131,10 @@ TextureImporter:
       name: deatheffect-17_0
       rect:
         serializedVersion: 2
-        x: 480
-        y: 1
-        width: 32
-        height: 33
+        x: 915
+        y: 358
+        width: 11
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,6 +145,116 @@ TextureImporter:
       bones: []
       spriteID: 717f1e39cb8a09bd0800000000000000
       internalID: -2625413054868621545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deatheffect-17_1
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 163
+        width: 106
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 723942b0e1b9b08f0800000000000000
+      internalID: -573193974221335769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deatheffect-17_2
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 271
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d925a6b1264478f20800000000000000
+      internalID: 3424781229795988125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deatheffect-17_3
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 211
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2b83052843720490800000000000000
+      internalID: -7781530452446966994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deatheffect-17_4
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 175
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48d2e14813012ecf0800000000000000
+      internalID: -224599226559091324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deatheffect-17_5
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 137
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca500259b49cca180800000000000000
+      internalID: -9102679420360981076
       vertices: []
       indices: 
       edges: []
@@ -149,6 +274,11 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       deatheffect-17_0: -2625413054868621545
+      deatheffect-17_1: -573193974221335769
+      deatheffect-17_2: 3424781229795988125
+      deatheffect-17_3: -7781530452446966994
+      deatheffect-17_4: -224599226559091324
+      deatheffect-17_5: -9102679420360981076
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

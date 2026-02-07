@@ -14,9 +14,6 @@ TextureImporter:
   - first:
       213: -6641758531667463249
     second: deatheffect-16_3
-  - first:
-      213: -2158687683680758711
-    second: deatheffect-16_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -128,9 +125,9 @@ TextureImporter:
       name: deatheffect-16_0
       rect:
         serializedVersion: 2
-        x: 375
-        y: 133
-        width: 9
+        x: 970
+        y: 357
+        width: 6
         height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -150,10 +147,10 @@ TextureImporter:
       name: deatheffect-16_1
       rect:
         serializedVersion: 2
-        x: 429
-        y: 68
-        width: 16
-        height: 17
+        x: 878
+        y: 155
+        width: 110
+        height: 194
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,10 +169,10 @@ TextureImporter:
       name: deatheffect-16_2
       rect:
         serializedVersion: 2
-        x: 461
-        y: 64
-        width: 14
-        height: 10
+        x: 981
+        y: 183
+        width: 11
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,10 +191,10 @@ TextureImporter:
       name: deatheffect-16_3
       rect:
         serializedVersion: 2
-        x: 453
-        y: 21
-        width: 14
-        height: 12
+        x: 965
+        y: 150
+        width: 15
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,28 +205,6 @@ TextureImporter:
       bones: []
       spriteID: fa37a041ecbb3d3a0800000000000000
       internalID: -6641758531667463249
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: deatheffect-16_4
-      rect:
-        serializedVersion: 2
-        x: 462
-        y: 6
-        width: 43
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 94492392dfcca02e0800000000000000
-      internalID: -2158687683680758711
       vertices: []
       indices: 
       edges: []
@@ -252,7 +227,6 @@ TextureImporter:
       deatheffect-16_1: 7947600873954133479
       deatheffect-16_2: -3607540200811883540
       deatheffect-16_3: -6641758531667463249
-      deatheffect-16_4: -2158687683680758711
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

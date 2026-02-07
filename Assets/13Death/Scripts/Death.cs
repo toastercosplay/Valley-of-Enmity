@@ -13,8 +13,6 @@ public class Death : MonoBehaviour
     public int delay = 300;
     int seed;
 
-    Quaternion rawRotation;
-
     Animator anim;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -53,11 +51,9 @@ public class Death : MonoBehaviour
 
         this.transform.position = targetPlayer.position;
 
-        rawRotation = Random.rotation;
-        rawRotation.x = 0;
-        rawRotation.y = 0;
+        float randomAngle = Random.Range(0f, 360f);
 
-        this.transform.rotation = Random.rotation;
+        this.transform.rotation = Quaternion.Euler(0, 0, randomAngle);
         anim.SetTrigger("Attack");
     }
 

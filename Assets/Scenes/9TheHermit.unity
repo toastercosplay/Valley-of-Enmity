@@ -346,8 +346,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 027337673f1ace749893cb3aa4c77f33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HermitPlayer
-  minTemp: 100
-  maxTemp: 200
+  minTemp: 900
+  maxTemp: 1000
   minGoal: 100
   maxGoal: 200
   maxSize: 1.5

@@ -21,7 +21,7 @@ public class HermitPlayer : MonoBehaviour
     void Start()
     {
         //anim = GetComponent<Animator>();
-        playerData = GameObject.FindGameObjectWithTag(playerName).GetComponent<PlayerData>();
+        //playerData = GameObject.FindGameObjectWithTag(playerName).GetComponent<PlayerData>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         //Debug.Log(spriteRenderer);

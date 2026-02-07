@@ -5,6 +5,15 @@ TextureImporter:
   - first:
       213: -75813612034403271
     second: deatheffect-11_0
+  - first:
+      213: -8257691233367450621
+    second: deatheffect-11_1
+  - first:
+      213: 2040931132479490835
+    second: deatheffect-11_2
+  - first:
+      213: -6720722694058011897
+    second: deatheffect-11_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,10 +125,10 @@ TextureImporter:
       name: deatheffect-11_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 158
-        width: 346
-        height: 344
+        x: 20
+        y: 240
+        width: 255
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,6 +139,72 @@ TextureImporter:
       bones: []
       spriteID: 934dc89ebe7a2fef0800000000000000
       internalID: -75813612034403271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deatheffect-11_1
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 242
+        width: 40
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30c964a0399c66d80800000000000000
+      internalID: -8257691233367450621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deatheffect-11_2
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 240
+        width: 135
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31bc97a3d08d25c10800000000000000
+      internalID: 2040931132479490835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deatheffect-11_3
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 241
+        width: 268
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70314c251523bb2a0800000000000000
+      internalID: -6720722694058011897
       vertices: []
       indices: 
       edges: []
@@ -149,6 +224,9 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       deatheffect-11_0: -75813612034403271
+      deatheffect-11_1: -8257691233367450621
+      deatheffect-11_2: 2040931132479490835
+      deatheffect-11_3: -6720722694058011897
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

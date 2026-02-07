@@ -5,9 +5,6 @@ TextureImporter:
   - first:
       213: 7331171148057547163
     second: deatheffect-2_0
-  - first:
-      213: -6719766507232567976
-    second: deatheffect-2_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -119,10 +116,10 @@ TextureImporter:
       name: deatheffect-2_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 475
-        width: 29
-        height: 27
+        x: 0
+        y: 0
+        width: 1024
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,28 +130,6 @@ TextureImporter:
       bones: []
       spriteID: b911093215d8db560800000000000000
       internalID: 7331171148057547163
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: deatheffect-2_1
-      rect:
-        serializedVersion: 2
-        x: 58
-        y: 427
-        width: 29
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 85dd5dae6f79eb2a0800000000000000
-      internalID: -6719766507232567976
       vertices: []
       indices: 
       edges: []
@@ -174,7 +149,6 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       deatheffect-2_0: 7331171148057547163
-      deatheffect-2_1: -6719766507232567976
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

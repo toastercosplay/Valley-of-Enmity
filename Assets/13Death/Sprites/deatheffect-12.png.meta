@@ -20,18 +20,6 @@ TextureImporter:
   - first:
       213: -1418090599304379616
     second: deatheffect-12_5
-  - first:
-      213: 7522011674090800177
-    second: deatheffect-12_6
-  - first:
-      213: -6834029239746094461
-    second: deatheffect-12_7
-  - first:
-      213: -8002488107975579458
-    second: deatheffect-12_8
-  - first:
-      213: 8853397569861608421
-    second: deatheffect-12_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -143,10 +131,10 @@ TextureImporter:
       name: deatheffect-12_0
       rect:
         serializedVersion: 2
-        x: 48
-        y: 467
-        width: 8
-        height: 11
+        x: 28
+        y: 240
+        width: 127
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,10 +153,10 @@ TextureImporter:
       name: deatheffect-12_1
       rect:
         serializedVersion: 2
-        x: 56
-        y: 432
-        width: 8
-        height: 8
+        x: 246
+        y: 241
+        width: 135
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,10 +175,10 @@ TextureImporter:
       name: deatheffect-12_2
       rect:
         serializedVersion: 2
-        x: 93
-        y: 435
-        width: 7
-        height: 14
+        x: 482
+        y: 240
+        width: 22
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,10 +197,10 @@ TextureImporter:
       name: deatheffect-12_3
       rect:
         serializedVersion: 2
-        x: 77
-        y: 401
-        width: 10
-        height: 8
+        x: 586
+        y: 242
+        width: 26
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,10 +219,10 @@ TextureImporter:
       name: deatheffect-12_4
       rect:
         serializedVersion: 2
-        x: 83
-        y: 403
-        width: 27
-        height: 27
+        x: 700
+        y: 241
+        width: 30
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,10 +241,10 @@ TextureImporter:
       name: deatheffect-12_5
       rect:
         serializedVersion: 2
-        x: 129
-        y: 349
-        width: 9
-        height: 8
+        x: 795
+        y: 240
+        width: 166
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,94 +255,6 @@ TextureImporter:
       bones: []
       spriteID: 02344210d1ee15ce0800000000000000
       internalID: -1418090599304379616
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: deatheffect-12_6
-      rect:
-        serializedVersion: 2
-        x: 131
-        y: 316
-        width: 62
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1340686a3cd836860800000000000000
-      internalID: 7522011674090800177
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: deatheffect-12_7
-      rect:
-        serializedVersion: 2
-        x: 225
-        y: 314
-        width: 7
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 38a1d4c5d96a821a0800000000000000
-      internalID: -6834029239746094461
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: deatheffect-12_8
-      rect:
-        serializedVersion: 2
-        x: 179
-        y: 293
-        width: 11
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: eb8e3dcf67371f090800000000000000
-      internalID: -8002488107975579458
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: deatheffect-12_9
-      rect:
-        serializedVersion: 2
-        x: 196
-        y: 18
-        width: 297
-        height: 295
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5e368e6be269dda70800000000000000
-      internalID: 8853397569861608421
       vertices: []
       indices: 
       edges: []
@@ -379,10 +279,6 @@ TextureImporter:
       deatheffect-12_3: 3417970254409683272
       deatheffect-12_4: 1123715542373171923
       deatheffect-12_5: -1418090599304379616
-      deatheffect-12_6: 7522011674090800177
-      deatheffect-12_7: -6834029239746094461
-      deatheffect-12_8: -8002488107975579458
-      deatheffect-12_9: 8853397569861608421
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

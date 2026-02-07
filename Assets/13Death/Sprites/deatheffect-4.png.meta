@@ -125,10 +125,10 @@ TextureImporter:
       name: deatheffect-4_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 479
-        width: 23
-        height: 23
+        x: 713
+        y: 241
+        width: 26
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,10 +147,10 @@ TextureImporter:
       name: deatheffect-4_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 427
-        width: 22
-        height: 21
+        x: 803
+        y: 242
+        width: 30
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,10 +169,10 @@ TextureImporter:
       name: deatheffect-4_2
       rect:
         serializedVersion: 2
-        x: 132
-        y: 353
-        width: 30
-        height: 28
+        x: 917
+        y: 241
+        width: 25
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,10 +191,10 @@ TextureImporter:
       name: deatheffect-4_3
       rect:
         serializedVersion: 2
-        x: 223
-        y: 258
-        width: 35
-        height: 33
+        x: 979
+        y: 241
+        width: 26
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

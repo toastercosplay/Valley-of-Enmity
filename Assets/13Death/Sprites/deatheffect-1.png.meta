@@ -116,10 +116,10 @@ TextureImporter:
       name: deatheffect-1_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 475
-        width: 29
-        height: 28
+        x: 987
+        y: 241
+        width: 25
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

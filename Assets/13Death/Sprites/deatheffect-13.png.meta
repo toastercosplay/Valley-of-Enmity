@@ -23,21 +23,6 @@ TextureImporter:
   - first:
       213: 9129175334240623017
     second: deatheffect-13_6
-  - first:
-      213: 6871496170921650653
-    second: deatheffect-13_7
-  - first:
-      213: -7453718248444763840
-    second: deatheffect-13_8
-  - first:
-      213: -5354843063992814370
-    second: deatheffect-13_9
-  - first:
-      213: 1619148867648464124
-    second: deatheffect-13_10
-  - first:
-      213: 2409855825561049035
-    second: deatheffect-13_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -149,10 +134,10 @@ TextureImporter:
       name: deatheffect-13_0
       rect:
         serializedVersion: 2
-        x: 43
-        y: 469
-        width: 9
-        height: 11
+        x: 28
+        y: 240
+        width: 28
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,10 +156,10 @@ TextureImporter:
       name: deatheffect-13_1
       rect:
         serializedVersion: 2
-        x: 66
-        y: 427
-        width: 11
-        height: 11
+        x: 131
+        y: 239
+        width: 138
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,10 +178,10 @@ TextureImporter:
       name: deatheffect-13_2
       rect:
         serializedVersion: 2
-        x: 98
-        y: 388
-        width: 28
-        height: 46
+        x: 361
+        y: 241
+        width: 22
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,10 +200,10 @@ TextureImporter:
       name: deatheffect-13_3
       rect:
         serializedVersion: 2
-        x: 116
-        y: 413
-        width: 6
-        height: 8
+        x: 478
+        y: 240
+        width: 23
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,10 +222,10 @@ TextureImporter:
       name: deatheffect-13_4
       rect:
         serializedVersion: 2
-        x: 96
-        y: 385
-        width: 12
-        height: 9
+        x: 591
+        y: 242
+        width: 25
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,10 +244,10 @@ TextureImporter:
       name: deatheffect-13_5
       rect:
         serializedVersion: 2
-        x: 160
-        y: 352
-        width: 10
-        height: 12
+        x: 702
+        y: 243
+        width: 31
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,10 +266,10 @@ TextureImporter:
       name: deatheffect-13_6
       rect:
         serializedVersion: 2
-        x: 168
-        y: 332
-        width: 8
-        height: 7
+        x: 791
+        y: 240
+        width: 124
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -295,116 +280,6 @@ TextureImporter:
       bones: []
       spriteID: 9a99ba9199851be70800000000000000
       internalID: 9129175334240623017
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: deatheffect-13_7
-      rect:
-        serializedVersion: 2
-        x: 174
-        y: 259
-        width: 81
-        height: 76
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dd9ed375c557c5f50800000000000000
-      internalID: 6871496170921650653
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: deatheffect-13_8
-      rect:
-        serializedVersion: 2
-        x: 194
-        y: 332
-        width: 6
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0416a999eb21f8890800000000000000
-      internalID: -7453718248444763840
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: deatheffect-13_9
-      rect:
-        serializedVersion: 2
-        x: 167
-        y: 314
-        width: 12
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ed47ebeba96cfa5b0800000000000000
-      internalID: -5354843063992814370
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: deatheffect-13_10
-      rect:
-        serializedVersion: 2
-        x: 275
-        y: 247
-        width: 7
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cf4a9a6015f587610800000000000000
-      internalID: 1619148867648464124
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: deatheffect-13_11
-      rect:
-        serializedVersion: 2
-        x: 277
-        y: 0
-        width: 235
-        height: 236
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bc7d87afa17817120800000000000000
-      internalID: 2409855825561049035
       vertices: []
       indices: 
       edges: []
@@ -425,16 +300,11 @@ TextureImporter:
     nameFileIdTable:
       deatheffect-13_0: -28482902491166889
       deatheffect-13_1: -6410024972139085341
-      deatheffect-13_10: 1619148867648464124
-      deatheffect-13_11: 2409855825561049035
       deatheffect-13_2: 1315131847463615140
       deatheffect-13_3: -3266901730064435222
       deatheffect-13_4: -2366687798312290907
       deatheffect-13_5: 553145607879094186
       deatheffect-13_6: 9129175334240623017
-      deatheffect-13_7: 6871496170921650653
-      deatheffect-13_8: -7453718248444763840
-      deatheffect-13_9: -5354843063992814370
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

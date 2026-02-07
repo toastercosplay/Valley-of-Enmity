@@ -20,9 +20,6 @@ TextureImporter:
   - first:
       213: 6757062269129697710
     second: deatheffect-8_5
-  - first:
-      213: 495569890855150614
-    second: deatheffect-8_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -134,10 +131,10 @@ TextureImporter:
       name: deatheffect-8_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 478
-        width: 22
-        height: 22
+        x: 193
+        y: 244
+        width: 68
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,10 +153,10 @@ TextureImporter:
       name: deatheffect-8_1
       rect:
         serializedVersion: 2
-        x: 72
-        y: 416
-        width: 26
-        height: 28
+        x: 353
+        y: 239
+        width: 33
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,10 +175,10 @@ TextureImporter:
       name: deatheffect-8_2
       rect:
         serializedVersion: 2
-        x: 146
-        y: 343
-        width: 22
-        height: 22
+        x: 480
+        y: 239
+        width: 24
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,10 +197,10 @@ TextureImporter:
       name: deatheffect-8_3
       rect:
         serializedVersion: 2
-        x: 239
-        y: 245
-        width: 33
-        height: 31
+        x: 588
+        y: 240
+        width: 25
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -222,10 +219,10 @@ TextureImporter:
       name: deatheffect-8_4
       rect:
         serializedVersion: 2
-        x: 325
-        y: 156
-        width: 32
-        height: 32
+        x: 702
+        y: 240
+        width: 29
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,10 +241,10 @@ TextureImporter:
       name: deatheffect-8_5
       rect:
         serializedVersion: 2
-        x: 397
-        y: 89
-        width: 30
-        height: 30
+        x: 804
+        y: 240
+        width: 167
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,28 +255,6 @@ TextureImporter:
       bones: []
       spriteID: ea9aba45558e5cd50800000000000000
       internalID: 6757062269129697710
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: deatheffect-8_6
-      rect:
-        serializedVersion: 2
-        x: 459
-        y: 16
-        width: 38
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 614ecc9a03e90e600800000000000000
-      internalID: 495569890855150614
       vertices: []
       indices: 
       edges: []
@@ -304,7 +279,6 @@ TextureImporter:
       deatheffect-8_3: -2805321831483524359
       deatheffect-8_4: -2132133733715703334
       deatheffect-8_5: 6757062269129697710
-      deatheffect-8_6: 495569890855150614
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
