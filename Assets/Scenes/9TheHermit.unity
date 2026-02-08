@@ -346,12 +346,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 027337673f1ace749893cb3aa4c77f33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HermitPlayer
+  fireTemperature: 100
+  tempLossPerSecond: 50
   minTemp: 900
   maxTemp: 1000
+  foodPreparedness: 0
   minGoal: 100
   maxGoal: 200
-  maxSize: 1.5
-  minSize: 0.5
+  ringMaterial: {fileID: 2100000, guid: bb15c9163b0e105429552a8be87fe1fc, type: 2}
+  minRadius: 0.1
+  maxRadius: 0.5
+  volumeConstant: 0.5
   playerName: Player1Data
 --- !u!212 &660226572
 SpriteRenderer:
@@ -378,7 +383,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: bb15c9163b0e105429552a8be87fe1fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -400,7 +405,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -579,12 +584,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 027337673f1ace749893cb3aa4c77f33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HermitPlayer
+  fireTemperature: 100
+  tempLossPerSecond: 20
   minTemp: 100
   maxTemp: 200
+  foodPreparedness: 0
   minGoal: 100
   maxGoal: 200
-  maxSize: 1.5
-  minSize: 0.5
+  ringMaterial: {fileID: 0}
+  minRadius: 0.1
+  maxRadius: 0.5
+  volumeConstant: 0.05
   playerName: Player1Data
 --- !u!114 &927800173
 MonoBehaviour:
