@@ -15,6 +15,8 @@ public class HermitPlayer : MonoBehaviour
     public float minRadius = 0.1f;
     public float maxRadius = 0.5f;
     public float volumeConstant = 0.02f;
+
+    public bool sweetSpot = false;
     
     [SerializeField] string playerName = "";
     PlayerData playerData;
@@ -95,12 +97,14 @@ public class HermitPlayer : MonoBehaviour
         {
             float t = Mathf.InverseLerp(minTemp, maxTemp, fireTemperature);
             finalColor = idealColor;
+            sweetSpot = true;
         }
 
         // 5. APPLY
         ringMaterial.SetFloat("_Radius", shaderRadius);
         ringMaterial.SetFloat("_Thickness", thickness);
         ringMaterial.SetColor("_Color", finalColor);
+        ringMaterial.SetFloat("_Glowing", sweetSpot ? 1.0f : 0.0f);
     }
 
     void UpdateCookingLogic()

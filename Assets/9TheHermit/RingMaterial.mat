@@ -55,19 +55,20 @@ Material:
     m_Floats:
     - _ColorMask: 15
     - _EnableExternalAlpha: 0
+    - _Glowing: 1
     - _Radius: 0.45
     - _Stencil: 0
     - _StencilComp: 8
     - _StencilOp: 0
     - _StencilReadMask: 255
     - _StencilWriteMask: 255
-    - _Thickness: 0.022575917
+    - _Thickness: 0.028965788
     - _UIMaskSoftnessX: 1
     - _UIMaskSoftnessY: 1
     - _ZWrite: 0
     m_Colors:
     - _ClipRect: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 0.7082304, g: 0.22577408, b: 0.62145996, a: 1}
+    - _Color: {r: 0.15506709, g: 0.6327348, b: 0.9735737, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
