@@ -7,6 +7,10 @@ public class Justice : MonoBehaviour
     private float yBound;
     public PlayerData player1Data;
     public PlayerData player2Data;
+
+    [SerializeField]GameObject player1;
+    [SerializeField]GameObject player2;
+    
     GameManager gameManager;
 
     void Start()
@@ -27,7 +31,7 @@ public class Justice : MonoBehaviour
         }
         if (loss == True) { //change this to actual collision with pipes
             player1Data.SetBufferState(3); //change to specific player etc etc
-            player2Data.SetBufferState(3); 
+            player2Data.SetBufferState(3); //3 = failed game, 1 = won game (how do u win flappy bird though)
             gameManager.FinishMinigame(); //going to have to update everything to its own function
         }
     }
@@ -49,4 +53,19 @@ TO DO:
     [] script
     [] unity
 [] look at animations
+
+Look Into:
+- Game objects
+    - set active function
+- box collider 2D (probably going to be in tutorial)
+- overivew of unity tutorial 
+- Format of game
+    - each player plays flappy bird on their own 
+    - split screen or no?
+    - would programming only need to account for one player and then you duplicate it?
+    - winning:
+        - option 1: have set amount of pipes to go through and person who gets through most wins(takes away from flappy bird vibe, extra programming)
+        - option 2: everyone plays - ppl lose as game goes on, last person to keep going wins (might take a while and go past 60 seconds but unlikely to do so)
+    
+- 
 */
