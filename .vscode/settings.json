@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Enmity.slnx"
+    "dotnet.defaultSolution": "Valley-of-Enmity.slnx"
 }
