@@ -13,7 +13,6 @@ public class PlayerData : MonoBehaviour
 
     int bufferState = 0; //0  default, 1 = success, 2 = neutral, 3 = failure
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         DontDestroyOnLoad(this.gameObject);
