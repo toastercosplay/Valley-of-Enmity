@@ -62,6 +62,7 @@ public class TopDownMovement : MonoBehaviour
         }
 
         //Debug.Log(v.magnitude);
+        Debug.Log($"Movement: {v}");
     }
 
     public void OnA()
