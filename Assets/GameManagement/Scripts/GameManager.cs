@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] public PlayerData player1;
     [SerializeField] public PlayerData player2;
-    //[SerializeField] PlayerData player3;
+    [SerializeField] public PlayerData player3;
     //[SerializeField] PlayerData player4;
 
     public List<GameObject> cardList;
@@ -54,6 +54,12 @@ public class GameManager : MonoBehaviour
     {
         player1.gameObject.SetActive(true);
         player2.gameObject.SetActive(true);
+
+        if (numberOfPlayers >= 3)
+        {
+            player3.gameObject.SetActive(true);
+        }
+
         SceneManager.LoadScene("Table");
     }
 
