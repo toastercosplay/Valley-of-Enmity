@@ -23,6 +23,7 @@ public class Justice : MonoBehaviour
     }
 
     // Update is called once per frame
+    /*
     void Update()
     {
         if (true){
@@ -35,11 +36,13 @@ public class Justice : MonoBehaviour
             gameManager.FinishMinigame(); //going to have to update everything to its own function
         }
     }
+    */
 
-    private void OnCollisionEnter2D(Collision2D other) {
-        //should be for when bird hits pipes?
-        
+    public void GameOver()
+    {
+        Time.timeScale = 0f;
     }
+    
 }
 
 /* 

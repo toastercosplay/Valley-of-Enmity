@@ -23,5 +23,6 @@ public class KeyMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //add end game stuff
+        Time.timeScale = 0f;
     }
 }
