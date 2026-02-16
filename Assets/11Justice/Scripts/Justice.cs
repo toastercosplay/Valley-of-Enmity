@@ -19,17 +19,17 @@ public class Justice : MonoBehaviour
         player1Data = GameObject.FindGameObjectWithTag("Player1Data").GetComponent<PlayerData>();
         player2Data = GameObject.FindGameObjectWithTag("Player2Data").GetComponent<PlayerData>();
 
-        loss = False;
+        //loss = False;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (UsingButtons.onAPressed()){
+        if (true){
             rigidBody.linearVelocity = Vector2.zero;
             rigidBody.AddForce(Vector2.up);
         }
-        if (loss == True) { //change this to actual collision with pipes
+        if (true) { //change this to actual collision with pipes
             player1Data.SetBufferState(3); //change to specific player etc etc
             player2Data.SetBufferState(3); //3 = failed game, 1 = won game (how do u win flappy bird though)
             gameManager.FinishMinigame(); //going to have to update everything to its own function
