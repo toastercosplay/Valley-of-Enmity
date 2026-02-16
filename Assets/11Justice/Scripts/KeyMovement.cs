@@ -3,7 +3,7 @@ using UnityEngine;
 public class KeyMovement : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    [SerializeField] private float velocity = 2;
+    [SerializeField] private float velocity = 5f;
     private Rigidbody2D key;
 
     void Start()
