@@ -249,6 +249,17 @@
                 },
                 {
                     "name": "",
+                    "id": "0a8dd963-232f-458e-a286-09acc4a5e051",
+                    "path": "<Keyboard>/#(A)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "A",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "74fc031c-5283-4b37-bf1c-5983dc0f5db3",
                     "path": "<SwitchProControllerHID>/buttonSouth",
                     "interactions": "",
@@ -568,7 +579,7 @@
                     "name": "Submit",
                     "type": "Button",
                     "id": "40713e65-6b79-4a5f-ad0b-e13c6b4755c4",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -577,7 +588,7 @@
                     "name": "Cancel",
                     "type": "Button",
                     "id": "21b47d50-fc40-4c25-a11f-2c6613e6467c",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -1316,6 +1327,17 @@
                     "name": "",
                     "id": "1d8d2a42-0aa4-4bbc-8f38-3b8479456ebf",
                     "path": "<SwitchProControllerHID>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "A",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "49060ee5-09bb-4c89-8916-2be33f6b49da",
+                    "path": "<Keyboard>/j",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
