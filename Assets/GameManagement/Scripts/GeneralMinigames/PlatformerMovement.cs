@@ -2,19 +2,19 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
 
-public class TopDownMovement : MonoBehaviour
+public class PlatformerMovement : MonoBehaviour
 {
-    float movementX, movementY;
+    float movementX;
     //[SerializeField] float speed = 10f;
     [SerializeField] float maxSpeed = 10f;
-
-    [SerializeField] UnityEvent onAButton;
 
     Rigidbody2D rb;
     Animator anim;
 
     float localXScale = 1;
     float localYScale = 1;
+
+    [SerializeField] float jumpForce = 5f;
     
     void Start()
     {
@@ -26,8 +26,9 @@ public class TopDownMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
+        float moveVeloX = movementX * maxSpeed;
 
-        rb.linearVelocity = new Vector2(movementX, movementY) * maxSpeed;
+        rb.linearVelocity = new Vector2(moveVeloX, rb.linearVelocity.y);
 
         if (rb.linearVelocity.magnitude > maxSpeed)
         {
@@ -50,15 +51,10 @@ public class TopDownMovement : MonoBehaviour
         //on receiving messages from the input system
         Vector2 v = context.ReadValue<Vector2>();
         movementX = v.x / 10f;
-        movementY = v.y / 10f;
 
         if (v.x < .2 && v.x > -.2)
         {
             movementX = 0;
-        }
-        if (v.y < .2 && v.y > -.2)
-        {
-            movementY = 0;
         }
 
         //Debug.Log(v.magnitude);
@@ -67,6 +63,10 @@ public class TopDownMovement : MonoBehaviour
 
     public void OnA()
     {
-        onAButton.Invoke();
+        //jump
+        if (Mathf.Abs(rb.linearVelocity.y) < 0.1f) 
+        {
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
     }
 }

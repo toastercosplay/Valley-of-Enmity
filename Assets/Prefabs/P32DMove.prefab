@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 135176602910038942, guid: 16381205fc75b234095b50691c10e057, type: 3}
+      propertyPath: m_DefaultActionMap
+      value: Player3
+      objectReference: {fileID: 0}
     - target: {fileID: 461161919870064386, guid: 16381205fc75b234095b50691c10e057, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.25
@@ -67,11 +71,15 @@ PrefabInstance:
     - target: {fileID: 682144039175306323, guid: 16381205fc75b234095b50691c10e057, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 815ee356817e0ab498233b5474647d5e, type: 3}
+      objectReference: {fileID: 21300000, guid: f99e3141279a14e479db4f37ec4c863f, type: 3}
     - target: {fileID: 4256571217353293998, guid: 16381205fc75b234095b50691c10e057, type: 3}
       propertyPath: m_Name
       value: P32DMove
       objectReference: {fileID: 0}
+    - target: {fileID: 8584250968129103220, guid: 16381205fc75b234095b50691c10e057, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 1f6437593a38c6a4683dd1b40d903198, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
