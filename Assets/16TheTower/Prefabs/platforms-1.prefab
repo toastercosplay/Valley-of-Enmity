@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5628572433303756766}
   - component: {fileID: 6153139532795319504}
   - component: {fileID: 4808991109061480137}
-  - component: {fileID: 606889146291130093}
   m_Layer: 0
   m_Name: platforms-1
   m_TagString: Untagged
@@ -36,6 +35,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6153139532795319504
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -81,6 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 5cb35bcd59c2aff41bee11032bf98e7a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -90,7 +91,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &4808991109061480137
 BoxCollider2D:
@@ -138,19 +138,3 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 14.330305, y: 6.391604}
   m_EdgeRadius: 0
---- !u!114 &606889146291130093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4224967501103088797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8abdfaab0065c04478b3c1927138410c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::obstacle
-  minX: -60
-  maxX: 60
-  startY: 50
-  speed: 25
