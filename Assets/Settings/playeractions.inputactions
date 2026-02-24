@@ -249,6 +249,17 @@
                 },
                 {
                     "name": "",
+                    "id": "c5ea958c-cc1c-484b-8bdb-b203591fd5ce",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "A",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "74fc031c-5283-4b37-bf1c-5983dc0f5db3",
                     "path": "<SwitchProControllerHID>/buttonSouth",
                     "interactions": "",
@@ -284,6 +295,17 @@
                     "name": "",
                     "id": "cb7b5f0d-cd02-495b-a331-2a7afa3723c1",
                     "path": "<SwitchProControllerHID>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightTrigger",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5d8d540f-54b5-4136-8664-e63f9e850b80",
+                    "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -1067,6 +1089,17 @@
                 },
                 {
                     "name": "",
+                    "id": "3512e869-476e-4e02-be68-387df3d3dd1e",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "A",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "3bb44e06-8ce6-4f43-90e8-8eccf4374cbd",
                     "path": "<Gamepad>/rightStick",
                     "interactions": "",
@@ -1358,6 +1391,17 @@
                 },
                 {
                     "name": "",
+                    "id": "2f0baceb-b7dd-4b67-8182-fb7322fe4f3b",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "A",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "0e23a4ec-9a7c-490a-9b39-9b5cf568b9af",
                     "path": "<Gamepad>/rightStick",
                     "interactions": "",
@@ -1640,6 +1684,17 @@
                     "name": "",
                     "id": "1142486c-ab67-4123-9587-5eadc2984381",
                     "path": "<SwitchProControllerHID>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "A",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "35cc84ea-3ed5-46d0-a590-be2bbc7f881b",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
