@@ -249,17 +249,6 @@
                 },
                 {
                     "name": "",
-                    "id": "c5ea958c-cc1c-484b-8bdb-b203591fd5ce",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "A",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "74fc031c-5283-4b37-bf1c-5983dc0f5db3",
                     "path": "<SwitchProControllerHID>/buttonSouth",
                     "interactions": "",
@@ -332,7 +321,7 @@
                     "name": "Submit",
                     "type": "Button",
                     "id": "40713e65-6b79-4a5f-ad0b-e13c6b4755c4",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -341,7 +330,7 @@
                     "name": "Cancel",
                     "type": "Button",
                     "id": "21b47d50-fc40-4c25-a11f-2c6613e6467c",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -1080,17 +1069,6 @@
                     "name": "",
                     "id": "1d8d2a42-0aa4-4bbc-8f38-3b8479456ebf",
                     "path": "<SwitchProControllerHID>/buttonEast",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "A",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "3512e869-476e-4e02-be68-387df3d3dd1e",
-                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

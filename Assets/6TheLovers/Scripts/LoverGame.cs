@@ -5,10 +5,10 @@ public class LoverGame : MonoBehaviour
 {
     [SerializeField] List<string> itemNames;
 
-    private string necessary1 = "";
-    private string necessary2 = "";
-    private string necessary3 = "";
-    private string necessary4 = "";
+    public string necessary1 = "";
+    public string necessary2 = "";
+    public string necessary3 = "";
+    public string necessary4 = "";
 
     [SerializeField] GameObject display1;
     [SerializeField] GameObject display2;
@@ -17,6 +17,11 @@ public class LoverGame : MonoBehaviour
 
     [SerializeField]GameObject player1;
     [SerializeField]GameObject player2;
+
+    [SerializeField] GameObject loverImage1;
+    [SerializeField] GameObject loverImage2;
+
+    [SerializeField] float gravity = 9.8f;
 
     GameManager gameManager;
     PlayerData player1Data;
@@ -29,6 +34,8 @@ public class LoverGame : MonoBehaviour
         //gameManager = GameManager.Instance;
         //player1Data = GameObject.FindGameObjectWithTag("Player1Data").GetComponent<PlayerData>();
         //player2Data = GameObject.FindGameObjectWithTag("Player2Data").GetComponent<PlayerData>();
+
+        Physics.gravity = new Vector3(0, -gravity, 0);
 
         for (int i = 0; i < 4; i++)
         {
@@ -58,6 +65,19 @@ public class LoverGame : MonoBehaviour
                 itemNames.RemoveAt(randChoice);
             }
         }
+
+        int loverImage = Random.Range(0,2);
+        if (loverImage == 0)
+        {
+            loverImage1.SetActive(true);
+            loverImage2.SetActive(false);
+        }
+        else
+        {
+            loverImage1.SetActive(false);
+            loverImage2.SetActive(true);
+        }
+
 
         UpdateVisuals();
     }

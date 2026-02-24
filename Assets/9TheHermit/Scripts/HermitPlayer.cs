@@ -81,6 +81,7 @@ public class HermitPlayer : MonoBehaviour
         Color finalColor;
         Color coldColor = new Color(0.02f, 0.16f, 0.25f); // #05283f
         Color idealColor = new Color(0.16f, 0.65f, 1f);  // #29a5ff
+        Color goldColor = new Color(1f, 0.84f, 0f);      // #ffd400
         Color hotColor = new Color(1f, 0f, 0.42f);       // #ff006a
 
         if (fireTemperature <= minTemp)
@@ -96,7 +97,7 @@ public class HermitPlayer : MonoBehaviour
         else
         {
             float t = Mathf.InverseLerp(minTemp, maxTemp, fireTemperature);
-            finalColor = idealColor;
+            finalColor = goldColor;
             sweetSpot = true;
         }
 
