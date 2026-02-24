@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 
 public enum StarColor
@@ -48,9 +49,32 @@ public class Star : MonoBehaviour
             spriteRenderer.color = Color.blue;
     }
 
-    // Helper function to check if this star can accept a new connection
+    [Header("Win")]
+    public Vector2 winDestination;
+
+    public bool IsSatisfied => connectedStars.Count == maxDegree;
+
     public bool CanConnect()
     {
         return connectedStars.Count < maxDegree;
+    }
+
+    public void MoveToWinDestination(float duration)
+    {
+        StartCoroutine(LerpToPosition(winDestination, duration));
+    }
+
+    private IEnumerator LerpToPosition(Vector2 target, float duration)
+    {
+        Vector3 start = transform.position;
+        Vector3 end = new Vector3(target.x, target.y, start.z);
+        float elapsed = 0f;
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            transform.position = Vector3.Lerp(start, end, elapsed / duration);
+            yield return null;
+        }
+        transform.position = end;
     }
 }

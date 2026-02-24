@@ -6,6 +6,11 @@ public class StarGameManager : MonoBehaviour
     public LineRenderer linePrefab; 
     public CursorMovement cursorMovement;
 
+    [Header("Win")]
+    public Star[] allStars;
+    public float winMoveDuration = 1.5f;
+    private bool gameWon;
+
     void Start()
     {
         cursorMovement.onAPressed.AddListener(HandleClick);
@@ -23,12 +28,19 @@ public class StarGameManager : MonoBehaviour
 
     void CancelSelection()
     {
-        firstSelectedStar = null;
+        if (gameWon) return;
+        ClearSelection();
         Debug.Log("Selection Cancelled");
+    }
+
+    void ClearSelection()
+    {
+        firstSelectedStar = null;
     }
 
     void HandleClick()
     {
+        if (gameWon) return;
         Debug.Log("Click registered");
         // Get cursor screen position from its RectTransform (works for Screen Space - Overlay canvas)
         RectTransform cursorRect = cursorMovement.GetComponent<RectTransform>();
@@ -73,13 +85,18 @@ public class StarGameManager : MonoBehaviour
         // CASE 2: We already selected a star. Try to connect to this new one.
         
         // Rule: Cannot connect to itself
-        if (clickedStar == firstSelectedStar) return;
+        if (clickedStar == firstSelectedStar)
+        {
+            Debug.Log($"Unselected {clickedStar.name}.");
+            ClearSelection();
+            return;
+        }
 
         // Rule: Bipartite (Must be different colors)
         if (firstSelectedStar.starColor == clickedStar.starColor)
         {
             Debug.Log("Cannot connect stars of the same color!");
-            firstSelectedStar = null; // Reset selection
+            ClearSelection();
             return;
         }
 
@@ -87,7 +104,7 @@ public class StarGameManager : MonoBehaviour
         if (!clickedStar.CanConnect())
         {
             Debug.Log("Target star is full!");
-            firstSelectedStar = null;
+            ClearSelection();
             return;
         }
 
@@ -95,7 +112,7 @@ public class StarGameManager : MonoBehaviour
         if (firstSelectedStar.connectedStars.Contains(clickedStar))
         {
             Debug.Log("Already connected!");
-            firstSelectedStar = null;
+            ClearSelection();
             return;
         }
 
@@ -103,7 +120,7 @@ public class StarGameManager : MonoBehaviour
         CreateConnection(firstSelectedStar, clickedStar);
         
         // Reset selection for the next turn
-        firstSelectedStar = null;
+        ClearSelection();
     }
 
     void CreateConnection(Star a, Star b)
@@ -118,5 +135,29 @@ public class StarGameManager : MonoBehaviour
         line.SetPosition(1, b.transform.position);
 
         Debug.Log("Connection Successful!");
+
+        CheckWinCondition();
+    }
+
+    void CheckWinCondition()
+    {
+        if (allStars == null || allStars.Length == 0)
+        {
+            Debug.LogWarning("allStars array is empty! Assign all Star objects in the Inspector.");
+            return;
+        }
+
+        foreach (Star s in allStars)
+        {
+            if (!s.IsSatisfied) return;
+        }
+
+        gameWon = true;
+        Debug.Log("You win!");
+
+        foreach (Star s in allStars)
+        {
+            s.MoveToWinDestination(winMoveDuration);
+        }
     }
 }

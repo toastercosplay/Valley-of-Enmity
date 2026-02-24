@@ -119,6 +119,39 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &91324001 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1341126606115463391, guid: b0d870eac0b4c49879a0a9b3fa8491df, type: 3}
+  m_PrefabInstance: {fileID: 497693039}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4581717351d5249cdae9d9e3e51d7f78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Star
+--- !u!114 &279316015 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1341126606115463391, guid: b0d870eac0b4c49879a0a9b3fa8491df, type: 3}
+  m_PrefabInstance: {fileID: 1423798225}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4581717351d5249cdae9d9e3e51d7f78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Star
+--- !u!114 &449037705 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1341126606115463391, guid: b0d870eac0b4c49879a0a9b3fa8491df, type: 3}
+  m_PrefabInstance: {fileID: 1040202928}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4581717351d5249cdae9d9e3e51d7f78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Star
 --- !u!1001 &497693039
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -129,11 +162,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1341126606115463391, guid: b0d870eac0b4c49879a0a9b3fa8491df, type: 3}
       propertyPath: maxDegree
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1341126606115463391, guid: b0d870eac0b4c49879a0a9b3fa8491df, type: 3}
       propertyPath: starColor
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341126606115463391, guid: b0d870eac0b4c49879a0a9b3fa8491df, type: 3}
+      propertyPath: winDestination.x
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341126606115463391, guid: b0d870eac0b4c49879a0a9b3fa8491df, type: 3}
+      propertyPath: winDestination.y
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 3662744025264530465, guid: b0d870eac0b4c49879a0a9b3fa8491df, type: 3}
       propertyPath: m_Name
@@ -207,6 +248,14 @@ PrefabInstance:
     - target: {fileID: 1341126606115463391, guid: b0d870eac0b4c49879a0a9b3fa8491df, type: 3}
       propertyPath: starColor
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341126606115463391, guid: b0d870eac0b4c49879a0a9b3fa8491df, type: 3}
+      propertyPath: winDestination.x
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341126606115463391, guid: b0d870eac0b4c49879a0a9b3fa8491df, type: 3}
+      propertyPath: winDestination.y
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 3662744025264530465, guid: b0d870eac0b4c49879a0a9b3fa8491df, type: 3}
       propertyPath: m_Name
@@ -418,6 +467,14 @@ PrefabInstance:
       propertyPath: starColor
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1341126606115463391, guid: b0d870eac0b4c49879a0a9b3fa8491df, type: 3}
+      propertyPath: winDestination.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341126606115463391, guid: b0d870eac0b4c49879a0a9b3fa8491df, type: 3}
+      propertyPath: winDestination.y
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 3662744025264530465, guid: b0d870eac0b4c49879a0a9b3fa8491df, type: 3}
       propertyPath: m_Name
       value: Star
@@ -494,7 +551,7 @@ GameObject:
   m_IsActive: 1
 --- !u!120 &1440996011
 LineRenderer:
-  serializedVersion: 2
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -540,6 +597,7 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_Positions: []
   m_Parameters:
     serializedVersion: 3
@@ -596,7 +654,6 @@ LineRenderer:
     textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
-  m_MaskInteraction: 0
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
@@ -647,6 +704,11 @@ MonoBehaviour:
   firstSelectedStar: {fileID: 0}
   linePrefab: {fileID: 7111882800686827334, guid: 5b0e28e5e5eaf4bef8d2a43ef16578e1, type: 3}
   cursorMovement: {fileID: 1864681128}
+  allStars:
+  - {fileID: 279316015}
+  - {fileID: 449037705}
+  - {fileID: 91324001}
+  winMoveDuration: 1.5
 --- !u!4 &1521737520
 Transform:
   m_ObjectHideFlags: 0
@@ -696,6 +758,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1598820474
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -741,6 +804,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 67f2b6584e661ff47b5bc1fa14814a7c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -750,7 +814,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1864681126
 PrefabInstance:
