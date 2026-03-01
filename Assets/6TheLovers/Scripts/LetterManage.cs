@@ -12,7 +12,7 @@ public class LetterManage : MonoBehaviour
 
     [SerializeField] List<GameObject> objects;
     [SerializeField] GameObject[] negativeObjects;
-    bool[] needings = new bool[12];
+    List<bool> needings = new List<bool>(12);
 
     void Start()
     {
@@ -70,12 +70,16 @@ public class LetterManage : MonoBehaviour
             needings[11] = true;
         }
 
-        for (int i = 0; i < needings.Length; i++)
+        
+
+        for (int i = 0; i < objects.Count; i++)
         {
+            print(i);
             if (needings[i])
             {
                 objects[i].SetActive(true);
                 objects.RemoveAt(i);
+                //needings.RemoveAt(i);
             }
         }
 
