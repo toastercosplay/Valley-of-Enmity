@@ -14,16 +14,20 @@ public class KeyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            //make into Fly function and then use using button script and attach player/fly function together
-            key.linearVelocity = new Vector2(0, velocity);
+           Fly(); 
         }
+        //make into Fly function and then use using button script and attach player/fly function together
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //add end game stuff
         Time.timeScale = 0f;
+    }
+
+    public void Fly(){
+        key.linearVelocity = new Vector2(0, velocity);
     }
 }

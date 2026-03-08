@@ -251,7 +251,7 @@ Transform:
   m_GameObject: {fileID: 145492504}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 100, y: 112, z: -140.39767}
+  m_LocalPosition: {x: 112, y: 112, z: -140.39767}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -301,6 +301,123 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1 &281977594
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 281977596}
+  - component: {fileID: 281977595}
+  - component: {fileID: 281977597}
+  m_Layer: 0
+  m_Name: Player1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &281977595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281977594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77d5aab9d478def4b9b6f8ec29b0a9b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UsingButtons
+  onAPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1540264738}
+        m_TargetAssemblyTypeName: KeyMovement, Assembly-CSharp
+        m_MethodName: Fly
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onAReleased:
+    m_PersistentCalls:
+      m_Calls: []
+  onBPressed:
+    m_PersistentCalls:
+      m_Calls: []
+  onBReleased:
+    m_PersistentCalls:
+      m_Calls: []
+  onXPressed:
+    m_PersistentCalls:
+      m_Calls: []
+  onXReleased:
+    m_PersistentCalls:
+      m_Calls: []
+  onYPressed:
+    m_PersistentCalls:
+      m_Calls: []
+  onYReleased:
+    m_PersistentCalls:
+      m_Calls: []
+  onRTPressed:
+    m_PersistentCalls:
+      m_Calls: []
+  onRTReleased:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!4 &281977596
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281977594}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 106.24748, y: 107.85581, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &281977597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281977594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+  m_Actions: {fileID: -944628639613478452, guid: a609e50d64272f54ca987a2093dfe58c, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: eaf08466-07ff-4b4a-8649-e65e18ce1243
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &617464476
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,8 +1040,8 @@ GameObject:
   - component: {fileID: 1540264739}
   - component: {fileID: 1540264738}
   m_Layer: 0
-  m_Name: Player1
-  m_TagString: PlayerOne
+  m_Name: Key
+  m_TagString: Key
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1209,8 +1326,8 @@ Transform:
   m_GameObject: {fileID: 2136518234}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 100, y: 100, z: 0}
-  m_LocalScale: {x: 24.363745, y: 3.00382, z: 1}
+  m_LocalPosition: {x: 111.8128, y: 100, z: 0}
+  m_LocalScale: {x: 47.989365, y: 3.00382, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1228,3 +1345,4 @@ SceneRoots:
   - {fileID: 1088967884}
   - {fileID: 833840071}
   - {fileID: 1441377858}
+  - {fileID: 281977596}

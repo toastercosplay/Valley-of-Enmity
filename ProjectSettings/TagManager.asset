@@ -8,7 +8,7 @@ TagManager:
   - Player2Data
   - Item
   - DepositBox
-  - PlayerOne
+  - Key
   layers:
   - Default
   - TransparentFX
