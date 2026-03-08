@@ -42,16 +42,22 @@ public class LoverPlayer : MonoBehaviour
             hoveredItem = null;
             return;
         }
-        
-        
-        
         else if (isHoldingItem && currentItem != null)
         {
             //drop item
-            Vector2 dropOffset = new Vector2(0f, -1f);
-            Vector2 newItemPosition = (Vector2)transform.position + dropOffset;
-            currentItem.BePickedUp(newItemPosition);
-            
+            DepositBox box = GetOverlappingBox();
+
+            if (box != null && box.holding == null)
+            {
+                box.PlaceItem(currentItem);
+            }
+            else
+            {
+                Vector2 dropOffset = new Vector2(0f, -1f);
+                Vector2 newItemPosition = (Vector2)transform.position + dropOffset;
+                currentItem.BePickedUp(newItemPosition);
+            }
+
             isHoldingItem = false;
             currentItem = null;
 
@@ -68,26 +74,25 @@ public class LoverPlayer : MonoBehaviour
             hoveredItem = other.gameObject.GetComponent<Collectible>();
             return;
         }
-
-        /*if (other.gameObject.CompareTag("DepositBox"))
-        {
-
-            if (!isHoldingItem)
-                return;
-            
-            inLetter[other.gameObject.GetComponent<DepositBox>().boxIndex] = currentItem;
-            other.gameObject.GetComponent<DepositBox>().holding = currentItem;
-            
-            isHoldingItem = false;
-            currentItem = null;
-
-            return;
-        }*/
     }
 
     void OnTriggerExit(Collider other)
     {
             hoveredItem = null;
             return;
+    }
+
+    private DepositBox GetOverlappingBox()
+    {
+        // You can use a small OverlapSphere or check a cached reference
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, 0.5f);
+        foreach (var hit in hitColliders)
+        {
+            if (hit.TryGetComponent<DepositBox>(out DepositBox box))
+            {
+                return box;
+            }
+        }
+        return null;
     }
 }

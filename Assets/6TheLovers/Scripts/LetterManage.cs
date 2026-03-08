@@ -12,7 +12,7 @@ public class LetterManage : MonoBehaviour
 
     [SerializeField] List<GameObject> objects;
     [SerializeField] GameObject[] negativeObjects;
-    List<bool> needings = new List<bool>(12);
+    bool[] needings = new bool[12];
 
     void Start()
     {
@@ -70,11 +70,11 @@ public class LetterManage : MonoBehaviour
             needings[11] = true;
         }
 
-        
+        //Debug.Log("here");
 
         for (int i = 0; i < objects.Count; i++)
         {
-            print(i);
+            //print(i);
             if (needings[i])
             {
                 objects[i].SetActive(true);
@@ -85,12 +85,17 @@ public class LetterManage : MonoBehaviour
 
         Debug.Log("Good");
 
+        int activatedCount = 0;
+
         //choose random 4 other non-necessary items to fill the rest of the letter
-        for (int i = 0; i < 4; i++)
+        while (activatedCount < 4)
         {
-            int randChoice = Random.Range(0, objects.Count-1);
-            objects[randChoice].SetActive(true);
-            objects.RemoveAt(randChoice);
+            int randChoice = Random.Range(0, objects.Count); 
+            if (objects[randChoice].activeSelf == false)
+            {
+                objects[randChoice].SetActive(true);
+                activatedCount++; 
+            }
         }
 
         //finally, choose a random negative item

@@ -127,7 +127,7 @@ public class GameManager : MonoBehaviour
         else if (ermmm == 54)
             spawnPosition = new Vector3(5f, 0f, 0);
         else if (ermmm == 55)
-            spawnPosition = new Vector3(-7.5f, -1.5f, 0);
+            spawnPosition = new Vector3(7.5f, -1.5f, 0);
 
 
         Instantiate(selectedCardObject, spawnPosition, Quaternion.identity);
