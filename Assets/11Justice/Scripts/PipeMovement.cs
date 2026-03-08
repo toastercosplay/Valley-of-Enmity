@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PipeMovement : MonoBehaviour
 {
-    [SerializeField] private float speed = 10f;
+    [SerializeField] private float speed = 7f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

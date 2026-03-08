@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a83ab3841bdeb4144b2d956ba930226b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PipeMovement
-  speed: 0.5
+  speed: 7
 --- !u!61 &220485369722971334
 BoxCollider2D:
   m_ObjectHideFlags: 0

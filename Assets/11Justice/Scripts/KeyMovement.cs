@@ -3,7 +3,7 @@ using UnityEngine;
 public class KeyMovement : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    [SerializeField] private float velocity = 5f;
+    [SerializeField] private float velocity = 6.5f;
     private Rigidbody2D key;
 
     void Start()
@@ -16,6 +16,7 @@ public class KeyMovement : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
+            //make into Fly function and then use using button script and attach player/fly function together
             key.linearVelocity = new Vector2(0, velocity);
         }
     }

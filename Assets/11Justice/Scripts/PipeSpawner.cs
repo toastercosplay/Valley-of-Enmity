@@ -4,8 +4,8 @@ using UnityEngine.Rendering.Universal;
 
 public class PipeSpawner : MonoBehaviour
 {
-    [SerializeField] private float spawnInterval = 1.5f;
-    [SerializeField] private float heightRange = 0.45f;
+    [SerializeField] private float spawnInterval = 1f;
+    [SerializeField] private float heightRange = 6f;
     [SerializeField] private GameObject pipePreFab;
 
     private float timer;
