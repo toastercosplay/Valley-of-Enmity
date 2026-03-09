@@ -70,23 +70,32 @@ public class LetterManage : MonoBehaviour
             needings[11] = true;
         }
 
-        for (int i = 0; i < needings.Length; i++)
+        //Debug.Log("here");
+
+        for (int i = 0; i < objects.Count; i++)
         {
+            //print(i);
             if (needings[i])
             {
                 objects[i].SetActive(true);
                 objects.RemoveAt(i);
+                //needings.RemoveAt(i);
             }
         }
 
         Debug.Log("Good");
 
+        int activatedCount = 0;
+
         //choose random 4 other non-necessary items to fill the rest of the letter
-        for (int i = 0; i < 4; i++)
+        while (activatedCount < 4)
         {
-            int randChoice = Random.Range(0, objects.Count-1);
-            objects[randChoice].SetActive(true);
-            objects.RemoveAt(randChoice);
+            int randChoice = Random.Range(0, objects.Count); 
+            if (objects[randChoice].activeSelf == false)
+            {
+                objects[randChoice].SetActive(true);
+                activatedCount++; 
+            }
         }
 
         //finally, choose a random negative item

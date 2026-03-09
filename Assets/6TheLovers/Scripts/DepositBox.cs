@@ -8,6 +8,8 @@ public class DepositBox : MonoBehaviour
 
     [SerializeField] LoverPlayer loverPlayer;
 
+    public bool playerIsOverhead = false;
+
     // Update is called once per frame
     void Update()
     {
@@ -17,31 +19,24 @@ public class DepositBox : MonoBehaviour
         }
     }
 
-    void OnTriggerStay(Collider other)
+    public void PlaceItem(Collectible item)
     {
-        if (other.gameObject.CompareTag("Item") && holding == null && loverPlayer.isHoldingItem == false)
-        {
-            Collectible item = other.gameObject.GetComponent<Collectible>();
+        holding = item;
+        loverPlayer.inLetter[boxIndex] = item;
+    }
 
-            if (item == null)
-            {
-                Debug.LogError("Hovered item has no Collectible component!");
-                return;
-            }
-
-            loverPlayer.inLetter[boxIndex] = item;
-
-            holding = item;
-        }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player")) playerIsOverhead = true;
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Item"))
-        {
-            if (holding == null || loverPlayer.isHoldingItem)
-                return;
+        if (other.CompareTag("Player")) playerIsOverhead = false;
 
+        // If an item is pulled out of the box by the player
+        if (other.gameObject.CompareTag("Item") && !loverPlayer.isHoldingItem)
+        {
             holding = null;
             loverPlayer.inLetter[boxIndex] = null;
         }

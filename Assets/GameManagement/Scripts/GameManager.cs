@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public PlayerData player1;
     [SerializeField] public PlayerData player2;
     [SerializeField] public PlayerData player3;
-    //[SerializeField] PlayerData player4;
+    [SerializeField] public PlayerData player4;
 
     public List<GameObject> cardList;
     public float spawnDelay = 5f;
@@ -58,6 +58,11 @@ public class GameManager : MonoBehaviour
         if (numberOfPlayers >= 3)
         {
             player3.gameObject.SetActive(true);
+        }
+
+        if (numberOfPlayers >= 4)
+        {
+            player4.gameObject.SetActive(true);
         }
 
         SceneManager.LoadScene("Table");
@@ -104,6 +109,8 @@ public class GameManager : MonoBehaviour
         Vector3 spawnPosition = Vector3.zero;
 
         int ermmm = numberOfGames * 10 + (gamesPlayed + 1);
+        //tens digit: total games
+        //ones digit: current game 
 
         if (ermmm == 31)
             spawnPosition = new Vector3(-2f, -0.6f, 0);
@@ -111,6 +118,17 @@ public class GameManager : MonoBehaviour
             spawnPosition = new Vector3(2.5f, 0.6f, 0);
         else if (ermmm == 33)
             spawnPosition = new Vector3(7f, -0.6f, 0);
+        else if (ermmm == 51)
+            spawnPosition = new Vector3(-2.5f, -1.5f, 0);
+        else if (ermmm == 52)
+            spawnPosition = new Vector3(0f, 0f, 0);
+        else if (ermmm == 53)
+            spawnPosition = new Vector3(2.5f, 1.5f, 0);
+        else if (ermmm == 54)
+            spawnPosition = new Vector3(5f, 0f, 0);
+        else if (ermmm == 55)
+            spawnPosition = new Vector3(7.5f, -1.5f, 0);
+
 
         Instantiate(selectedCardObject, spawnPosition, Quaternion.identity);
         PlaySound();
