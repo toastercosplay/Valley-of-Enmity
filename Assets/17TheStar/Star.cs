@@ -29,10 +29,21 @@ public class Star : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+    [Header("Multiplayer")]
+    public bool randomizeOnStart = true;
+
     void Start()
     {
-        // Randomize starting color
-        starColor = Random.value > 0.5f ? StarColor.Red : StarColor.Blue;
+        if (randomizeOnStart)
+        {
+            starColor = Random.value > 0.5f ? StarColor.Red : StarColor.Blue;
+        }
+        UpdateColorVisuals();
+    }
+
+    public void SetColor(StarColor color)
+    {
+        starColor = color;
         UpdateColorVisuals();
     }
 
@@ -48,7 +59,7 @@ public class Star : MonoBehaviour
         UpdateColorVisuals();
     }
 
-    void UpdateColorVisuals()
+    public void UpdateColorVisuals()
     {
         if (spriteRenderer == null) return;
 

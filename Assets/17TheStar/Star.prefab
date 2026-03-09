@@ -145,3 +145,4 @@ MonoBehaviour:
   bipartiteSet: 0
   redSprite: {fileID: 2002330332111315540, guid: 2a0493c1439b546658c67e29c459ca80, type: 3}
   blueSprite: {fileID: -2247386590115578738, guid: 4a187a79a8ea34c6ea665137e226a55a, type: 3}
+  randomizeOnStart: 1

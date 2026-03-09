@@ -1,17 +1,27 @@
 using UnityEngine;
+using System;
 
-public class StarGameManager : MonoBehaviour
+public class PlayerStarInstance : MonoBehaviour
 {
+    public Camera playerCamera;
     public CursorMovement cursorMovement;
-
-    [Header("Stars")]
-    public Star[] allStars;
+    public Star[] myStars;
+    public int playerIndex;
+    public int playerLayer;
 
     private bool gameWon;
+    private float startTime;
+    private float completionTime = -1f;
+
+    public Action<int, float> onPlayerFinished;
 
     void Start()
     {
-        cursorMovement.onAPressed.AddListener(HandleClick);
+        startTime = Time.time;
+        if (cursorMovement != null)
+        {
+            cursorMovement.onAPressed.AddListener(HandleClick);
+        }
     }
 
     void OnDestroy()
@@ -27,9 +37,10 @@ public class StarGameManager : MonoBehaviour
         if (gameWon) return;
 
         RectTransform cursorRect = cursorMovement.GetComponent<RectTransform>();
-        Vector2 screenPos = cursorRect.position;
+        Vector2 worldPos = cursorRect.position;
 
-        RaycastHit2D hit = Physics2D.Raycast(screenPos, Vector2.zero);
+        // Raycast only on this player's layer
+        RaycastHit2D hit = Physics2D.Raycast(worldPos, Vector2.zero, Mathf.Infinity, 1 << playerLayer);
 
         if (hit.collider != null)
         {
@@ -44,35 +55,45 @@ public class StarGameManager : MonoBehaviour
 
     void CheckWinCondition()
     {
-        if (allStars == null || allStars.Length == 0) return;
+        if (myStars == null || myStars.Length == 0) return;
 
-        // Check if all set A stars share one color and all set B stars share the other
         StarColor? setAColor = null;
         StarColor? setBColor = null;
 
-        foreach (Star s in allStars)
+        foreach (Star s in myStars)
         {
             if (s.bipartiteSet == BipartiteSet.A)
             {
                 if (setAColor == null)
                     setAColor = s.starColor;
                 else if (s.starColor != setAColor)
-                    return; // Not all A stars match
+                    return;
             }
             else
             {
                 if (setBColor == null)
                     setBColor = s.starColor;
                 else if (s.starColor != setBColor)
-                    return; // Not all B stars match
+                    return;
             }
         }
 
-        // Both sets must exist and have different colors
         if (setAColor != null && setBColor != null && setAColor != setBColor)
         {
             gameWon = true;
-            Debug.Log("You win!");
+            completionTime = Time.time - startTime;
+            Debug.Log($"Player {playerIndex + 1} finished in {completionTime:F2}s!");
+            onPlayerFinished?.Invoke(playerIndex, completionTime);
         }
+    }
+
+    public bool HasFinished()
+    {
+        return gameWon;
+    }
+
+    public float GetCompletionTime()
+    {
+        return completionTime;
     }
 }
