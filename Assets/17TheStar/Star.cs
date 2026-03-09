@@ -11,8 +11,12 @@ public enum StarColor
 public class Star : MonoBehaviour
 {
     [Header("Settings")]
-    public StarColor starColor;     
-    public int maxDegree = 3;       
+    public StarColor starColor;
+    public int maxDegree = 3;
+
+    [Header("Sprites")]
+    public Sprite redSprite;
+    public Sprite blueSprite;
 
     [Header("State")]
     // We keep a list of connected stars to prevent connecting the same two stars twice
@@ -29,6 +33,7 @@ public class Star : MonoBehaviour
     void Start()
     {
         UpdateColorVisuals();
+        CreateDegreeLabel();
     }
 
     // Call this whenever you change the variable in the inspector to see changes live
@@ -42,11 +47,30 @@ public class Star : MonoBehaviour
     {
         if (spriteRenderer == null) return;
 
-        // Simple logic to change sprite color based on the enum
-        if (starColor == StarColor.Red)
-            spriteRenderer.color = Color.red;
-        else
-            spriteRenderer.color = Color.blue;
+        spriteRenderer.color = Color.white;
+        if (starColor == StarColor.Red && redSprite != null)
+            spriteRenderer.sprite = redSprite;
+        else if (starColor == StarColor.Blue && blueSprite != null)
+            spriteRenderer.sprite = blueSprite;
+    }
+
+    private void CreateDegreeLabel()
+    {
+        GameObject labelObj = new GameObject("DegreeLabel");
+        labelObj.transform.SetParent(transform, false);
+        labelObj.transform.localPosition = new Vector3(0, 0, -1);
+
+        TextMesh textMesh = labelObj.AddComponent<TextMesh>();
+        textMesh.text = maxDegree.ToString();
+        textMesh.color = Color.black;
+        textMesh.fontSize = 160 ;
+        textMesh.characterSize = 0.5f;
+        textMesh.anchor = TextAnchor.MiddleCenter;
+        textMesh.alignment = TextAlignment.Center;
+
+        // Render above the star sprite
+        MeshRenderer mr = labelObj.GetComponent<MeshRenderer>();
+        mr.sortingOrder = spriteRenderer != null ? spriteRenderer.sortingOrder + 1 : 1;
     }
 
     [Header("Win")]

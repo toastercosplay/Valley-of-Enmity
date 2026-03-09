@@ -83,8 +83,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1413163155605188201, guid: 91d96702b99374ac3929ccea3ba64c30, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 2002330332111315540, guid: 2a0493c1439b546658c67e29c459ca80, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -143,5 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Star
   starColor: 0
   maxDegree: 3
+  redSprite: {fileID: 2002330332111315540, guid: 2a0493c1439b546658c67e29c459ca80, type: 3}
+  blueSprite: {fileID: -2247386590115578738, guid: 4a187a79a8ea34c6ea665137e226a55a, type: 3}
   connectedStars: []
   winDestination: {x: 0, y: 0}
