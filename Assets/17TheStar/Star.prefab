@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 2002330332111315540, guid: 2a0493c1439b546658c67e29c459ca80, type: 3}
+  m_Sprite: {fileID: -2247386590115578738, guid: 4a187a79a8ea34c6ea665137e226a55a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -128,7 +128,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 39.315002
+  m_Radius: 12
 --- !u!114 &1341126606115463391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,9 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4581717351d5249cdae9d9e3e51d7f78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Star
-  starColor: 0
-  maxDegree: 3
+  starColor: 1
+  bipartiteSet: 0
   redSprite: {fileID: 2002330332111315540, guid: 2a0493c1439b546658c67e29c459ca80, type: 3}
   blueSprite: {fileID: -2247386590115578738, guid: 4a187a79a8ea34c6ea665137e226a55a, type: 3}
-  connectedStars: []
-  winDestination: {x: 0, y: 0}

@@ -1,5 +1,5 @@
 Star  winDestination (now = current position)
-Star	(4.4, -49.7)
+Star	(4.4, -49.7)  
 Star (1)		(20.5, 12.4)
 Star (2)		(24.2, 52.1)
 Star (3)		(-16.5, 45.7)
