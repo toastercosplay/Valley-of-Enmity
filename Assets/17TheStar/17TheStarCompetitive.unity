@@ -154,6 +154,7 @@ MonoBehaviour:
   - {fileID: 3185891467313102751, guid: 81dbd187285284b379970195c1cd07a3, type: 3}
   - {fileID: 2372223853959873347, guid: 7fe33ea998ec546d79f9fcffafd29899, type: 3}
   - {fileID: 1130696061823969904, guid: 890a7dd2622d24321a2ea5f15be5b488, type: 3}
+  backgroundImage: {fileID: -5676941320307315788, guid: 1291985207bb64b1bb378129d8463b69, type: 3}
   playerCountOverride: 4
   playerLayerNames:
   - StarP1

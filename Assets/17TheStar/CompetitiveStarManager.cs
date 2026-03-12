@@ -10,6 +10,9 @@ public class CompetitiveStarManager : MonoBehaviour
     public GameObject starArenaPrefab;
     public GameObject[] cursorPrefabs; // P1Cursor, P2Cursor, P3Cursor, P4Cursor
 
+    [Header("Background")]
+    public Sprite backgroundImage;
+
     [Header("Settings")]
     [Tooltip("If 0, reads from GameManager.Instance. Set manually for testing.")]
     public int playerCountOverride = 0;
@@ -39,6 +42,9 @@ public class CompetitiveStarManager : MonoBehaviour
         Camera mainCam = Camera.main;
         if (mainCam != null)
             Destroy(mainCam.gameObject);
+
+        // Create background camera (renders behind all player cameras)
+        // CreateBackgroundCamera();
 
         // Create ranking UI overlay
         CreateRankingUI();
@@ -85,9 +91,8 @@ public class CompetitiveStarManager : MonoBehaviour
         cam.orthographicSize = 100;
         cam.transform.position = new Vector3(0, 0, -10);
         cam.rect = viewportRect;
-        cam.cullingMask = (1 << layer) | (1 << 0); // player layer + Default layer
+        cam.cullingMask = 1 << layer; // player layer only
         cam.clearFlags = CameraClearFlags.SolidColor;
-        cam.backgroundColor = new Color(0.192f, 0.302f, 0.475f);
         cam.depth = playerIndex; // render order
 
         // Create canvas for cursor (Screen Space - Camera)
@@ -103,10 +108,14 @@ public class CompetitiveStarManager : MonoBehaviour
 
         canvasObj.AddComponent<GraphicRaycaster>();
 
+        // Set canvas to player layer so the player camera can see it
+        SetLayerRecursive(canvasObj, layer);
+
         // Instantiate cursor as child of canvas
         if (playerIndex < cursorPrefabs.Length && cursorPrefabs[playerIndex] != null)
         {
             GameObject cursor = Instantiate(cursorPrefabs[playerIndex], canvasObj.transform);
+            SetLayerRecursive(cursor, layer);
             cursor.name = $"P{playerIndex + 1}Cursor";
 
             CursorMovement cursorMovement = cursor.GetComponent<CursorMovement>();
@@ -232,6 +241,46 @@ public class CompetitiveStarManager : MonoBehaviour
         if (GameManager.Instance != null)
         {
             GameManager.Instance.FinishMinigame();
+        }
+    }
+
+    void CreateBackgroundCamera()
+    {
+        // Background camera renders first at depth -1, full screen
+        GameObject bgCamObj = new GameObject("BackgroundCamera");
+        Camera bgCam = bgCamObj.AddComponent<Camera>();
+        bgCam.orthographic = true;
+        bgCam.orthographicSize = 100;
+        bgCam.transform.position = new Vector3(0, 0, -10);
+        bgCam.rect = new Rect(0f, 0f, 1f, 1f);
+        bgCam.depth = -1;
+        bgCam.clearFlags = CameraClearFlags.SolidColor;
+        bgCam.backgroundColor = new Color(0.192f, 0.302f, 0.475f);
+        bgCam.cullingMask = 1 << 0; // Default layer only
+
+        if (backgroundImage != null)
+        {
+            // Create sprite on Default layer (player cameras don't see Default)
+            GameObject bgObj = new GameObject("BackgroundSprite");
+            bgObj.layer = 0;
+            SpriteRenderer sr = bgObj.AddComponent<SpriteRenderer>();
+            sr.sprite = backgroundImage;
+            sr.sortingOrder = -1000;
+
+            // Scale sprite to fill the camera view
+            float camHeight = bgCam.orthographicSize * 2f;
+            float camWidth = camHeight * bgCam.aspect;
+            Vector2 spriteSize = sr.sprite.bounds.size;
+            float scaleX = camWidth / spriteSize.x;
+            float scaleY = camHeight / spriteSize.y;
+            float scale = Mathf.Max(scaleX, scaleY); // cover entire screen
+            Vector3 backgroundScale = new Vector3(scale, scale, 1f);
+            bgObj.transform.localScale = backgroundScale;
+
+            // Center the rendered sprite, even if the imported sprite pivot is not centered.
+            Vector3 cameraCenter = bgCam.transform.position + new Vector3(0f, 0f, 10f);
+            Vector3 spriteCenterOffset = Vector3.Scale(sr.sprite.bounds.center, backgroundScale);
+            bgObj.transform.position = cameraCenter - spriteCenterOffset;
         }
     }
 
