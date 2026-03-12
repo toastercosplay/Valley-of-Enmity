@@ -407,8 +407,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   player1: {fileID: 1939895858}
   player2: {fileID: 107135378}
-  player3: {fileID: 0}
-  player4: {fileID: 0}
+  player3: {fileID: 1830240636}
+  player4: {fileID: 484574787}
   cardList:
   - {fileID: 0}
   - {fileID: 0}
