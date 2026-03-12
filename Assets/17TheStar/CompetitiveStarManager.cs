@@ -119,6 +119,7 @@ public class CompetitiveStarManager : MonoBehaviour
             cursor.name = $"P{playerIndex + 1}Cursor";
 
             CursorMovement cursorMovement = cursor.GetComponent<CursorMovement>();
+            cursorMovement.SetMaxSpeed(70f);
 
             // Collect stars from the arena
             Star[] stars = arena.GetComponentsInChildren<Star>();

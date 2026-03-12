@@ -7,6 +7,7 @@ public class CursorMovement : MonoBehaviour
     float movementX, movementY;
     //[SerializeField] float speed = 10f;
     [SerializeField] float maxSpeed = 10f;
+    public void SetMaxSpeed(float speed) { maxSpeed = speed; }
 
     private RectTransform imageRectTransform;
 
