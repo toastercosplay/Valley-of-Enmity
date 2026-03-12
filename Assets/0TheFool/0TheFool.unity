@@ -209,6 +209,10 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4548870016846830317, guid: d00d2a740adc70c4f886bf3607129df7, type: 3}
+      propertyPath: m_Actions
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: a609e50d64272f54ca987a2093dfe58c, type: 3}
+    - target: {fileID: 4548870016846830317, guid: d00d2a740adc70c4f886bf3607129df7, type: 3}
       propertyPath: m_DefaultActionMap
       value: Player2
       objectReference: {fileID: 0}
@@ -576,7 +580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FoolPlayer
   theFool: {fileID: 1534095346}
-  playerName: Player1Data
+  playerName: Player4Data
   playerData: {fileID: 0}
 --- !u!114 &266132402
 MonoBehaviour:
@@ -2305,120 +2309,213 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: Joystick
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
       propertyPath: m_ActionEvents.Array.size
-      value: 18
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
       propertyPath: m_ActionEvents.Array.data[5].m_ActionId
-      value: b95a362c-5174-49e0-8938-9b146434decc
-      objectReference: {fileID: 0}
-    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
-      propertyPath: m_ActionEvents.Array.data[6].m_ActionId
       value: 933b1881-70cb-415b-9915-f499f22e29fe
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
-      propertyPath: m_ActionEvents.Array.data[7].m_ActionId
+      propertyPath: m_ActionEvents.Array.data[6].m_ActionId
       value: 6a2606ed-1d46-4a58-b62c-ac5354e5e7cd
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
-      propertyPath: m_ActionEvents.Array.data[8].m_ActionId
+      propertyPath: m_ActionEvents.Array.data[7].m_ActionId
       value: 40713e65-6b79-4a5f-ad0b-e13c6b4755c4
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
-      propertyPath: m_ActionEvents.Array.data[9].m_ActionId
+      propertyPath: m_ActionEvents.Array.data[8].m_ActionId
       value: 21b47d50-fc40-4c25-a11f-2c6613e6467c
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
-      propertyPath: m_ActionEvents.Array.data[10].m_ActionId
+      propertyPath: m_ActionEvents.Array.data[9].m_ActionId
       value: e097ee3e-9229-42c0-b5fd-dc2fc5a33921
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
-      propertyPath: m_ActionEvents.Array.data[11].m_ActionId
+      propertyPath: m_ActionEvents.Array.data[10].m_ActionId
       value: ec1ccd19-2ede-4886-9f69-a290c7b1aac8
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
-      propertyPath: m_ActionEvents.Array.data[12].m_ActionId
+      propertyPath: m_ActionEvents.Array.data[11].m_ActionId
       value: b4f504e9-b754-4217-b3d4-d6aae00045a6
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
-      propertyPath: m_ActionEvents.Array.data[13].m_ActionId
+      propertyPath: m_ActionEvents.Array.data[12].m_ActionId
       value: 853693f7-aace-40c1-8d7b-57c105543e86
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
-      propertyPath: m_ActionEvents.Array.data[14].m_ActionId
+      propertyPath: m_ActionEvents.Array.data[13].m_ActionId
       value: 1b8a4a37-034e-42f3-a39f-4e6234a497a2
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
-      propertyPath: m_ActionEvents.Array.data[15].m_ActionId
+      propertyPath: m_ActionEvents.Array.data[14].m_ActionId
       value: 42c4bbdd-1098-4eb2-97f0-803709aae84d
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
-      propertyPath: m_ActionEvents.Array.data[16].m_ActionId
+      propertyPath: m_ActionEvents.Array.data[15].m_ActionId
       value: 03487166-9535-4a5f-a301-19bc0a58c373
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[16].m_ActionId
+      value: 892ff973-c47c-4ce5-b901-0bc7e9180429
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
       propertyPath: m_ActionEvents.Array.data[17].m_ActionId
-      value: 41c5a0cb-3559-4fae-9b69-ffccf2ce2b70
+      value: 3ecfaf75-8770-41ca-93e2-219731ad93ad
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
       propertyPath: m_ActionEvents.Array.data[5].m_ActionName
-      value: 'Player1/Y[/SwitchProControllerHID/buttonWest]'
-      objectReference: {fileID: 0}
-    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
-      propertyPath: m_ActionEvents.Array.data[6].m_ActionName
       value: 'Player1/RightTrigger[/SwitchProControllerHID/rightTrigger]'
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
-      propertyPath: m_ActionEvents.Array.data[7].m_ActionName
+      propertyPath: m_ActionEvents.Array.data[6].m_ActionName
       value: 'UI/Navigate[/SwitchProControllerHID/leftStick/up,/SwitchProControllerHID/rightStick/up,/SwitchProControllerHID/leftStick/down,/SwitchProControllerHID/rightStick/down,/SwitchProControllerHID/leftStick/left,/SwitchProControllerHID/rightStick/left,/SwitchProControllerHID/leftStick/right,/SwitchProControllerHID/rightStick/right,/SwitchProControllerHID/dpad]'
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
-      propertyPath: m_ActionEvents.Array.data[8].m_ActionName
+      propertyPath: m_ActionEvents.Array.data[7].m_ActionName
       value: 'UI/Submit[/SwitchProControllerHID/buttonEast]'
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
-      propertyPath: m_ActionEvents.Array.data[9].m_ActionName
+      propertyPath: m_ActionEvents.Array.data[8].m_ActionName
       value: 'UI/Cancel[/SwitchProControllerHID/buttonSouth]'
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
-      propertyPath: m_ActionEvents.Array.data[10].m_ActionName
+      propertyPath: m_ActionEvents.Array.data[9].m_ActionName
       value: UI/Point
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
-      propertyPath: m_ActionEvents.Array.data[11].m_ActionName
+      propertyPath: m_ActionEvents.Array.data[10].m_ActionName
       value: UI/Click
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
-      propertyPath: m_ActionEvents.Array.data[12].m_ActionName
+      propertyPath: m_ActionEvents.Array.data[11].m_ActionName
       value: UI/ScrollWheel
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
-      propertyPath: m_ActionEvents.Array.data[13].m_ActionName
+      propertyPath: m_ActionEvents.Array.data[12].m_ActionName
       value: UI/MiddleClick
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
-      propertyPath: m_ActionEvents.Array.data[14].m_ActionName
+      propertyPath: m_ActionEvents.Array.data[13].m_ActionName
       value: UI/RightClick
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
-      propertyPath: m_ActionEvents.Array.data[15].m_ActionName
+      propertyPath: m_ActionEvents.Array.data[14].m_ActionName
       value: UI/TrackedDevicePosition
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
-      propertyPath: m_ActionEvents.Array.data[16].m_ActionName
+      propertyPath: m_ActionEvents.Array.data[15].m_ActionName
       value: UI/TrackedDeviceOrientation
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[16].m_ActionName
+      value: 'Player1/Y[/SwitchProControllerHID/buttonWest,/SwitchProControllerHID1/buttonWest,/SwitchProControllerHID2/buttonWest]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
       propertyPath: m_ActionEvents.Array.data[17].m_ActionName
-      value: Player2/New action
+      value: 'Player2/Move[/SwitchProControllerHID/leftStick,/SwitchProControllerHID1/leftStick,/SwitchProControllerHID2/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/PowerA
+        PowerA Advantage Wired Controller for Nintendo Switch 2/stick]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[18].m_ActionName
+      value: 'Player2/Look[/SwitchProControllerHID/rightStick,/SwitchProControllerHID1/rightStick,/SwitchProControllerHID2/rightStick,/Mouse/delta,/Touchscreen/delta]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[19].m_ActionName
+      value: 'Player2/A[/SwitchProControllerHID/buttonEast,/SwitchProControllerHID1/buttonEast,/SwitchProControllerHID2/buttonEast,/Mouse/leftButton,/PowerA
+        PowerA Advantage Wired Controller for Nintendo Switch 2/button3]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[20].m_ActionName
+      value: 'Player2/B[/SwitchProControllerHID/buttonSouth,/SwitchProControllerHID1/buttonSouth,/SwitchProControllerHID2/buttonSouth,/PowerA
+        PowerA Advantage Wired Controller for Nintendo Switch 2/button2]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[21].m_ActionName
+      value: 'Player2/X[/SwitchProControllerHID/buttonNorth,/SwitchProControllerHID1/buttonNorth,/SwitchProControllerHID2/buttonNorth]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[22].m_ActionName
+      value: 'Player2/Y[/SwitchProControllerHID/buttonWest,/SwitchProControllerHID1/buttonWest,/SwitchProControllerHID2/buttonWest]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[23].m_ActionName
+      value: 'Player2/RightTrigger[/SwitchProControllerHID/rightTrigger,/SwitchProControllerHID1/rightTrigger,/SwitchProControllerHID2/rightTrigger]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[24].m_ActionName
+      value: 'Player3/Move[/SwitchProControllerHID/leftStick,/SwitchProControllerHID1/leftStick,/SwitchProControllerHID2/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/PowerA
+        PowerA Advantage Wired Controller for Nintendo Switch 2/stick]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[25].m_ActionName
+      value: 'Player3/Look[/SwitchProControllerHID/rightStick,/SwitchProControllerHID1/rightStick,/SwitchProControllerHID2/rightStick,/Mouse/delta,/Touchscreen/delta]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[26].m_ActionName
+      value: 'Player3/A[/SwitchProControllerHID/buttonEast,/SwitchProControllerHID1/buttonEast,/SwitchProControllerHID2/buttonEast,/Mouse/leftButton,/PowerA
+        PowerA Advantage Wired Controller for Nintendo Switch 2/button3]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[27].m_ActionName
+      value: 'Player3/B[/SwitchProControllerHID/buttonSouth,/SwitchProControllerHID1/buttonSouth,/SwitchProControllerHID2/buttonSouth,/PowerA
+        PowerA Advantage Wired Controller for Nintendo Switch 2/button2]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[28].m_ActionName
+      value: 'Player3/X[/SwitchProControllerHID/buttonNorth,/SwitchProControllerHID1/buttonNorth,/SwitchProControllerHID2/buttonNorth]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[29].m_ActionName
+      value: 'Player3/Y[/SwitchProControllerHID/buttonWest,/SwitchProControllerHID1/buttonWest,/SwitchProControllerHID2/buttonWest]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[30].m_ActionName
+      value: 'Player3/RightTrigger[/SwitchProControllerHID/rightTrigger,/SwitchProControllerHID1/rightTrigger,/SwitchProControllerHID2/rightTrigger]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[31].m_ActionName
+      value: 'Player4/Move[/SwitchProControllerHID/leftStick,/SwitchProControllerHID1/leftStick,/SwitchProControllerHID2/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/PowerA
+        PowerA Advantage Wired Controller for Nintendo Switch 2/stick]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[32].m_ActionName
+      value: 'Player4/Look[/SwitchProControllerHID/rightStick,/SwitchProControllerHID1/rightStick,/SwitchProControllerHID2/rightStick,/Mouse/delta,/Touchscreen/delta]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[33].m_ActionName
+      value: 'Player4/A[/SwitchProControllerHID/buttonEast,/SwitchProControllerHID1/buttonEast,/SwitchProControllerHID2/buttonEast,/Mouse/leftButton,/PowerA
+        PowerA Advantage Wired Controller for Nintendo Switch 2/button3]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[34].m_ActionName
+      value: 'Player4/B[/SwitchProControllerHID/buttonSouth,/SwitchProControllerHID1/buttonSouth,/SwitchProControllerHID2/buttonSouth,/PowerA
+        PowerA Advantage Wired Controller for Nintendo Switch 2/button2]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[35].m_ActionName
+      value: 'Player4/X[/SwitchProControllerHID/buttonNorth,/SwitchProControllerHID1/buttonNorth,/SwitchProControllerHID2/buttonNorth]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[36].m_ActionName
+      value: 'Player4/Y[/SwitchProControllerHID/buttonWest,/SwitchProControllerHID1/buttonWest,/SwitchProControllerHID2/buttonWest]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[37].m_ActionName
+      value: 'Player4/RightTrigger[/SwitchProControllerHID/rightTrigger,/SwitchProControllerHID1/rightTrigger,/SwitchProControllerHID2/rightTrigger]'
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
       propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
       propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
       propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_Target

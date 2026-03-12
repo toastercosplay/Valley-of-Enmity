@@ -155,10 +155,6 @@ MonoBehaviour:
   player4: {fileID: 1326064799}
   cardList:
   - {fileID: 7709118123446550073, guid: 18cdc974fc75be64b943f3d67f6708de, type: 3}
-  - {fileID: 8417072814907389845, guid: a7b7ef53da88b044aadc9a14bad7ddb5, type: 3}
-  - {fileID: 8197723452066880357, guid: ea53996799dcf9f499f2aa28df7a822a, type: 3}
-  - {fileID: 4392925064412045008, guid: 25578793c1b34284cad1c5e49df44e8e, type: 3}
-  - {fileID: 1442807215313116753, guid: e287f0fef40069549bc37e39c3352c80, type: 3}
   spawnDelay: 5
 --- !u!4 &25436847
 Transform:
@@ -1325,9 +1321,6 @@ MonoBehaviour:
   moveThreshold: 0.3
   playerName: Player3Data
   objectToOn: {fileID: 1370910766}
-  objectToOff1: {fileID: 0}
-  objectToOff2: {fileID: 0}
-  objectToOff3: {fileID: 0}
 --- !u!114 &770595883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1617,9 +1610,6 @@ MonoBehaviour:
   moveThreshold: 0.3
   playerName: Player2Data
   objectToOn: {fileID: 770595878}
-  objectToOff1: {fileID: 0}
-  objectToOff2: {fileID: 0}
-  objectToOff3: {fileID: 0}
 --- !u!82 &886822604
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3247,9 +3237,6 @@ MonoBehaviour:
   moveThreshold: 0.3
   playerName: Player4Data
   objectToOn: {fileID: 1320609711}
-  objectToOff1: {fileID: 2117926228}
-  objectToOff2: {fileID: 886822600}
-  objectToOff3: {fileID: 770595878}
 --- !u!114 &1370910771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3929,9 +3916,6 @@ MonoBehaviour:
   moveThreshold: 0.3
   playerName: Player1Data
   objectToOn: {fileID: 886822600}
-  objectToOff1: {fileID: 0}
-  objectToOff2: {fileID: 0}
-  objectToOff3: {fileID: 0}
 --- !u!82 &2117926232
 AudioSource:
   m_ObjectHideFlags: 0

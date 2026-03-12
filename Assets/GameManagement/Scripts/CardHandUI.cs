@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Users;
 using UnityEngine.UI;
 
 public class CardHandUI : MonoBehaviour
@@ -20,9 +21,6 @@ public class CardHandUI : MonoBehaviour
     PlayerData playerData;
 
     [SerializeField] GameObject objectToOn;
-    [SerializeField] GameObject objectToOff1;
-    [SerializeField] GameObject objectToOff2;
-    [SerializeField] GameObject objectToOff3;
 
     PlayerInput playerInput;
 
@@ -85,13 +83,17 @@ public class CardHandUI : MonoBehaviour
         //andrew spent hours here- fix this john later
         if (playerName == "Player4Data")
         {
-             //playerInput.user.UnpairDevices();
-             objectToOff1.SetActive(false);
-             objectToOff2.SetActive(false);
-             objectToOff3.SetActive(false);
-             this.gameObject.SetActive(false);
+             foreach (var user in InputUser.all)
+            {
+                user.UnpairDevices();
+            }
         }
         objectToOn.SetActive(true);
+        //stop rendering the children
+        for (int i = 0; i < cards.Length; i++)
+        {
+            cards[i].GetComponent<Image>().enabled = false;
+        }
         //
 
     }
