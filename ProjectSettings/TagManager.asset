@@ -9,6 +9,8 @@ TagManager:
   - Item
   - DepositBox
   - Lightning
+  - Player3Data
+  - Player4Data
   layers:
   - Default
   - TransparentFX

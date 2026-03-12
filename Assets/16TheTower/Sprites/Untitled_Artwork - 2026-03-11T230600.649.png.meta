@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c887c04abac7af044a521698bf4c6624
+guid: 4058c35474018eb42af7c0de82057e4c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2151895242381020000
-    second: towerbg-2_0
+      213: 1748967655918877458
+    second: Untitled_Artwork - 2026-03-11T230600.649_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: towerbg-2_0
+      name: Untitled_Artwork - 2026-03-11T230600.649_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0a4b604adaee222e0800000000000000
-      internalID: -2151895242381020000
+      spriteID: 21b31be01d4954810800000000000000
+      internalID: 1748967655918877458
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      towerbg-2_0: -2151895242381020000
+      Untitled_Artwork - 2026-03-11T230600.649_0: 1748967655918877458
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

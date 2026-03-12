@@ -14,19 +14,19 @@ public class TowerPlayerWhat : MonoBehaviour
     void Start()
     {
         movement = GetComponent<PlatformerMovement>();
-        player = GameManager.Instance.GetPlayer(playerName);
+        //player = GameManager.Instance.GetPlayer(playerName);
     }
 
     void Update()
     {
         if (transform.position.y < -25)
         {
-            player.SetBufferState(3);
-            this.GameObject.SetActive(false);
+            //player.SetBufferState(3);
+            //this.GameObject.SetActive(false);
         }
         if (transform.position.y > 500)
         {
-            player.SetBufferState(1);
+            //player.SetBufferState(1);
             //this.GameObject.SetActive(false);
         }
     }

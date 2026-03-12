@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 542bad168fbda9a4c87d387c1113aeef
+guid: c14f5e830607d834d9db6d459580e0e6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7620584066597156537
-    second: towerbg-4_0
+      213: 5125163266171100887
+    second: tower_obstacle3 (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: towerbg-4_0
+      name: tower_obstacle3 (1)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 960
-        height: 600
+        x: 250
+        y: 16
+        width: 447
+        height: 362
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7498971ca2f3e3690800000000000000
-      internalID: -7620584066597156537
+      spriteID: 7de520816dc302740800000000000000
+      internalID: 5125163266171100887
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      towerbg-4_0: -7620584066597156537
+      tower_obstacle3 (1)_0: 5125163266171100887
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

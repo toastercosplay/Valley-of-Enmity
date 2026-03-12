@@ -605,7 +605,7 @@ GameObject:
   - component: {fileID: 484574787}
   m_Layer: 0
   m_Name: Player4Data
-  m_TagString: Player2Data
+  m_TagString: Player4Data
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1237,7 +1237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e185aecfbbef3d4888449312502adf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DevilPlayer
-  playerData: {fileID: 1939895858}
+  playerData: {fileID: 1830240636}
   gameController: {fileID: 284426191}
   kneelSprite: {fileID: 2005134155269240375, guid: 38dc972381fd7fc4c92a70c4b489c1cf, type: 3}
   bowSprite: {fileID: -415446080585258355, guid: 48c5b28595d032d4185dc9de58ffd696, type: 3}
@@ -6626,7 +6626,7 @@ GameObject:
   - component: {fileID: 1830240636}
   m_Layer: 0
   m_Name: Player3Data
-  m_TagString: Player2Data
+  m_TagString: Player3Data
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22372,7 +22372,7 @@ MonoBehaviour:
     m_ActionId: 18b84037-902d-4537-9b6b-1be00536f62d
     m_ActionName: Player4/RightTrigger
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_DefaultControlScheme: Joystick
   m_DefaultActionMap: Player4
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -22388,7 +22388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e185aecfbbef3d4888449312502adf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DevilPlayer
-  playerData: {fileID: 107135378}
+  playerData: {fileID: 484574787}
   gameController: {fileID: 284426191}
   kneelSprite: {fileID: 2005134155269240375, guid: 38dc972381fd7fc4c92a70c4b489c1cf, type: 3}
   bowSprite: {fileID: -415446080585258355, guid: 48c5b28595d032d4185dc9de58ffd696, type: 3}

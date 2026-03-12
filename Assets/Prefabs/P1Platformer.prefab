@@ -11,11 +11,11 @@ PrefabInstance:
     - target: {fileID: 135176602910038942, guid: 16381205fc75b234095b50691c10e057, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 8521986779430860938}
+      objectReference: {fileID: 3146612354697752410}
     - target: {fileID: 135176602910038942, guid: 16381205fc75b234095b50691c10e057, type: 3}
       propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 8521986779430860938}
+      objectReference: {fileID: 3146612354697752410}
     - target: {fileID: 135176602910038942, guid: 16381205fc75b234095b50691c10e057, type: 3}
       propertyPath: m_ActionEvents.Array.data[17].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -111,14 +111,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4256571217353293998, guid: 16381205fc75b234095b50691c10e057, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8521986779430860938}
+      addedObject: {fileID: 3146612354697752410}
   m_SourcePrefab: {fileID: 100100000, guid: 16381205fc75b234095b50691c10e057, type: 3}
 --- !u!1 &9107077535065776650 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4256571217353293998, guid: 16381205fc75b234095b50691c10e057, type: 3}
   m_PrefabInstance: {fileID: 5003699554839159460}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8521986779430860938
+--- !u!114 &3146612354697752410
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
