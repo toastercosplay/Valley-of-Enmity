@@ -5,6 +5,7 @@ public class KeyMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] private float velocity = 6.5f;
     private Rigidbody2D key;
+    public int playerIndex = 0; 
 
     void Start()
     {

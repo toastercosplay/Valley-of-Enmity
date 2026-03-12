@@ -5,13 +5,15 @@ using TMPro;
 public class ScoringText : MonoBehaviour
 {
     public static ScoringText instance;
-    [SerializeField] private TextMeshProUGUI currentScoreText;
-    private int score;
+    [SerializeField] private TextMeshProUGUI player1ScoreText;
+    [SerializeField] private TextMeshProUGUI player2ScoreText;
+    private int[] scores = new int[4];
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        currentScoreText.text = score.ToString();        
+        player1ScoreText.text = scores[0].ToString();
+        player2ScoreText.text = scores[1].ToString();
     }
 
     // Update is called once per frame
@@ -28,9 +30,17 @@ public class ScoringText : MonoBehaviour
         }
     }
 
-    public void UpdateScore()
+    public void UpdateScore(int playerIndex)
     {
-        score++;
-        currentScoreText.text = score.ToString();
+        scores[playerIndex]++;
+        
+        if (playerIndex == 0)
+        {
+            player1ScoreText.text = scores[0].ToString();
+        }
+        else if (playerIndex == 1)
+        {
+            player2ScoreText.text = scores[1].ToString();
+        }
     }
 }

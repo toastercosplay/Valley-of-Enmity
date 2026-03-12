@@ -5,9 +5,9 @@ public class PipeIncreaseScore : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Key"))
-        {
-            ScoringText.instance.UpdateScore();
-        }
+        var key = collision.GetComponent<KeyMovement>();
+        if (key == null) return;
+
+        ScoringText.instance.UpdateScore(key.playerIndex);
     }
 }
