@@ -454,6 +454,34 @@ PrefabInstance:
       propertyPath: maxSpeed
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 2627840999588617721, guid: 4531b471b8efef94187c39eacef9c1bf, type: 3}
+      propertyPath: onRTPressed.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2627840999588617721, guid: 4531b471b8efef94187c39eacef9c1bf, type: 3}
+      propertyPath: onRTPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2627840999588617721, guid: 4531b471b8efef94187c39eacef9c1bf, type: 3}
+      propertyPath: onRTPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 266132401}
+    - target: {fileID: 2627840999588617721, guid: 4531b471b8efef94187c39eacef9c1bf, type: 3}
+      propertyPath: onRTPressed.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2627840999588617721, guid: 4531b471b8efef94187c39eacef9c1bf, type: 3}
+      propertyPath: onRTPressed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShootArrow
+      objectReference: {fileID: 0}
+    - target: {fileID: 2627840999588617721, guid: 4531b471b8efef94187c39eacef9c1bf, type: 3}
+      propertyPath: onRTPressed.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FoolPlayer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2627840999588617721, guid: 4531b471b8efef94187c39eacef9c1bf, type: 3}
+      propertyPath: onRTPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2805696189871630996, guid: 4531b471b8efef94187c39eacef9c1bf, type: 3}
       propertyPath: m_Name
       value: P4Cursor
@@ -1424,6 +1452,34 @@ PrefabInstance:
     - target: {fileID: 8456480783204711806, guid: 2ed68b809dc085e4db1377284aa87c4c, type: 3}
       propertyPath: maxSpeed
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8456480783204711806, guid: 2ed68b809dc085e4db1377284aa87c4c, type: 3}
+      propertyPath: onRTPressed.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8456480783204711806, guid: 2ed68b809dc085e4db1377284aa87c4c, type: 3}
+      propertyPath: onRTPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8456480783204711806, guid: 2ed68b809dc085e4db1377284aa87c4c, type: 3}
+      propertyPath: onRTPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1618608832}
+    - target: {fileID: 8456480783204711806, guid: 2ed68b809dc085e4db1377284aa87c4c, type: 3}
+      propertyPath: onRTPressed.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8456480783204711806, guid: 2ed68b809dc085e4db1377284aa87c4c, type: 3}
+      propertyPath: onRTPressed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShootArrow
+      objectReference: {fileID: 0}
+    - target: {fileID: 8456480783204711806, guid: 2ed68b809dc085e4db1377284aa87c4c, type: 3}
+      propertyPath: onRTPressed.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FoolPlayer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8456480783204711806, guid: 2ed68b809dc085e4db1377284aa87c4c, type: 3}
+      propertyPath: onRTPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8629836768206490131, guid: 2ed68b809dc085e4db1377284aa87c4c, type: 3}
       propertyPath: m_Name

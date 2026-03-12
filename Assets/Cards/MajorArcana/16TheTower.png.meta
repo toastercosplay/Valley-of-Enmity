@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 60f1029aeddaa4a49b0bdb0b5719d727
+guid: 50fa7c8f62f3c1545a997c46cb9c4619
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8120162299216254327
-    second: Untitled_Artwork (75)_0
+      213: 6746431702264617241
+    second: 16TheTower_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Untitled_Artwork (75)_0
+      name: 16TheTower_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 960
-        height: 600
+        width: 825
+        height: 1425
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 775dd43b69c90b070800000000000000
-      internalID: 8120162299216254327
+      spriteID: 9199aea93e320ad50800000000000000
+      internalID: 6746431702264617241
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Untitled_Artwork (75)_0: 8120162299216254327
+      16TheTower_0: 6746431702264617241
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
