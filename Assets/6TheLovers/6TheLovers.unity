@@ -1166,7 +1166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DepositBox
   boxIndex: 1
   holding: {fileID: 0}
-  loverPlayer: {fileID: 0}
+  loverPlayer: {fileID: 336262696}
   playerIsOverhead: 0
 --- !u!54 &101850837
 Rigidbody:
@@ -3760,7 +3760,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DepositBox
   boxIndex: 2
   holding: {fileID: 0}
-  loverPlayer: {fileID: 0}
+  loverPlayer: {fileID: 336262696}
   playerIsOverhead: 0
 --- !u!54 &426696812
 Rigidbody:
@@ -3977,7 +3977,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &545482132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4425,7 +4425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DepositBox
   boxIndex: 0
   holding: {fileID: 0}
-  loverPlayer: {fileID: 0}
+  loverPlayer: {fileID: 336262696}
   playerIsOverhead: 0
 --- !u!54 &624741853
 Rigidbody:
@@ -6848,7 +6848,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DepositBox
   boxIndex: 3
   holding: {fileID: 0}
-  loverPlayer: {fileID: 0}
+  loverPlayer: {fileID: 237680120}
   playerIsOverhead: 0
 --- !u!54 &1102834782
 Rigidbody:
@@ -6959,7 +6959,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DepositBox
   boxIndex: 2
   holding: {fileID: 0}
-  loverPlayer: {fileID: 0}
+  loverPlayer: {fileID: 237680120}
   playerIsOverhead: 0
 --- !u!54 &1117555495
 Rigidbody:
@@ -7211,7 +7211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DepositBox
   boxIndex: 0
   holding: {fileID: 0}
-  loverPlayer: {fileID: 0}
+  loverPlayer: {fileID: 237680120}
   playerIsOverhead: 0
 --- !u!54 &1158458820
 Rigidbody:
@@ -10830,7 +10830,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DepositBox
   boxIndex: 1
   holding: {fileID: 0}
-  loverPlayer: {fileID: 0}
+  loverPlayer: {fileID: 237680120}
   playerIsOverhead: 0
 --- !u!54 &1686608598
 Rigidbody:
@@ -13186,7 +13186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DepositBox
   boxIndex: 3
   holding: {fileID: 0}
-  loverPlayer: {fileID: 0}
+  loverPlayer: {fileID: 336262696}
   playerIsOverhead: 0
 --- !u!54 &1938248796
 Rigidbody:
@@ -13883,7 +13883,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2012604956
 MonoBehaviour:
   m_ObjectHideFlags: 0

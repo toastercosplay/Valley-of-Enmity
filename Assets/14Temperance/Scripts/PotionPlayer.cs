@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PotionPlayer : MonoBehaviour
 {
-    Collectible currentItem = null;
+    TempCollect currentItem = null;
     bool isHoldingItem = false;
     [SerializeField] PotionBrewing potionBrewing = null;
 
@@ -21,7 +21,7 @@ public class PotionPlayer : MonoBehaviour
         if (other.gameObject.CompareTag("Item") && !isHoldingItem)
         {
             isHoldingItem = true;
-            currentItem = other.gameObject.GetComponent<Collectible>();
+            currentItem = other.gameObject.GetComponent<TempCollect>();
             return;
         }
 

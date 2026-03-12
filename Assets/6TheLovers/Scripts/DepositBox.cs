@@ -15,7 +15,7 @@ public class DepositBox : MonoBehaviour
     {
         if (holding != null)
         {
-            holding.BePickedUp(transform.position);
+            holding.BePickedUp(transform.position, this.gameObject);
         }
     }
 

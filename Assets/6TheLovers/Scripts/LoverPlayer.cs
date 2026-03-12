@@ -16,7 +16,7 @@ public class LoverPlayer : MonoBehaviour
     {
         if (isHoldingItem && currentItem != null)
         {
-            currentItem.BePickedUp(transform.position);
+            currentItem.BePickedUp(transform.position, this.gameObject);
         }
     }
 
@@ -37,7 +37,7 @@ public class LoverPlayer : MonoBehaviour
                 return;
             }
 
-            currentItem.BePickedUp(transform.position);
+            currentItem.BePickedUp(transform.position, this.gameObject);
             isHoldingItem = true;
             hoveredItem = null;
             return;
@@ -55,7 +55,7 @@ public class LoverPlayer : MonoBehaviour
             {
                 Vector2 dropOffset = new Vector2(0f, -1f);
                 Vector2 newItemPosition = (Vector2)transform.position + dropOffset;
-                currentItem.BePickedUp(newItemPosition);
+                currentItem.BePickedUp(newItemPosition, this.gameObject);
             }
 
             isHoldingItem = false;
@@ -66,13 +66,15 @@ public class LoverPlayer : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        //Debug.Log("LoverPlayer collided with: " + other.gameObject.name);
-
         if (other.gameObject.CompareTag("Item") && !isHoldingItem)
         {
-            //isHoldingItem = true;
-            hoveredItem = other.gameObject.GetComponent<Collectible>();
-            return;
+            Collectible item = other.gameObject.GetComponent<Collectible>();
+            
+            // Only allow hovering if the item is currently unowned
+            if (item != null && item.currentOwner == null)
+            {
+                hoveredItem = item;
+            }
         }
     }
 
