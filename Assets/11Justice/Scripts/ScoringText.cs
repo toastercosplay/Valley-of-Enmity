@@ -7,6 +7,8 @@ public class ScoringText : MonoBehaviour
     public static ScoringText instance;
     [SerializeField] private TextMeshProUGUI player1ScoreText;
     [SerializeField] private TextMeshProUGUI player2ScoreText;
+    [SerializeField] private TextMeshProUGUI player3ScoreText;
+    [SerializeField] private TextMeshProUGUI player4ScoreText;
     private int[] scores = new int[4];
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -14,6 +16,8 @@ public class ScoringText : MonoBehaviour
     {
         player1ScoreText.text = scores[0].ToString();
         player2ScoreText.text = scores[1].ToString();
+        player3ScoreText.text = scores[2].ToString();
+        player4ScoreText.text = scores[3].ToString();
     }
 
     // Update is called once per frame
@@ -41,6 +45,14 @@ public class ScoringText : MonoBehaviour
         else if (playerIndex == 1)
         {
             player2ScoreText.text = scores[1].ToString();
+        }
+        else if (playerIndex == 2)
+        {
+            player3ScoreText.text = scores[2].ToString();
+        }
+        else if (playerIndex == 3)
+        {
+            player3ScoreText.text = scores[3].ToString();
         }
     }
 }
