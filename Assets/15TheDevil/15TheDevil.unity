@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 2267410}
   - component: {fileID: 2267409}
   m_Layer: 5
-  m_Name: Panel (1)
+  m_Name: p2RedFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -251,7 +251,7 @@ GameObject:
   - component: {fileID: 161017833}
   - component: {fileID: 161017832}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: p1scoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -407,6 +407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   player1: {fileID: 1939895858}
   player2: {fileID: 107135378}
+  player3: {fileID: 0}
   cardList:
   - {fileID: 0}
   - {fileID: 0}
@@ -522,7 +523,7 @@ GameObject:
   - component: {fileID: 320872200}
   - component: {fileID: 320872199}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: p1RedFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -597,7 +598,7 @@ GameObject:
   - component: {fileID: 570948598}
   - component: {fileID: 570948597}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: countdownText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -813,7 +814,7 @@ GameObject:
   - component: {fileID: 865172533}
   - component: {fileID: 865172532}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: p2scoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6346,34 +6347,6 @@ MonoBehaviour:
     m_ActionName: Player1/RightTrigger
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 2bb2e1a6-76f9-4480-8c3b-c146d5bc8305
-    m_ActionName: 'Player3/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: b1fab2ef-d803-4450-906f-ec109eff58d7
-    m_ActionName: Player3/Look
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 15536dad-0ff8-49e7-b593-9f2477d5ed60
-    m_ActionName: Player3/A
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 52dd530e-ed3b-4819-a413-f246badc630b
-    m_ActionName: Player3/B
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: c95bd8a7-9f01-41c0-bda1-f9e9da9e98a8
-    m_ActionName: Player3/X
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 119b1a1f-4735-43e9-b5dd-8d925623168f
-    m_ActionName: Player3/Y
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: bb174358-5901-490d-a732-9b4eef7c8030
-    m_ActionName: Player3/RightTrigger
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: 6a2606ed-1d46-4a58-b62c-ac5354e5e7cd
     m_ActionName: 'UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
   - m_PersistentCalls:
@@ -6440,6 +6413,62 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 747b00af-291a-4e8e-a2c2-0a058b45b7db
     m_ActionName: Player2/RightTrigger
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 923638b2-57a1-4daa-9534-8a1b693c4c8f
+    m_ActionName: 'Player3/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2cd09567-8fb0-4c3c-90d1-c76adb5a87ae
+    m_ActionName: Player3/Look
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c6851374-1dac-48e7-bdb6-481436036ffb
+    m_ActionName: Player3/A
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 093bfa27-329f-47c0-8aed-efb15254bfcc
+    m_ActionName: Player3/B
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7142e267-86bf-4814-9d3e-d3ffa6c9800b
+    m_ActionName: Player3/X
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 695f8102-ef5a-40e4-ab62-d22d680684bf
+    m_ActionName: Player3/Y
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 95531ed1-5387-4f02-921f-a6e3cc0a3fff
+    m_ActionName: Player3/RightTrigger
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0c1984c1-025f-494a-a55a-85fe3cdf8f36
+    m_ActionName: 'Player4/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f3024e52-9d68-4b6a-86a2-52d99d382c86
+    m_ActionName: Player4/Look
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bf3df625-e4f6-4a4f-96a8-86c45edfd1a7
+    m_ActionName: Player4/A
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3d43c912-a303-42f7-80bb-66017e0b0614
+    m_ActionName: Player4/B
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f058af92-9183-4db1-9dd4-1169430ca293
+    m_ActionName: Player4/X
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 93374026-7e86-4ce5-bfc1-3a99a59c5292
+    m_ActionName: Player4/Y
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 18b84037-902d-4537-9b6b-1be00536f62d
+    m_ActionName: Player4/RightTrigger
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player1
