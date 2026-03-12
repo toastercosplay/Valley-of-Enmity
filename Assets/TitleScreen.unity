@@ -152,8 +152,11 @@ MonoBehaviour:
   player1: {fileID: 1592483905}
   player2: {fileID: 935331522}
   player3: {fileID: 0}
+  player4: {fileID: 0}
   cardList:
   - {fileID: 7709118123446550073, guid: 18cdc974fc75be64b943f3d67f6708de, type: 3}
+  - {fileID: 8417072814907389845, guid: a7b7ef53da88b044aadc9a14bad7ddb5, type: 3}
+  - {fileID: 8197723452066880357, guid: ea53996799dcf9f499f2aa28df7a822a, type: 3}
   - {fileID: 4392925064412045008, guid: 25578793c1b34284cad1c5e49df44e8e, type: 3}
   - {fileID: 1442807215313116753, guid: e287f0fef40069549bc37e39c3352c80, type: 3}
   spawnDelay: 5

@@ -146,7 +146,7 @@ public class PotionBrewing : MonoBehaviour
         instructions.SetActive(false);
     }
 
-    public void addItem(Collectible item)
+    public void addItem(TempCollect item)
     {
         if (!hasFlower)
         {

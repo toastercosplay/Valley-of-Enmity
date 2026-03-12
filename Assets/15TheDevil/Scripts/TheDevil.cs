@@ -1,41 +1,55 @@
 using UnityEngine;
 using TMPro;
+using System.Collections.Generic;
 
 public class TheDevil : MonoBehaviour
 {
     [Header("Game Settings")]
-    [SerializeField] float totalTimeLimit = 30f;
+    [SerializeField] float totalTimeLimit = 15f;
     [SerializeField] float countdownTime = 3f;
     [SerializeField] float outOfOrderPenalty = 2f;
 
     [Header("References")]
-    [SerializeField] DevilPlayer playerOne;
-    [SerializeField] DevilPlayer playerTwo;
+    [SerializeField] DevilPlayer[] players = new DevilPlayer[4];
 
     [Header("UI")]
-    [SerializeField] TMP_Text playerOneTimeText;
-    [SerializeField] TMP_Text playerTwoTimeText;
+    [SerializeField] TMP_Text[] playerTimeTexts = new TMP_Text[4];
     [SerializeField] TMP_Text countdownText;
 
     GameManager gameManager;
 
-    int currentPlayerTurn; // 0 = waiting to start, 1 = player one's turn, 2 = player two's turn
+    int playerCount;
+    int currentPlayerTurn; // 0-(playerCount-1), -1 = waiting to start
     bool gameStarted;
     bool gameEnded;
     float countdownTimer;
 
-    float playerOneTime;
-    float playerTwoTime;
+    float[] playerTimes;
 
     void Start()
     {
         gameManager = GameManager.Instance;
         countdownTimer = countdownTime;
-        currentPlayerTurn = 0;
+        currentPlayerTurn = -1;
         gameStarted = false;
         gameEnded = false;
-        playerOneTime = 0f;
-        playerTwoTime = 0f;
+
+        playerCount = GetPlayerCount();
+        playerTimes = new float[playerCount];
+    }
+
+    int GetPlayerCount()
+    {
+        if (GameManager.Instance != null)
+        {
+            int count = 2;
+            if (GameManager.Instance.player3 != null && GameManager.Instance.player3.gameObject.activeSelf)
+                count = 3;
+            if (GameManager.Instance.player4 != null && GameManager.Instance.player4.gameObject.activeSelf)
+                count = 4;
+            return count;
+        }
+        return 2;
     }
 
     void Update()
@@ -55,12 +69,14 @@ public class TheDevil : MonoBehaviour
             return;
         }
 
-        if (currentPlayerTurn == 1)
-            playerOneTime += Time.deltaTime;
-        else
-            playerTwoTime += Time.deltaTime;
+        if (currentPlayerTurn >= 0)
+            playerTimes[currentPlayerTurn] += Time.deltaTime;
 
-        if (playerOneTime + playerTwoTime >= totalTimeLimit)
+        float totalTime = 0f;
+        for (int i = 0; i < playerCount; i++)
+            totalTime += playerTimes[i];
+
+        if (totalTime >= totalTimeLimit)
         {
             EndGame();
             return;
@@ -71,10 +87,9 @@ public class TheDevil : MonoBehaviour
 
     void UpdateUI()
     {
-        if (playerOneTimeText != null)
-            playerOneTimeText.text = FormatTime(playerOneTime);
-        if (playerTwoTimeText != null)
-            playerTwoTimeText.text = FormatTime(playerTwoTime);
+        for (int i = 0; i < playerCount; i++)
+            if (playerTimeTexts[i] != null)
+                playerTimeTexts[i].text = FormatTime(playerTimes[i]);
     }
 
     string FormatTime(float time)
@@ -88,91 +103,55 @@ public class TheDevil : MonoBehaviour
     void StartGame()
     {
         gameStarted = true;
-        currentPlayerTurn = 1;
+        currentPlayerTurn = 0;
 
-        playerOne.SetActive(true);
-        playerTwo.SetActive(false);
+        for (int i = 0; i < playerCount; i++)
+            players[i].SetActive(i == 0);
     }
 
     public void OnPlayerClick(DevilPlayer player)
     {
         if (!gameStarted || gameEnded) return;
 
-        int playerNumber = (player == playerOne) ? 1 : 2;
+        int playerNumber = System.Array.IndexOf(players, player);
 
         if (playerNumber == currentPlayerTurn)
         {
-            ApplyPenalty(player);
+            ApplyPenalty(playerNumber);
             return;
         }
 
-        SwitchTurn();
+        SwitchTurn(playerNumber);
+        
     }
 
-    void SwitchTurn()
+    void SwitchTurn(int playerNumber)
     {
-
-        if (currentPlayerTurn == 1)
-        {
-            currentPlayerTurn = 2;
-            playerOne.SetActive(false);
-            playerTwo.SetActive(true);
-        }
-        else
-        {
-            currentPlayerTurn = 1;
-            playerOne.SetActive(true);
-            playerTwo.SetActive(false);
-        }
+        players[currentPlayerTurn].SetActive(false);
+        currentPlayerTurn = playerNumber;
+        players[currentPlayerTurn].SetActive(true);
     }
 
-    void ApplyPenalty(DevilPlayer player)
+    void ApplyPenalty(int playerIndex)
     {
-        if (player == playerOne)
-        {
-            playerOneTime = Mathf.Max(0f, playerOneTime - outOfOrderPenalty);
-            playerOne.OnPenalty();
-        }
-        else
-        {
-            playerTwoTime = Mathf.Max(0f, playerTwoTime - outOfOrderPenalty);
-            playerTwo.OnPenalty();
-        }
-
+        playerTimes[playerIndex] = Mathf.Max(0f, playerTimes[playerIndex] - outOfOrderPenalty);
+        players[playerIndex].OnPenalty();
     }
 
     void EndGame()
     {
         gameEnded = true;
 
-        playerOne.SetActive(false);
-        playerTwo.SetActive(false);
+        for (int i = 0; i < playerCount; i++)
+            players[i].SetActive(false);
 
-        if (playerOneTimeText != null)
-        {
-            playerOneTimeText.text = FormatTime(playerOneTime);
-        }
-        if (playerTwoTimeText != null)
-        {
-            playerTwoTimeText.text = FormatTime(playerTwoTime);
-        }
+        int winner = 0;
+        for (int i = 1; i < playerCount; i++)
+            if (playerTimes[i] > playerTimes[winner])
+                winner = i;
 
-        if (playerOneTime > playerTwoTime)
-        {
-            playerOne.SetResult(1); // Success
-            playerTwo.SetResult(3); // Failure
-        }
-        else if (playerTwoTime > playerOneTime)
-        {
-            playerOne.SetResult(3); // Failure
-            playerTwo.SetResult(1); // Success
-        }
-        //pretty sure this else is basically impossible but if we want to switch to a diff scoring than just raw comparing the floats this might be useful
-        else
-        {
-            playerOne.SetResult(2); // Neutral
-            playerTwo.SetResult(2); // Neutral
-        }
+        for (int i = 0; i < playerCount; i++)
+            players[i].SetResult(i == winner ? 1 : 3);
 
         Invoke(nameof(FinishGame), 2f);
     }
