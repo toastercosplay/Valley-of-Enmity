@@ -20,6 +20,9 @@ public class CardHandUI : MonoBehaviour
     PlayerData playerData;
 
     [SerializeField] GameObject objectToOn;
+    [SerializeField] GameObject objectToOff1;
+    [SerializeField] GameObject objectToOff2;
+    [SerializeField] GameObject objectToOff3;
 
     PlayerInput playerInput;
 
@@ -79,12 +82,17 @@ public class CardHandUI : MonoBehaviour
             playerData.SetCharacter(0);
         }
 
-        if (playerName == "Player2Data")
+        //andrew spent hours here- fix this john later
+        if (playerName == "Player4Data")
         {
-            playerInput.user.UnpairDevices();
+             //playerInput.user.UnpairDevices();
+             objectToOff1.SetActive(false);
+             objectToOff2.SetActive(false);
+             objectToOff3.SetActive(false);
+             this.gameObject.SetActive(false);
         }
         objectToOn.SetActive(true);
-        this.gameObject.SetActive(false);
+        //
 
     }
 

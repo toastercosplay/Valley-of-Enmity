@@ -151,8 +151,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   player1: {fileID: 1592483905}
   player2: {fileID: 935331522}
-  player3: {fileID: 0}
-  player4: {fileID: 0}
+  player3: {fileID: 1787825785}
+  player4: {fileID: 1326064799}
   cardList:
   - {fileID: 7709118123446550073, guid: 18cdc974fc75be64b943f3d67f6708de, type: 3}
   - {fileID: 8417072814907389845, guid: a7b7ef53da88b044aadc9a14bad7ddb5, type: 3}
@@ -633,7 +633,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bc6b8592c2885c84cbbd143b4e8c2111, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 108129e9b93675748831969b04f07575, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -858,7 +858,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bc6b8592c2885c84cbbd143b4e8c2111, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 108129e9b93675748831969b04f07575, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -963,6 +963,7 @@ GameObject:
   - component: {fileID: 770595882}
   - component: {fileID: 770595881}
   - component: {fileID: 770595880}
+  - component: {fileID: 770595883}
   m_Layer: 5
   m_Name: P3 Hand
   m_TagString: Untagged
@@ -1184,19 +1185,7 @@ MonoBehaviour:
     m_ActionId: 892ff973-c47c-4ce5-b901-0bc7e9180429
     m_ActionName: Player1/Y
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 770595882}
-        m_TargetAssemblyTypeName: CardHandUI, Assembly-CSharp
-        m_MethodName: OnMove
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 3ecfaf75-8770-41ca-93e2-219731ad93ad
     m_ActionName: Player2/Move
   - m_PersistentCalls:
@@ -1204,19 +1193,7 @@ MonoBehaviour:
     m_ActionId: c2a275f9-8b08-493b-8e37-53460f4ac177
     m_ActionName: Player2/Look
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 770595882}
-        m_TargetAssemblyTypeName: CardHandUI, Assembly-CSharp
-        m_MethodName: OnA
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 1c195ad7-8685-41f2-969f-fad003e02d40
     m_ActionName: Player2/A
   - m_PersistentCalls:
@@ -1236,36 +1213,94 @@ MonoBehaviour:
     m_ActionId: 747b00af-291a-4e8e-a2c2-0a058b45b7db
     m_ActionName: Player2/RightTrigger
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 2bb2e1a6-76f9-4480-8c3b-c146d5bc8305
-    m_ActionName: 'Player3/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+      m_Calls:
+      - m_Target: {fileID: 770595882}
+        m_TargetAssemblyTypeName: CardHandUI, Assembly-CSharp
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 923638b2-57a1-4daa-9534-8a1b693c4c8f
+    m_ActionName: 'Player3/Move[/SwitchProControllerHID/leftStick,/SwitchProControllerHID2/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/stick]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: b1fab2ef-d803-4450-906f-ec109eff58d7
-    m_ActionName: Player3/Look
+    m_ActionId: 2cd09567-8fb0-4c3c-90d1-c76adb5a87ae
+    m_ActionName: 'Player3/Look[/SwitchProControllerHID/rightStick,/SwitchProControllerHID2/rightStick,/Mouse/delta,/Touchscreen/delta]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 770595882}
+        m_TargetAssemblyTypeName: CardHandUI, Assembly-CSharp
+        m_MethodName: OnA
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c6851374-1dac-48e7-bdb6-481436036ffb
+    m_ActionName: 'Player3/A[/SwitchProControllerHID/buttonEast,/SwitchProControllerHID2/buttonEast,/Mouse/leftButton,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button3]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 15536dad-0ff8-49e7-b593-9f2477d5ed60
-    m_ActionName: Player3/A
+    m_ActionId: 093bfa27-329f-47c0-8aed-efb15254bfcc
+    m_ActionName: 'Player3/B[/SwitchProControllerHID/buttonSouth,/SwitchProControllerHID2/buttonSouth,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button2]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 52dd530e-ed3b-4819-a413-f246badc630b
-    m_ActionName: Player3/B
+    m_ActionId: 7142e267-86bf-4814-9d3e-d3ffa6c9800b
+    m_ActionName: 'Player3/X[/SwitchProControllerHID/buttonNorth,/SwitchProControllerHID2/buttonNorth]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: c95bd8a7-9f01-41c0-bda1-f9e9da9e98a8
-    m_ActionName: Player3/X
+    m_ActionId: 695f8102-ef5a-40e4-ab62-d22d680684bf
+    m_ActionName: 'Player3/Y[/SwitchProControllerHID/buttonWest,/SwitchProControllerHID2/buttonWest]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 119b1a1f-4735-43e9-b5dd-8d925623168f
-    m_ActionName: Player3/Y
+    m_ActionId: 95531ed1-5387-4f02-921f-a6e3cc0a3fff
+    m_ActionName: 'Player3/RightTrigger[/SwitchProControllerHID/rightTrigger,/SwitchProControllerHID2/rightTrigger]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: bb174358-5901-490d-a732-9b4eef7c8030
-    m_ActionName: Player3/RightTrigger
+    m_ActionId: 0c1984c1-025f-494a-a55a-85fe3cdf8f36
+    m_ActionName: 'Player4/Move[/SwitchProControllerHID/leftStick,/SwitchProControllerHID2/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/stick]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f3024e52-9d68-4b6a-86a2-52d99d382c86
+    m_ActionName: 'Player4/Look[/SwitchProControllerHID/rightStick,/SwitchProControllerHID2/rightStick,/Mouse/delta,/Touchscreen/delta]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bf3df625-e4f6-4a4f-96a8-86c45edfd1a7
+    m_ActionName: 'Player4/A[/SwitchProControllerHID/buttonEast,/SwitchProControllerHID2/buttonEast,/Mouse/leftButton,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button3]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3d43c912-a303-42f7-80bb-66017e0b0614
+    m_ActionName: 'Player4/B[/SwitchProControllerHID/buttonSouth,/SwitchProControllerHID2/buttonSouth,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button2]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f058af92-9183-4db1-9dd4-1169430ca293
+    m_ActionName: 'Player4/X[/SwitchProControllerHID/buttonNorth,/SwitchProControllerHID2/buttonNorth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 93374026-7e86-4ce5-bfc1-3a99a59c5292
+    m_ActionName: 'Player4/Y[/SwitchProControllerHID/buttonWest,/SwitchProControllerHID2/buttonWest]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 18b84037-902d-4537-9b6b-1be00536f62d
+    m_ActionName: 'Player4/RightTrigger[/SwitchProControllerHID/rightTrigger,/SwitchProControllerHID2/rightTrigger]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Gamepad
-  m_DefaultActionMap: Player2
+  m_DefaultActionMap: Player3
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &770595882
@@ -1289,7 +1324,22 @@ MonoBehaviour:
   raisedHeight: 40
   moveThreshold: 0.3
   playerName: Player3Data
-  objectToOn: {fileID: 1320609711}
+  objectToOn: {fileID: 1370910766}
+  objectToOff1: {fileID: 0}
+  objectToOff2: {fileID: 0}
+  objectToOff3: {fileID: 0}
+--- !u!114 &770595883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770595878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74248f2d7f3b5e64ea4f92d2b5000c15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::test
 --- !u!1 &886822600
 GameObject:
   m_ObjectHideFlags: 0
@@ -1302,6 +1352,7 @@ GameObject:
   - component: {fileID: 886822603}
   - component: {fileID: 886822602}
   - component: {fileID: 886822604}
+  - component: {fileID: 886822605}
   m_Layer: 5
   m_Name: P2 Hand
   m_TagString: Untagged
@@ -1479,32 +1530,66 @@ MonoBehaviour:
     m_ActionName: Player2/RightTrigger
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 2bb2e1a6-76f9-4480-8c3b-c146d5bc8305
-    m_ActionName: 'Player3/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+    m_ActionId: 923638b2-57a1-4daa-9534-8a1b693c4c8f
+    m_ActionName: 'Player3/Move[/SwitchProControllerHID/leftStick,/SwitchProControllerHID2/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/stick]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: b1fab2ef-d803-4450-906f-ec109eff58d7
-    m_ActionName: Player3/Look
+    m_ActionId: 2cd09567-8fb0-4c3c-90d1-c76adb5a87ae
+    m_ActionName: 'Player3/Look[/SwitchProControllerHID/rightStick,/SwitchProControllerHID2/rightStick,/Mouse/delta,/Touchscreen/delta]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 15536dad-0ff8-49e7-b593-9f2477d5ed60
-    m_ActionName: Player3/A
+    m_ActionId: c6851374-1dac-48e7-bdb6-481436036ffb
+    m_ActionName: 'Player3/A[/SwitchProControllerHID/buttonEast,/SwitchProControllerHID2/buttonEast,/Mouse/leftButton,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button3]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 52dd530e-ed3b-4819-a413-f246badc630b
-    m_ActionName: Player3/B
+    m_ActionId: 093bfa27-329f-47c0-8aed-efb15254bfcc
+    m_ActionName: 'Player3/B[/SwitchProControllerHID/buttonSouth,/SwitchProControllerHID2/buttonSouth,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button2]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: c95bd8a7-9f01-41c0-bda1-f9e9da9e98a8
-    m_ActionName: Player3/X
+    m_ActionId: 7142e267-86bf-4814-9d3e-d3ffa6c9800b
+    m_ActionName: 'Player3/X[/SwitchProControllerHID/buttonNorth,/SwitchProControllerHID2/buttonNorth]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 119b1a1f-4735-43e9-b5dd-8d925623168f
-    m_ActionName: Player3/Y
+    m_ActionId: 695f8102-ef5a-40e4-ab62-d22d680684bf
+    m_ActionName: 'Player3/Y[/SwitchProControllerHID/buttonWest,/SwitchProControllerHID2/buttonWest]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: bb174358-5901-490d-a732-9b4eef7c8030
-    m_ActionName: Player3/RightTrigger
+    m_ActionId: 95531ed1-5387-4f02-921f-a6e3cc0a3fff
+    m_ActionName: 'Player3/RightTrigger[/SwitchProControllerHID/rightTrigger,/SwitchProControllerHID2/rightTrigger]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0c1984c1-025f-494a-a55a-85fe3cdf8f36
+    m_ActionName: 'Player4/Move[/SwitchProControllerHID/leftStick,/SwitchProControllerHID2/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/stick]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f3024e52-9d68-4b6a-86a2-52d99d382c86
+    m_ActionName: 'Player4/Look[/SwitchProControllerHID/rightStick,/SwitchProControllerHID2/rightStick,/Mouse/delta,/Touchscreen/delta]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bf3df625-e4f6-4a4f-96a8-86c45edfd1a7
+    m_ActionName: 'Player4/A[/SwitchProControllerHID/buttonEast,/SwitchProControllerHID2/buttonEast,/Mouse/leftButton,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button3]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3d43c912-a303-42f7-80bb-66017e0b0614
+    m_ActionName: 'Player4/B[/SwitchProControllerHID/buttonSouth,/SwitchProControllerHID2/buttonSouth,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button2]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f058af92-9183-4db1-9dd4-1169430ca293
+    m_ActionName: 'Player4/X[/SwitchProControllerHID/buttonNorth,/SwitchProControllerHID2/buttonNorth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 93374026-7e86-4ce5-bfc1-3a99a59c5292
+    m_ActionName: 'Player4/Y[/SwitchProControllerHID/buttonWest,/SwitchProControllerHID2/buttonWest]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 18b84037-902d-4537-9b6b-1be00536f62d
+    m_ActionName: 'Player4/RightTrigger[/SwitchProControllerHID/rightTrigger,/SwitchProControllerHID2/rightTrigger]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player2
@@ -1532,6 +1617,9 @@ MonoBehaviour:
   moveThreshold: 0.3
   playerName: Player2Data
   objectToOn: {fileID: 770595878}
+  objectToOff1: {fileID: 0}
+  objectToOff2: {fileID: 0}
+  objectToOff3: {fileID: 0}
 --- !u!82 &886822604
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1629,6 +1717,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &886822605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886822600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74248f2d7f3b5e64ea4f92d2b5000c15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::test
 --- !u!1 &915059361
 GameObject:
   m_ObjectHideFlags: 0
@@ -1806,7 +1906,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bc6b8592c2885c84cbbd143b4e8c2111, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 108129e9b93675748831969b04f07575, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2661,6 +2761,68 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 747b00af-291a-4e8e-a2c2-0a058b45b7db
     m_ActionName: Player2/RightTrigger
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 923638b2-57a1-4daa-9534-8a1b693c4c8f
+    m_ActionName: 'Player3/Move[/SwitchProControllerHID/leftStick,/SwitchProControllerHID2/leftStick,/SwitchProControllerHID1/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/stick]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2cd09567-8fb0-4c3c-90d1-c76adb5a87ae
+    m_ActionName: 'Player3/Look[/SwitchProControllerHID/rightStick,/SwitchProControllerHID2/rightStick,/SwitchProControllerHID1/rightStick,/Mouse/delta,/Touchscreen/delta]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c6851374-1dac-48e7-bdb6-481436036ffb
+    m_ActionName: 'Player3/A[/SwitchProControllerHID/buttonEast,/SwitchProControllerHID2/buttonEast,/SwitchProControllerHID1/buttonEast,/Mouse/leftButton,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button3]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 093bfa27-329f-47c0-8aed-efb15254bfcc
+    m_ActionName: 'Player3/B[/SwitchProControllerHID/buttonSouth,/SwitchProControllerHID2/buttonSouth,/SwitchProControllerHID1/buttonSouth,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button2]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7142e267-86bf-4814-9d3e-d3ffa6c9800b
+    m_ActionName: 'Player3/X[/SwitchProControllerHID/buttonNorth,/SwitchProControllerHID2/buttonNorth,/SwitchProControllerHID1/buttonNorth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 695f8102-ef5a-40e4-ab62-d22d680684bf
+    m_ActionName: 'Player3/Y[/SwitchProControllerHID/buttonWest,/SwitchProControllerHID2/buttonWest,/SwitchProControllerHID1/buttonWest]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 95531ed1-5387-4f02-921f-a6e3cc0a3fff
+    m_ActionName: 'Player3/RightTrigger[/SwitchProControllerHID/rightTrigger,/SwitchProControllerHID2/rightTrigger,/SwitchProControllerHID1/rightTrigger]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0c1984c1-025f-494a-a55a-85fe3cdf8f36
+    m_ActionName: 'Player4/Move[/SwitchProControllerHID/leftStick,/SwitchProControllerHID2/leftStick,/SwitchProControllerHID1/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/stick]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f3024e52-9d68-4b6a-86a2-52d99d382c86
+    m_ActionName: 'Player4/Look[/SwitchProControllerHID/rightStick,/SwitchProControllerHID2/rightStick,/SwitchProControllerHID1/rightStick,/Mouse/delta,/Touchscreen/delta]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bf3df625-e4f6-4a4f-96a8-86c45edfd1a7
+    m_ActionName: 'Player4/A[/SwitchProControllerHID/buttonEast,/SwitchProControllerHID2/buttonEast,/SwitchProControllerHID1/buttonEast,/Mouse/leftButton,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button3]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3d43c912-a303-42f7-80bb-66017e0b0614
+    m_ActionName: 'Player4/B[/SwitchProControllerHID/buttonSouth,/SwitchProControllerHID2/buttonSouth,/SwitchProControllerHID1/buttonSouth,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button2]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f058af92-9183-4db1-9dd4-1169430ca293
+    m_ActionName: 'Player4/X[/SwitchProControllerHID/buttonNorth,/SwitchProControllerHID2/buttonNorth,/SwitchProControllerHID1/buttonNorth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 93374026-7e86-4ce5-bfc1-3a99a59c5292
+    m_ActionName: 'Player4/Y[/SwitchProControllerHID/buttonWest,/SwitchProControllerHID2/buttonWest,/SwitchProControllerHID1/buttonWest]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 18b84037-902d-4537-9b6b-1be00536f62d
+    m_ActionName: 'Player4/RightTrigger[/SwitchProControllerHID/rightTrigger,/SwitchProControllerHID2/rightTrigger,/SwitchProControllerHID1/rightTrigger]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player1
@@ -2678,7 +2840,7 @@ GameObject:
   - component: {fileID: 1326064799}
   m_Layer: 0
   m_Name: Player4Data
-  m_TagString: Player2Data
+  m_TagString: Player4Data
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2723,6 +2885,7 @@ GameObject:
   - component: {fileID: 1370910770}
   - component: {fileID: 1370910769}
   - component: {fileID: 1370910768}
+  - component: {fileID: 1370910771}
   m_Layer: 5
   m_Name: P4 Hand
   m_TagString: Untagged
@@ -2944,19 +3107,7 @@ MonoBehaviour:
     m_ActionId: 892ff973-c47c-4ce5-b901-0bc7e9180429
     m_ActionName: Player1/Y
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1370910770}
-        m_TargetAssemblyTypeName: CardHandUI, Assembly-CSharp
-        m_MethodName: OnMove
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 3ecfaf75-8770-41ca-93e2-219731ad93ad
     m_ActionName: Player2/Move
   - m_PersistentCalls:
@@ -2964,19 +3115,7 @@ MonoBehaviour:
     m_ActionId: c2a275f9-8b08-493b-8e37-53460f4ac177
     m_ActionName: Player2/Look
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1370910770}
-        m_TargetAssemblyTypeName: CardHandUI, Assembly-CSharp
-        m_MethodName: OnA
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 1c195ad7-8685-41f2-969f-fad003e02d40
     m_ActionName: Player2/A
   - m_PersistentCalls:
@@ -2997,35 +3136,93 @@ MonoBehaviour:
     m_ActionName: Player2/RightTrigger
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 2bb2e1a6-76f9-4480-8c3b-c146d5bc8305
-    m_ActionName: 'Player3/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+    m_ActionId: 923638b2-57a1-4daa-9534-8a1b693c4c8f
+    m_ActionName: 'Player3/Move[/SwitchProControllerHID/leftStick,/SwitchProControllerHID2/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/stick]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: b1fab2ef-d803-4450-906f-ec109eff58d7
-    m_ActionName: Player3/Look
+    m_ActionId: 2cd09567-8fb0-4c3c-90d1-c76adb5a87ae
+    m_ActionName: 'Player3/Look[/SwitchProControllerHID/rightStick,/SwitchProControllerHID2/rightStick,/Mouse/delta,/Touchscreen/delta]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 15536dad-0ff8-49e7-b593-9f2477d5ed60
-    m_ActionName: Player3/A
+    m_ActionId: c6851374-1dac-48e7-bdb6-481436036ffb
+    m_ActionName: 'Player3/A[/SwitchProControllerHID/buttonEast,/SwitchProControllerHID2/buttonEast,/Mouse/leftButton,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button3]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 52dd530e-ed3b-4819-a413-f246badc630b
-    m_ActionName: Player3/B
+    m_ActionId: 093bfa27-329f-47c0-8aed-efb15254bfcc
+    m_ActionName: 'Player3/B[/SwitchProControllerHID/buttonSouth,/SwitchProControllerHID2/buttonSouth,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button2]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: c95bd8a7-9f01-41c0-bda1-f9e9da9e98a8
-    m_ActionName: Player3/X
+    m_ActionId: 7142e267-86bf-4814-9d3e-d3ffa6c9800b
+    m_ActionName: 'Player3/X[/SwitchProControllerHID/buttonNorth,/SwitchProControllerHID2/buttonNorth]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 119b1a1f-4735-43e9-b5dd-8d925623168f
-    m_ActionName: Player3/Y
+    m_ActionId: 695f8102-ef5a-40e4-ab62-d22d680684bf
+    m_ActionName: 'Player3/Y[/SwitchProControllerHID/buttonWest,/SwitchProControllerHID2/buttonWest]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: bb174358-5901-490d-a732-9b4eef7c8030
-    m_ActionName: Player3/RightTrigger
+    m_ActionId: 95531ed1-5387-4f02-921f-a6e3cc0a3fff
+    m_ActionName: 'Player3/RightTrigger[/SwitchProControllerHID/rightTrigger,/SwitchProControllerHID2/rightTrigger]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1370910770}
+        m_TargetAssemblyTypeName: CardHandUI, Assembly-CSharp
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0c1984c1-025f-494a-a55a-85fe3cdf8f36
+    m_ActionName: 'Player4/Move[/SwitchProControllerHID/leftStick,/SwitchProControllerHID2/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/stick]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f3024e52-9d68-4b6a-86a2-52d99d382c86
+    m_ActionName: 'Player4/Look[/SwitchProControllerHID/rightStick,/SwitchProControllerHID2/rightStick,/Mouse/delta,/Touchscreen/delta]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1370910770}
+        m_TargetAssemblyTypeName: CardHandUI, Assembly-CSharp
+        m_MethodName: OnA
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: bf3df625-e4f6-4a4f-96a8-86c45edfd1a7
+    m_ActionName: 'Player4/A[/SwitchProControllerHID/buttonEast,/SwitchProControllerHID2/buttonEast,/Mouse/leftButton,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button3]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3d43c912-a303-42f7-80bb-66017e0b0614
+    m_ActionName: 'Player4/B[/SwitchProControllerHID/buttonSouth,/SwitchProControllerHID2/buttonSouth,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button2]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f058af92-9183-4db1-9dd4-1169430ca293
+    m_ActionName: 'Player4/X[/SwitchProControllerHID/buttonNorth,/SwitchProControllerHID2/buttonNorth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 93374026-7e86-4ce5-bfc1-3a99a59c5292
+    m_ActionName: 'Player4/Y[/SwitchProControllerHID/buttonWest,/SwitchProControllerHID2/buttonWest]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 18b84037-902d-4537-9b6b-1be00536f62d
+    m_ActionName: 'Player4/RightTrigger[/SwitchProControllerHID/rightTrigger,/SwitchProControllerHID2/rightTrigger]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Gamepad
-  m_DefaultActionMap: Player2
+  m_DefaultActionMap: Player4
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &1370910770
@@ -3050,6 +3247,21 @@ MonoBehaviour:
   moveThreshold: 0.3
   playerName: Player4Data
   objectToOn: {fileID: 1320609711}
+  objectToOff1: {fileID: 2117926228}
+  objectToOff2: {fileID: 886822600}
+  objectToOff3: {fileID: 770595878}
+--- !u!114 &1370910771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370910766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74248f2d7f3b5e64ea4f92d2b5000c15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::test
 --- !u!1 &1375708625
 GameObject:
   m_ObjectHideFlags: 0
@@ -3107,7 +3319,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bc6b8592c2885c84cbbd143b4e8c2111, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 108129e9b93675748831969b04f07575, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3257,7 +3469,7 @@ GameObject:
   - component: {fileID: 1787825785}
   m_Layer: 0
   m_Name: Player3Data
-  m_TagString: Player2Data
+  m_TagString: Player3Data
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3452,6 +3664,7 @@ GameObject:
   - component: {fileID: 2117926231}
   - component: {fileID: 2117926230}
   - component: {fileID: 2117926232}
+  - component: {fileID: 2117926233}
   m_Layer: 5
   m_Name: P1 Hand
   m_TagString: Untagged
@@ -3629,34 +3842,68 @@ MonoBehaviour:
     m_ActionName: Player2/RightTrigger
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 2bb2e1a6-76f9-4480-8c3b-c146d5bc8305
-    m_ActionName: 'Player3/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+    m_ActionId: 923638b2-57a1-4daa-9534-8a1b693c4c8f
+    m_ActionName: 'Player3/Move[/SwitchProControllerHID/leftStick,/SwitchProControllerHID2/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/stick]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: b1fab2ef-d803-4450-906f-ec109eff58d7
-    m_ActionName: Player3/Look
+    m_ActionId: 2cd09567-8fb0-4c3c-90d1-c76adb5a87ae
+    m_ActionName: 'Player3/Look[/SwitchProControllerHID/rightStick,/SwitchProControllerHID2/rightStick,/Mouse/delta,/Touchscreen/delta]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 15536dad-0ff8-49e7-b593-9f2477d5ed60
-    m_ActionName: Player3/A
+    m_ActionId: c6851374-1dac-48e7-bdb6-481436036ffb
+    m_ActionName: 'Player3/A[/SwitchProControllerHID/buttonEast,/SwitchProControllerHID2/buttonEast,/Mouse/leftButton,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button3]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 52dd530e-ed3b-4819-a413-f246badc630b
-    m_ActionName: Player3/B
+    m_ActionId: 093bfa27-329f-47c0-8aed-efb15254bfcc
+    m_ActionName: 'Player3/B[/SwitchProControllerHID/buttonSouth,/SwitchProControllerHID2/buttonSouth,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button2]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: c95bd8a7-9f01-41c0-bda1-f9e9da9e98a8
-    m_ActionName: Player3/X
+    m_ActionId: 7142e267-86bf-4814-9d3e-d3ffa6c9800b
+    m_ActionName: 'Player3/X[/SwitchProControllerHID/buttonNorth,/SwitchProControllerHID2/buttonNorth]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 119b1a1f-4735-43e9-b5dd-8d925623168f
-    m_ActionName: Player3/Y
+    m_ActionId: 695f8102-ef5a-40e4-ab62-d22d680684bf
+    m_ActionName: 'Player3/Y[/SwitchProControllerHID/buttonWest,/SwitchProControllerHID2/buttonWest]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: bb174358-5901-490d-a732-9b4eef7c8030
-    m_ActionName: Player3/RightTrigger
+    m_ActionId: 95531ed1-5387-4f02-921f-a6e3cc0a3fff
+    m_ActionName: 'Player3/RightTrigger[/SwitchProControllerHID/rightTrigger,/SwitchProControllerHID2/rightTrigger]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0c1984c1-025f-494a-a55a-85fe3cdf8f36
+    m_ActionName: 'Player4/Move[/SwitchProControllerHID/leftStick,/SwitchProControllerHID2/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/stick]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f3024e52-9d68-4b6a-86a2-52d99d382c86
+    m_ActionName: 'Player4/Look[/SwitchProControllerHID/rightStick,/SwitchProControllerHID2/rightStick,/Mouse/delta,/Touchscreen/delta]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bf3df625-e4f6-4a4f-96a8-86c45edfd1a7
+    m_ActionName: 'Player4/A[/SwitchProControllerHID/buttonEast,/SwitchProControllerHID2/buttonEast,/Mouse/leftButton,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button3]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3d43c912-a303-42f7-80bb-66017e0b0614
+    m_ActionName: 'Player4/B[/SwitchProControllerHID/buttonSouth,/SwitchProControllerHID2/buttonSouth,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button2]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f058af92-9183-4db1-9dd4-1169430ca293
+    m_ActionName: 'Player4/X[/SwitchProControllerHID/buttonNorth,/SwitchProControllerHID2/buttonNorth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 93374026-7e86-4ce5-bfc1-3a99a59c5292
+    m_ActionName: 'Player4/Y[/SwitchProControllerHID/buttonWest,/SwitchProControllerHID2/buttonWest]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 18b84037-902d-4537-9b6b-1be00536f62d
+    m_ActionName: 'Player4/RightTrigger[/SwitchProControllerHID/rightTrigger,/SwitchProControllerHID2/rightTrigger]'
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Gamepad
+  m_DefaultControlScheme: Joystick
   m_DefaultActionMap: Player1
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -3682,6 +3929,9 @@ MonoBehaviour:
   moveThreshold: 0.3
   playerName: Player1Data
   objectToOn: {fileID: 886822600}
+  objectToOff1: {fileID: 0}
+  objectToOff2: {fileID: 0}
+  objectToOff3: {fileID: 0}
 --- !u!82 &2117926232
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3779,6 +4029,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2117926233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117926228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74248f2d7f3b5e64ea4f92d2b5000c15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::test
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

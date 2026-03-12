@@ -45,7 +45,7 @@ public class Selections : MonoBehaviour
         {
             selectionState = 3;
             hasDoneIt = true;
-            //Debug.Log("Set temp selection to 3");
+            Debug.Log("Set temp selection to 3");
         }
     }
 
@@ -114,11 +114,11 @@ public class Selections : MonoBehaviour
             }
             else if (selectionState == 1)
             {
-                if (tempSelection >= 2 && tempSelection <= 3)
-                {
+                //if (tempSelection >= 2 && tempSelection <= 3)
+                //{
                     gameManager.SetNumberOfPlayers(tempSelection);
                     selectionState = 2;
-                }
+                //}
 
                 playerInput.user.UnpairDevices();
                 hand1.SetActive(true);
@@ -133,6 +133,7 @@ public class Selections : MonoBehaviour
                 if (tempSelection == 3 || tempSelection == 5)
                 {
                     gameManager.SetNumberOfGames(tempSelection);
+                    Debug.Log("Set number of games to: " + tempSelection);
                     gameManager.StartGame();
                 }
             }

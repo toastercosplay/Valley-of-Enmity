@@ -3,11 +3,15 @@ using UnityEngine.InputSystem;
 
 public class test : MonoBehaviour
 {
+    PlayerInput playerInput;
+
     void Start()
     {
-        foreach (var device in InputSystem.devices)
+        playerInput = GetComponent<PlayerInput>();
+
+        foreach (var device in playerInput.devices)
         {
-            Debug.Log(device.displayName + " : " + device.layout);
+            //Debug.Log("Player device: " + device.displayName + " : " + device.layout);
         }
     }
 }

@@ -18,6 +18,20 @@ public class Scoring : MonoBehaviour
     int wandsTotal = 0;
     int wandsScore = 0;
 
+    PlayerData cupsPlayerData;
+    [SerializeField] TMP_Text cupsTotalText;
+    [SerializeField] TMP_Text cupsGainedText;
+    int cupsState = 0;
+    int cupsTotal = 0;
+    int cupsScore = 0;
+
+    PlayerData pentaclesPlayerData;
+    [SerializeField] TMP_Text pentaclesTotalText;
+    [SerializeField] TMP_Text pentaclesGainedText;
+    int pentaclesState = 0;
+    int pentaclesTotal = 0;
+    int pentaclesScore = 0;
+
     int updateTimer = 0;
 
     GameManager gameManager;
@@ -26,12 +40,17 @@ public class Scoring : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        swordsPlayerData = GameObject.FindGameObjectWithTag("Player2Data").GetComponent<PlayerData>();
-        wandsPlayerData = GameObject.FindGameObjectWithTag("Player1Data").GetComponent<PlayerData>();
+        swordsPlayerData = GameObject.FindGameObjectWithTag("Player1Data").GetComponent<PlayerData>();
+        wandsPlayerData = GameObject.FindGameObjectWithTag("Player2Data").GetComponent<PlayerData>();
+        cupsPlayerData = GameObject.FindGameObjectWithTag("Player3Data").GetComponent<PlayerData>();
+        pentaclesPlayerData = GameObject.FindGameObjectWithTag("Player4Data").GetComponent<PlayerData>();
         audioSource = GetComponent<AudioSource>();
 
         swordsTotal = swordsPlayerData.GetTotalScore();
         wandsTotal = wandsPlayerData.GetTotalScore(); //these will display initial scores
+        cupsTotal = cupsPlayerData.GetTotalScore();
+        pentaclesTotal = pentaclesPlayerData.GetTotalScore();
+
         gameManager = GameManager.Instance;
 
         retrieveFromBuffer();
@@ -54,6 +73,12 @@ public class Scoring : MonoBehaviour
         wandsTotalText.text = "" + wandsTotal;
         wandsGainedText.text = "+" + wandsScore;  
 
+        cupsTotalText.text = "" + cupsTotal;
+        cupsGainedText.text = "+" + cupsScore;
+
+        pentaclesTotalText.text = "" + pentaclesTotal;
+        pentaclesGainedText.text = "+" + pentaclesScore;
+
         updateTimer = 0;
 
         //CHANGE LATER TO RANDOMIZE FROM THREE
@@ -70,9 +95,22 @@ public class Scoring : MonoBehaviour
             wandsTotal++;
             //wandsScore--;
         }
+        if (cupsTotal < cupsPlayerData.GetTotalScore())
+        {
+            cupsTotal++;
+            //cupsScore--;
+        }
+        if (pentaclesTotal < pentaclesPlayerData.GetTotalScore())
+        {
+            pentaclesTotal++;
+            //pentaclesScore--;
+        }
+
 
         swordsScore--;
         wandsScore--;
+        cupsScore--;
+        pentaclesScore--;
 
         if (swordsScore < 1)
         {
@@ -82,8 +120,16 @@ public class Scoring : MonoBehaviour
         {
             wandsGainedText.text = "";
         }
+        if (cupsScore < 1)
+        {
+            cupsGainedText.text = "";
+        }
+        if (pentaclesScore < 1)
+        {
+            pentaclesGainedText.text = "";
+        }
 
-        if (wandsScore < -2 && swordsScore < -2)
+        if (wandsScore < -2 && swordsScore < -2 && cupsScore < -2 && pentaclesScore < -2)
         {
             //both done updating
             gameManager.BackToTable();
@@ -95,6 +141,8 @@ public class Scoring : MonoBehaviour
     {
         swordsState = swordsPlayerData.GetBufferState();
         wandsState = wandsPlayerData.GetBufferState();
+        cupsState = cupsPlayerData.GetBufferState();
+        pentaclesState = pentaclesPlayerData.GetBufferState();
     }
 
     public void DrawScoreCards()
@@ -129,6 +177,38 @@ public class Scoring : MonoBehaviour
         }
         wandsPlayerData.SetBufferState(0);
         wandsPlayerData.SetTotalScore(wandsTotal + wandsScore);
+
+        //cups player
+        if (cupsState == 1)
+        {
+            cupsScore = cupsPlayerData.Success();
+        }
+        else if (cupsState == 2)
+        {
+            cupsScore = cupsPlayerData.Neutral();
+        }
+        else if (cupsState == 3)
+        {
+            cupsScore = cupsPlayerData.Failure();
+        }
+        cupsPlayerData.SetBufferState(0);
+        cupsPlayerData.SetTotalScore(cupsTotal + cupsScore);
+
+        //pentacles player
+        if (pentaclesState == 1)
+        {
+            pentaclesScore = pentaclesPlayerData.Success();
+        }
+        else if (pentaclesState == 2)
+        {
+            pentaclesScore = pentaclesPlayerData.Neutral();
+        }
+        else if (pentaclesState == 3)
+        {
+            pentaclesScore = pentaclesPlayerData.Failure();
+        }
+        pentaclesPlayerData.SetBufferState(0);
+        pentaclesPlayerData.SetTotalScore(pentaclesTotal + pentaclesScore);
     }
 
     public void PlaySound()
