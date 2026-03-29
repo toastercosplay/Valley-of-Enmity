@@ -973,6 +973,8 @@ MonoBehaviour:
   - {fileID: 1948065232}
   - {fileID: 553149872}
   - {fileID: 991464064}
+  - {fileID: 507497297}
+  - {fileID: 1832636043}
   objectsToDisable:
   - {fileID: 599657590}
   delayInSeconds: 7
@@ -1186,7 +1188,7 @@ MonoBehaviour:
     m_ActionId: 18b84037-902d-4537-9b6b-1be00536f62d
     m_ActionName: 'Player4/RightTrigger[/SwitchProControllerHID/rightTrigger]'
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Gamepad
+  m_DefaultControlScheme: Joystick
   m_DefaultActionMap: Player1
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -1349,7 +1351,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &819883592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1693,7 +1695,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &907039591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2290,7 +2292,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1613626970
 Animator:
   serializedVersion: 7
@@ -2836,7 +2838,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1869570607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2964,7 +2966,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1935750692
 MonoBehaviour:
   m_ObjectHideFlags: 0

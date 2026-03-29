@@ -18,8 +18,20 @@ EditorBuildSettings:
     path: Assets/0TheFool/0TheFool.unity
     guid: 90cf77bb1a747c544bc0404ccb581311
   - enabled: 1
+    path: Assets/9TheHermit/9TheHermit.unity
+    guid: 8457cc7be7b097b4d939763937ff48c7
+  - enabled: 1
     path: Assets/14Temperance/14Temperance.unity
     guid: 806cff501a75de6489bdb860382e2cc4
+  - enabled: 1
+    path: Assets/16TheTower/16TheTower.unity
+    guid: e44a2b85fb7ec6a4ea72def668e7c2a5
+  - enabled: 1
+    path: Assets/17TheStar/17TheStar.unity
+    guid: a337da831d07a4cefb18e536d63632fa
+  - enabled: 1
+    path: Assets/17TheStar/17TheStarCompetitive.unity
+    guid: 98c8af2cf31af41f382461050d8d8ddc
   - enabled: 1
     path: Assets/19TheSun/19TheSun.unity
     guid: ed23b4d7bf1e1e745a8bd215268506c4

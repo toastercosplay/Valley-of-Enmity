@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c63b273f16e6d9e49806e70f18a59ef7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  playerConfig: {fileID: 0}
   player1: {fileID: 1592483905}
   player2: {fileID: 935331522}
   player3: {fileID: 1787825785}
@@ -272,6 +273,392 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &30009025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 30009026}
+  - component: {fileID: 30009030}
+  - component: {fileID: 30009029}
+  - component: {fileID: 30009028}
+  - component: {fileID: 30009027}
+  m_Layer: 5
+  m_Name: P2/3Hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &30009026
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30009025}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1792984850}
+  - {fileID: 785260778}
+  - {fileID: 1270550329}
+  - {fileID: 1002051788}
+  m_Father: {fileID: 1041678607}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.0025024414, y: 0}
+  m_SizeDelta: {x: -0.0050049, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &30009027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30009025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74248f2d7f3b5e64ea4f92d2b5000c15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::test
+--- !u!82 &30009028
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30009025}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 7cb75a3a0bd56ce46b22c1be4534d67e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.75
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &30009029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30009025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+  m_Actions: {fileID: -944628639613478452, guid: a609e50d64272f54ca987a2093dfe58c, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 14a054d6-1f5a-4bcb-9e28-0981ec60dc48
+    m_ActionName: Player1/Move
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e17f9b81-47ec-4d67-884d-56f827b462da
+    m_ActionName: Player1/Look
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 16b69e57-af94-465c-b663-43b4db2fa288
+    m_ActionName: Player1/A
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 70cab098-0455-4bef-8940-981a790f33b5
+    m_ActionName: Player1/B
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 87955a21-30af-460d-ac8a-b505b3bf2aac
+    m_ActionName: Player1/X
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 933b1881-70cb-415b-9915-f499f22e29fe
+    m_ActionName: Player1/RightTrigger
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6a2606ed-1d46-4a58-b62c-ac5354e5e7cd
+    m_ActionName: UI/Navigate
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 40713e65-6b79-4a5f-ad0b-e13c6b4755c4
+    m_ActionName: UI/Submit
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 21b47d50-fc40-4c25-a11f-2c6613e6467c
+    m_ActionName: UI/Cancel
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e097ee3e-9229-42c0-b5fd-dc2fc5a33921
+    m_ActionName: UI/Point
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ec1ccd19-2ede-4886-9f69-a290c7b1aac8
+    m_ActionName: UI/Click
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b4f504e9-b754-4217-b3d4-d6aae00045a6
+    m_ActionName: UI/ScrollWheel
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 853693f7-aace-40c1-8d7b-57c105543e86
+    m_ActionName: UI/MiddleClick
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1b8a4a37-034e-42f3-a39f-4e6234a497a2
+    m_ActionName: UI/RightClick
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 42c4bbdd-1098-4eb2-97f0-803709aae84d
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 03487166-9535-4a5f-a301-19bc0a58c373
+    m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 892ff973-c47c-4ce5-b901-0bc7e9180429
+    m_ActionName: Player1/Y
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 30009030}
+        m_TargetAssemblyTypeName: CardHandUI, Assembly-CSharp
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3ecfaf75-8770-41ca-93e2-219731ad93ad
+    m_ActionName: Player2/Move
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c2a275f9-8b08-493b-8e37-53460f4ac177
+    m_ActionName: Player2/Look
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 30009030}
+        m_TargetAssemblyTypeName: CardHandUI, Assembly-CSharp
+        m_MethodName: OnA
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1c195ad7-8685-41f2-969f-fad003e02d40
+    m_ActionName: Player2/A
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bf690975-d11b-4faa-a784-993dcca9011b
+    m_ActionName: Player2/B
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5f38f0f3-cbce-42ca-b348-f95b8f9286a3
+    m_ActionName: Player2/X
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: eff78e15-9354-4be2-8f66-3ffdcba8f0f4
+    m_ActionName: Player2/Y
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 747b00af-291a-4e8e-a2c2-0a058b45b7db
+    m_ActionName: Player2/RightTrigger
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 923638b2-57a1-4daa-9534-8a1b693c4c8f
+    m_ActionName: 'Player3/Move[/SwitchProControllerHID/leftStick,/SwitchProControllerHID2/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/stick]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2cd09567-8fb0-4c3c-90d1-c76adb5a87ae
+    m_ActionName: 'Player3/Look[/SwitchProControllerHID/rightStick,/SwitchProControllerHID2/rightStick,/Mouse/delta,/Touchscreen/delta]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c6851374-1dac-48e7-bdb6-481436036ffb
+    m_ActionName: 'Player3/A[/SwitchProControllerHID/buttonEast,/SwitchProControllerHID2/buttonEast,/Mouse/leftButton,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button3]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 093bfa27-329f-47c0-8aed-efb15254bfcc
+    m_ActionName: 'Player3/B[/SwitchProControllerHID/buttonSouth,/SwitchProControllerHID2/buttonSouth,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button2]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7142e267-86bf-4814-9d3e-d3ffa6c9800b
+    m_ActionName: 'Player3/X[/SwitchProControllerHID/buttonNorth,/SwitchProControllerHID2/buttonNorth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 695f8102-ef5a-40e4-ab62-d22d680684bf
+    m_ActionName: 'Player3/Y[/SwitchProControllerHID/buttonWest,/SwitchProControllerHID2/buttonWest]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 95531ed1-5387-4f02-921f-a6e3cc0a3fff
+    m_ActionName: 'Player3/RightTrigger[/SwitchProControllerHID/rightTrigger,/SwitchProControllerHID2/rightTrigger]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0c1984c1-025f-494a-a55a-85fe3cdf8f36
+    m_ActionName: 'Player4/Move[/SwitchProControllerHID/leftStick,/SwitchProControllerHID2/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/stick]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f3024e52-9d68-4b6a-86a2-52d99d382c86
+    m_ActionName: 'Player4/Look[/SwitchProControllerHID/rightStick,/SwitchProControllerHID2/rightStick,/Mouse/delta,/Touchscreen/delta]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bf3df625-e4f6-4a4f-96a8-86c45edfd1a7
+    m_ActionName: 'Player4/A[/SwitchProControllerHID/buttonEast,/SwitchProControllerHID2/buttonEast,/Mouse/leftButton,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button3]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3d43c912-a303-42f7-80bb-66017e0b0614
+    m_ActionName: 'Player4/B[/SwitchProControllerHID/buttonSouth,/SwitchProControllerHID2/buttonSouth,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button2]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f058af92-9183-4db1-9dd4-1169430ca293
+    m_ActionName: 'Player4/X[/SwitchProControllerHID/buttonNorth,/SwitchProControllerHID2/buttonNorth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 93374026-7e86-4ce5-bfc1-3a99a59c5292
+    m_ActionName: 'Player4/Y[/SwitchProControllerHID/buttonWest,/SwitchProControllerHID2/buttonWest]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 18b84037-902d-4537-9b6b-1be00536f62d
+    m_ActionName: 'Player4/RightTrigger[/SwitchProControllerHID/rightTrigger,/SwitchProControllerHID2/rightTrigger]'
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: Gamepad
+  m_DefaultActionMap: Player2
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &30009030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30009025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83b89914c46bcfc4b8cdd9971d3e40ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardHandUI
+  cards:
+  - {fileID: 1792984850}
+  - {fileID: 785260778}
+  - {fileID: 1270550329}
+  - {fileID: 1002051788}
+  fanSpacing: 235
+  raisedHeight: 40
+  moveThreshold: 0.3
+  playerName: Player2Data
+  objectToOn: {fileID: 1621397015}
 --- !u!1 &57645313
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,6 +738,156 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &96851069
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 96851070}
+  - component: {fileID: 96851072}
+  - component: {fileID: 96851071}
+  m_Layer: 5
+  m_Name: Four
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &96851070
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96851069}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.95, y: 0.95, z: 0.95}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1160852400}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.372, y: 0.16666667}
+  m_AnchorMax: {x: 0.619, y: 0.8316667}
+  m_AnchoredPosition: {x: 0.9796982, y: -32}
+  m_SizeDelta: {x: -10.0406, y: -6.6050987}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &96851071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96851069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 70406e7b87611314fb7f3abaf78673b7, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &96851072
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96851069}
+  m_CullTransparentMesh: 1
+--- !u!1 &113170933
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 113170934}
+  - component: {fileID: 113170936}
+  - component: {fileID: 113170935}
+  m_Layer: 5
+  m_Name: Knight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &113170934
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113170933}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.95, y: 0.95, z: 0.95}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1621397016}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.372, y: 0.16666667}
+  m_AnchorMax: {x: 0.619, y: 0.8316667}
+  m_AnchoredPosition: {x: 0.9796982, y: -32}
+  m_SizeDelta: {x: -10.0406, y: -6.6050987}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &113170935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113170933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 8634ed2145cb7d34e95b4366be5b14e7, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &113170936
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113170933}
+  m_CullTransparentMesh: 1
 --- !u!1 &122229427
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,6 +963,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 122229427}
   m_CullTransparentMesh: 1
+--- !u!1 &303627023
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 303627024}
+  - component: {fileID: 303627026}
+  - component: {fileID: 303627025}
+  m_Layer: 5
+  m_Name: King
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &303627024
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303627023}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.95, y: 0.95, z: 0.95}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1255191368}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.372, y: 0.16666667}
+  m_AnchorMax: {x: 0.619, y: 0.8316667}
+  m_AnchoredPosition: {x: 0.9796982, y: -32}
+  m_SizeDelta: {x: -10.0406, y: -6.6050987}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &303627025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303627023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: bc6b8592c2885c84cbbd143b4e8c2111, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &303627026
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303627023}
+  m_CullTransparentMesh: 1
 --- !u!1 &304109648
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,6 +1112,156 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304109648}
+  m_CullTransparentMesh: 1
+--- !u!1 &352659232
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 352659233}
+  - component: {fileID: 352659235}
+  - component: {fileID: 352659234}
+  m_Layer: 5
+  m_Name: Three
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &352659233
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352659232}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.95, y: 0.95, z: 0.95}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1160852400}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.372, y: 0.16666667}
+  m_AnchorMax: {x: 0.619, y: 0.8316667}
+  m_AnchoredPosition: {x: 0.9796982, y: -32}
+  m_SizeDelta: {x: -10.0406, y: -6.6050987}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &352659234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352659232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 6fe57e8ad4c184d4ca5ea56573836045, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &352659235
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352659232}
+  m_CullTransparentMesh: 1
+--- !u!1 &370859810
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 370859811}
+  - component: {fileID: 370859813}
+  - component: {fileID: 370859812}
+  m_Layer: 5
+  m_Name: Page
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &370859811
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370859810}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.95, y: 0.95, z: 0.95}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1540025895}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.372, y: 0.16666667}
+  m_AnchorMax: {x: 0.619, y: 0.8316667}
+  m_AnchoredPosition: {x: 0.9796982, y: -32}
+  m_SizeDelta: {x: -10.0406, y: -6.6050987}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &370859812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370859810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: bc6b8592c2885c84cbbd143b4e8c2111, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &370859813
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370859810}
   m_CullTransparentMesh: 1
 --- !u!1 &398535802
 GameObject:
@@ -801,6 +1563,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519720382}
   m_CullTransparentMesh: 1
+--- !u!1 &524677923
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 524677924}
+  - component: {fileID: 524677926}
+  - component: {fileID: 524677925}
+  m_Layer: 5
+  m_Name: Page
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &524677924
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524677923}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.95, y: 0.95, z: 0.95}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1255191368}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.372, y: 0.16666667}
+  m_AnchorMax: {x: 0.619, y: 0.8316667}
+  m_AnchoredPosition: {x: 0.9796982, y: -32}
+  m_SizeDelta: {x: -10.0406, y: -6.6050987}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &524677925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524677923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: bc6b8592c2885c84cbbd143b4e8c2111, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &524677926
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524677923}
+  m_CullTransparentMesh: 1
 --- !u!1 &541143626
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,6 +1788,156 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 573806248}
   m_CullTransparentMesh: 1
+--- !u!1 &733546118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 733546119}
+  - component: {fileID: 733546121}
+  - component: {fileID: 733546120}
+  m_Layer: 5
+  m_Name: Queen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &733546119
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733546118}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.95, y: 0.95, z: 0.95}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1540025895}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.372, y: 0.16666667}
+  m_AnchorMax: {x: 0.619, y: 0.8316667}
+  m_AnchoredPosition: {x: 0.9796982, y: -32}
+  m_SizeDelta: {x: -10.0406, y: -6.6050987}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &733546120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733546118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: bc6b8592c2885c84cbbd143b4e8c2111, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &733546121
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733546118}
+  m_CullTransparentMesh: 1
+--- !u!1 &759539763
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 759539764}
+  - component: {fileID: 759539766}
+  - component: {fileID: 759539765}
+  m_Layer: 5
+  m_Name: King
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &759539764
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759539763}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.95, y: 0.95, z: 0.95}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1621397016}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.372, y: 0.16666667}
+  m_AnchorMax: {x: 0.619, y: 0.8316667}
+  m_AnchoredPosition: {x: 0.9796982, y: -32}
+  m_SizeDelta: {x: -10.0406, y: -6.6050987}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &759539765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759539763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 8634ed2145cb7d34e95b4366be5b14e7, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &759539766
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759539763}
+  m_CullTransparentMesh: 1
 --- !u!1 &770595878
 GameObject:
   m_ObjectHideFlags: 0
@@ -965,7 +1952,7 @@ GameObject:
   - component: {fileID: 770595880}
   - component: {fileID: 770595883}
   m_Layer: 5
-  m_Name: P3 Hand
+  m_Name: P3/4Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1337,6 +2324,81 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74248f2d7f3b5e64ea4f92d2b5000c15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::test
+--- !u!1 &785260777
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 785260778}
+  - component: {fileID: 785260780}
+  - component: {fileID: 785260779}
+  m_Layer: 5
+  m_Name: Knight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &785260778
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785260777}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.95, y: 0.95, z: 0.95}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 30009026}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.372, y: 0.16666667}
+  m_AnchorMax: {x: 0.619, y: 0.8316667}
+  m_AnchoredPosition: {x: 0.9796982, y: -32}
+  m_SizeDelta: {x: -10.0406, y: -6.6050987}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &785260779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785260777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 108129e9b93675748831969b04f07575, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &785260780
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785260777}
+  m_CullTransparentMesh: 1
 --- !u!1 &886822600
 GameObject:
   m_ObjectHideFlags: 0
@@ -1351,7 +2413,7 @@ GameObject:
   - component: {fileID: 886822604}
   - component: {fileID: 886822605}
   m_Layer: 5
-  m_Name: P2 Hand
+  m_Name: P2/4Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1723,6 +2785,81 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74248f2d7f3b5e64ea4f92d2b5000c15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::test
+--- !u!1 &889059079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 889059080}
+  - component: {fileID: 889059082}
+  - component: {fileID: 889059081}
+  m_Layer: 5
+  m_Name: Queen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &889059080
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889059079}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.95, y: 0.95, z: 0.95}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1621397016}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.372, y: 0.16666667}
+  m_AnchorMax: {x: 0.619, y: 0.8316667}
+  m_AnchoredPosition: {x: 0.9796982, y: -32}
+  m_SizeDelta: {x: -10.0406, y: -6.6050987}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &889059081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889059079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 8634ed2145cb7d34e95b4366be5b14e7, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &889059082
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889059079}
+  m_CullTransparentMesh: 1
 --- !u!1 &915059361
 GameObject:
   m_ObjectHideFlags: 0
@@ -1843,6 +2980,234 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &935551923
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 935551924}
+  - component: {fileID: 935551926}
+  - component: {fileID: 935551925}
+  m_Layer: 5
+  m_Name: King
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &935551924
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935551923}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.95, y: 0.95, z: 0.95}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1782617626}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.372, y: 0.16666667}
+  m_AnchorMax: {x: 0.619, y: 0.8316667}
+  m_AnchoredPosition: {x: 0.9796982, y: -32}
+  m_SizeDelta: {x: -10.0406, y: -6.6050987}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &935551925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935551923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 108129e9b93675748831969b04f07575, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &935551926
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935551923}
+  m_CullTransparentMesh: 1
+--- !u!1 &950296303
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 950296304}
+  - component: {fileID: 950296306}
+  - component: {fileID: 950296305}
+  m_Layer: 0
+  m_Name: PlayerAmountConfig
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &950296304
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950296303}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12.324402, y: -10.073425, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1041678607}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &950296305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950296303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+  m_Actions: {fileID: -944628639613478452, guid: a609e50d64272f54ca987a2093dfe58c, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: 
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &950296306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950296303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e280ee2066f50a54289a44be1ea64430, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAmountConfig
+  TwoPlayers: {fileID: 1540025894}
+  ThreePlayers: {fileID: 1255191367}
+  FourPlayers: {fileID: 2117926228}
+--- !u!1 &984540777
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 984540778}
+  - component: {fileID: 984540780}
+  - component: {fileID: 984540779}
+  m_Layer: 5
+  m_Name: King
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &984540778
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984540777}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.95, y: 0.95, z: 0.95}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1540025895}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.372, y: 0.16666667}
+  m_AnchorMax: {x: 0.619, y: 0.8316667}
+  m_AnchoredPosition: {x: 0.9796982, y: -32}
+  m_SizeDelta: {x: -10.0406, y: -6.6050987}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &984540779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984540777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: bc6b8592c2885c84cbbd143b4e8c2111, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &984540780
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984540777}
+  m_CullTransparentMesh: 1
 --- !u!1 &984914365
 GameObject:
   m_ObjectHideFlags: 0
@@ -1917,6 +3282,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 984914365}
+  m_CullTransparentMesh: 1
+--- !u!1 &1002051787
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1002051788}
+  - component: {fileID: 1002051790}
+  - component: {fileID: 1002051789}
+  m_Layer: 5
+  m_Name: King
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1002051788
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002051787}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.95, y: 0.95, z: 0.95}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 30009026}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.372, y: 0.16666667}
+  m_AnchorMax: {x: 0.619, y: 0.8316667}
+  m_AnchoredPosition: {x: 0.9796982, y: -32}
+  m_SizeDelta: {x: -10.0406, y: -6.6050987}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1002051789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002051787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 108129e9b93675748831969b04f07575, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1002051790
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002051787}
   m_CullTransparentMesh: 1
 --- !u!1 &1041678603
 GameObject:
@@ -2014,7 +3454,13 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 573806249}
-  - {fileID: 1320609712}
+  - {fileID: 1676331285}
+  - {fileID: 950296304}
+  - {fileID: 1540025895}
+  - {fileID: 1782617626}
+  - {fileID: 1255191368}
+  - {fileID: 30009026}
+  - {fileID: 1621397016}
   - {fileID: 2117926229}
   - {fileID: 886822601}
   - {fileID: 770595879}
@@ -2273,6 +3719,240 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1148709192}
   m_CullTransparentMesh: 1
+--- !u!1 &1160852399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1160852400}
+  - component: {fileID: 1160852404}
+  - component: {fileID: 1160852402}
+  m_Layer: 5
+  m_Name: PlayerCount
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1160852400
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160852399}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2140072514}
+  - {fileID: 352659233}
+  - {fileID: 96851070}
+  m_Father: {fileID: 1676331285}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 12.321899, y: 26.961609}
+  m_SizeDelta: {x: 959.995, y: 600}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!82 &1160852402
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160852399}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 7cb75a3a0bd56ce46b22c1be4534d67e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.75
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1160852404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160852399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b61b26337fefa43823c3b345f20206, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GeneralCardHandUI
+  cards:
+  - {fileID: 2140072514}
+  - {fileID: 352659233}
+  - {fileID: 96851070}
+  fanSpacing: 275
+  raisedHeight: 40
+  moveThreshold: 0.3
+  myType: Count
+  objectToOn: {fileID: 950296303}
+  playerInput: {fileID: 1676331286}
+--- !u!1 &1177725847
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1177725848}
+  - component: {fileID: 1177725850}
+  - component: {fileID: 1177725849}
+  m_Layer: 5
+  m_Name: Page
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1177725848
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177725847}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.95, y: 0.95, z: 0.95}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1782617626}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.372, y: 0.16666667}
+  m_AnchorMax: {x: 0.619, y: 0.8316667}
+  m_AnchoredPosition: {x: 0.9796982, y: -32}
+  m_SizeDelta: {x: -10.0406, y: -6.6050987}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1177725849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177725847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 108129e9b93675748831969b04f07575, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1177725850
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177725847}
+  m_CullTransparentMesh: 1
 --- !u!1 &1214151189
 GameObject:
   m_ObjectHideFlags: 0
@@ -2348,6 +4028,392 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1214151189}
   m_CullTransparentMesh: 1
+--- !u!1 &1255191367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1255191368}
+  - component: {fileID: 1255191372}
+  - component: {fileID: 1255191371}
+  - component: {fileID: 1255191370}
+  - component: {fileID: 1255191369}
+  m_Layer: 5
+  m_Name: P1/3 Hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1255191368
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255191367}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 524677924}
+  - {fileID: 1366620195}
+  - {fileID: 1301170382}
+  - {fileID: 303627024}
+  m_Father: {fileID: 1041678607}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.0025024414, y: 0}
+  m_SizeDelta: {x: -0.0050049, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1255191369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255191367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74248f2d7f3b5e64ea4f92d2b5000c15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::test
+--- !u!82 &1255191370
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255191367}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 7cb75a3a0bd56ce46b22c1be4534d67e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.75
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1255191371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255191367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+  m_Actions: {fileID: -944628639613478452, guid: a609e50d64272f54ca987a2093dfe58c, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1255191372}
+        m_TargetAssemblyTypeName: CardHandUI, Assembly-CSharp
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 14a054d6-1f5a-4bcb-9e28-0981ec60dc48
+    m_ActionName: Player1/Move
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e17f9b81-47ec-4d67-884d-56f827b462da
+    m_ActionName: Player1/Look
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1255191372}
+        m_TargetAssemblyTypeName: CardHandUI, Assembly-CSharp
+        m_MethodName: OnA
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 16b69e57-af94-465c-b663-43b4db2fa288
+    m_ActionName: Player1/A
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 70cab098-0455-4bef-8940-981a790f33b5
+    m_ActionName: Player1/B
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 87955a21-30af-460d-ac8a-b505b3bf2aac
+    m_ActionName: Player1/X
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 933b1881-70cb-415b-9915-f499f22e29fe
+    m_ActionName: Player1/RightTrigger
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6a2606ed-1d46-4a58-b62c-ac5354e5e7cd
+    m_ActionName: UI/Navigate
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 40713e65-6b79-4a5f-ad0b-e13c6b4755c4
+    m_ActionName: UI/Submit
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 21b47d50-fc40-4c25-a11f-2c6613e6467c
+    m_ActionName: UI/Cancel
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e097ee3e-9229-42c0-b5fd-dc2fc5a33921
+    m_ActionName: UI/Point
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ec1ccd19-2ede-4886-9f69-a290c7b1aac8
+    m_ActionName: UI/Click
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b4f504e9-b754-4217-b3d4-d6aae00045a6
+    m_ActionName: UI/ScrollWheel
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 853693f7-aace-40c1-8d7b-57c105543e86
+    m_ActionName: UI/MiddleClick
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1b8a4a37-034e-42f3-a39f-4e6234a497a2
+    m_ActionName: UI/RightClick
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 42c4bbdd-1098-4eb2-97f0-803709aae84d
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 03487166-9535-4a5f-a301-19bc0a58c373
+    m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 892ff973-c47c-4ce5-b901-0bc7e9180429
+    m_ActionName: Player1/Y
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3ecfaf75-8770-41ca-93e2-219731ad93ad
+    m_ActionName: Player2/Move
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c2a275f9-8b08-493b-8e37-53460f4ac177
+    m_ActionName: Player2/Look
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1c195ad7-8685-41f2-969f-fad003e02d40
+    m_ActionName: Player2/A
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bf690975-d11b-4faa-a784-993dcca9011b
+    m_ActionName: Player2/B
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5f38f0f3-cbce-42ca-b348-f95b8f9286a3
+    m_ActionName: Player2/X
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: eff78e15-9354-4be2-8f66-3ffdcba8f0f4
+    m_ActionName: Player2/Y
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 747b00af-291a-4e8e-a2c2-0a058b45b7db
+    m_ActionName: Player2/RightTrigger
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 923638b2-57a1-4daa-9534-8a1b693c4c8f
+    m_ActionName: 'Player3/Move[/SwitchProControllerHID/leftStick,/SwitchProControllerHID2/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/stick]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2cd09567-8fb0-4c3c-90d1-c76adb5a87ae
+    m_ActionName: 'Player3/Look[/SwitchProControllerHID/rightStick,/SwitchProControllerHID2/rightStick,/Mouse/delta,/Touchscreen/delta]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c6851374-1dac-48e7-bdb6-481436036ffb
+    m_ActionName: 'Player3/A[/SwitchProControllerHID/buttonEast,/SwitchProControllerHID2/buttonEast,/Mouse/leftButton,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button3]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 093bfa27-329f-47c0-8aed-efb15254bfcc
+    m_ActionName: 'Player3/B[/SwitchProControllerHID/buttonSouth,/SwitchProControllerHID2/buttonSouth,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button2]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7142e267-86bf-4814-9d3e-d3ffa6c9800b
+    m_ActionName: 'Player3/X[/SwitchProControllerHID/buttonNorth,/SwitchProControllerHID2/buttonNorth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 695f8102-ef5a-40e4-ab62-d22d680684bf
+    m_ActionName: 'Player3/Y[/SwitchProControllerHID/buttonWest,/SwitchProControllerHID2/buttonWest]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 95531ed1-5387-4f02-921f-a6e3cc0a3fff
+    m_ActionName: 'Player3/RightTrigger[/SwitchProControllerHID/rightTrigger,/SwitchProControllerHID2/rightTrigger]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0c1984c1-025f-494a-a55a-85fe3cdf8f36
+    m_ActionName: 'Player4/Move[/SwitchProControllerHID/leftStick,/SwitchProControllerHID2/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/stick]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f3024e52-9d68-4b6a-86a2-52d99d382c86
+    m_ActionName: 'Player4/Look[/SwitchProControllerHID/rightStick,/SwitchProControllerHID2/rightStick,/Mouse/delta,/Touchscreen/delta]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bf3df625-e4f6-4a4f-96a8-86c45edfd1a7
+    m_ActionName: 'Player4/A[/SwitchProControllerHID/buttonEast,/SwitchProControllerHID2/buttonEast,/Mouse/leftButton,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button3]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3d43c912-a303-42f7-80bb-66017e0b0614
+    m_ActionName: 'Player4/B[/SwitchProControllerHID/buttonSouth,/SwitchProControllerHID2/buttonSouth,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button2]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f058af92-9183-4db1-9dd4-1169430ca293
+    m_ActionName: 'Player4/X[/SwitchProControllerHID/buttonNorth,/SwitchProControllerHID2/buttonNorth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 93374026-7e86-4ce5-bfc1-3a99a59c5292
+    m_ActionName: 'Player4/Y[/SwitchProControllerHID/buttonWest,/SwitchProControllerHID2/buttonWest]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 18b84037-902d-4537-9b6b-1be00536f62d
+    m_ActionName: 'Player4/RightTrigger[/SwitchProControllerHID/rightTrigger,/SwitchProControllerHID2/rightTrigger]'
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: Joystick
+  m_DefaultActionMap: Player1
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &1255191372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255191367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83b89914c46bcfc4b8cdd9971d3e40ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardHandUI
+  cards:
+  - {fileID: 524677924}
+  - {fileID: 1366620195}
+  - {fileID: 1301170382}
+  - {fileID: 303627024}
+  fanSpacing: 235
+  raisedHeight: 40
+  moveThreshold: 0.3
+  playerName: Player1Data
+  objectToOn: {fileID: 30009025}
 --- !u!1 &1266823719
 GameObject:
   m_ObjectHideFlags: 0
@@ -2485,6 +4551,156 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1270550328
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1270550329}
+  - component: {fileID: 1270550331}
+  - component: {fileID: 1270550330}
+  m_Layer: 5
+  m_Name: Queen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1270550329
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270550328}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.95, y: 0.95, z: 0.95}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 30009026}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.372, y: 0.16666667}
+  m_AnchorMax: {x: 0.619, y: 0.8316667}
+  m_AnchoredPosition: {x: 0.9796982, y: -32}
+  m_SizeDelta: {x: -10.0406, y: -6.6050987}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1270550330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270550328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 108129e9b93675748831969b04f07575, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1270550331
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270550328}
+  m_CullTransparentMesh: 1
+--- !u!1 &1301170381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1301170382}
+  - component: {fileID: 1301170384}
+  - component: {fileID: 1301170383}
+  m_Layer: 5
+  m_Name: Queen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1301170382
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301170381}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.95, y: 0.95, z: 0.95}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1255191368}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.372, y: 0.16666667}
+  m_AnchorMax: {x: 0.619, y: 0.8316667}
+  m_AnchoredPosition: {x: 0.9796982, y: -32}
+  m_SizeDelta: {x: -10.0406, y: -6.6050987}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1301170383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301170381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: bc6b8592c2885c84cbbd143b4e8c2111, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1301170384
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301170381}
+  m_CullTransparentMesh: 1
 --- !u!1 &1320609711
 GameObject:
   m_ObjectHideFlags: 0
@@ -2498,9 +4714,8 @@ GameObject:
   - component: {fileID: 1320609714}
   - component: {fileID: 1320609713}
   - component: {fileID: 1320609716}
-  - component: {fileID: 1320609717}
   m_Layer: 5
-  m_Name: GameModeSelect
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2513,18 +4728,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1320609711}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1755991788}
-  m_Father: {fileID: 1041678607}
+  m_Father: {fileID: 1676331285}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0025024414, y: -0.000030517578}
-  m_SizeDelta: {x: -0.0050049, y: 0}
+  m_AnchoredPosition: {x: 12.321899, y: 26.961578}
+  m_SizeDelta: {x: 959.995, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1320609713
 MonoBehaviour:
@@ -2538,7 +4753,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f628f3fa7f2a6643a49798e32eb2662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Selections
-  hand1: {fileID: 2117926228}
+  CountSelectionObject: {fileID: 1160852399}
+  playerInput: {fileID: 1676331286}
 --- !u!114 &1320609714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2599,230 +4815,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1320609717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1320609711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
-  m_Actions: {fileID: -944628639613478452, guid: a609e50d64272f54ca987a2093dfe58c, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1320609713}
-        m_TargetAssemblyTypeName: Selections, Assembly-CSharp
-        m_MethodName: OnMove
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 14a054d6-1f5a-4bcb-9e28-0981ec60dc48
-    m_ActionName: Player1/Move
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: e17f9b81-47ec-4d67-884d-56f827b462da
-    m_ActionName: Player1/Look
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1320609713}
-        m_TargetAssemblyTypeName: Selections, Assembly-CSharp
-        m_MethodName: OnA
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 16b69e57-af94-465c-b663-43b4db2fa288
-    m_ActionName: Player1/A
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1320609713}
-        m_TargetAssemblyTypeName: Selections, Assembly-CSharp
-        m_MethodName: OnB
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 70cab098-0455-4bef-8940-981a790f33b5
-    m_ActionName: Player1/B
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 87955a21-30af-460d-ac8a-b505b3bf2aac
-    m_ActionName: Player1/X
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 933b1881-70cb-415b-9915-f499f22e29fe
-    m_ActionName: Player1/RightTrigger
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 6a2606ed-1d46-4a58-b62c-ac5354e5e7cd
-    m_ActionName: UI/Navigate
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 40713e65-6b79-4a5f-ad0b-e13c6b4755c4
-    m_ActionName: UI/Submit
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 21b47d50-fc40-4c25-a11f-2c6613e6467c
-    m_ActionName: UI/Cancel
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: e097ee3e-9229-42c0-b5fd-dc2fc5a33921
-    m_ActionName: UI/Point
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: ec1ccd19-2ede-4886-9f69-a290c7b1aac8
-    m_ActionName: UI/Click
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: b4f504e9-b754-4217-b3d4-d6aae00045a6
-    m_ActionName: UI/ScrollWheel
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 853693f7-aace-40c1-8d7b-57c105543e86
-    m_ActionName: UI/MiddleClick
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 1b8a4a37-034e-42f3-a39f-4e6234a497a2
-    m_ActionName: UI/RightClick
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 42c4bbdd-1098-4eb2-97f0-803709aae84d
-    m_ActionName: UI/TrackedDevicePosition
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 03487166-9535-4a5f-a301-19bc0a58c373
-    m_ActionName: UI/TrackedDeviceOrientation
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 892ff973-c47c-4ce5-b901-0bc7e9180429
-    m_ActionName: Player1/Y
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 3ecfaf75-8770-41ca-93e2-219731ad93ad
-    m_ActionName: Player2/Move
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: c2a275f9-8b08-493b-8e37-53460f4ac177
-    m_ActionName: Player2/Look
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 1c195ad7-8685-41f2-969f-fad003e02d40
-    m_ActionName: Player2/A
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: bf690975-d11b-4faa-a784-993dcca9011b
-    m_ActionName: Player2/B
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 5f38f0f3-cbce-42ca-b348-f95b8f9286a3
-    m_ActionName: Player2/X
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: eff78e15-9354-4be2-8f66-3ffdcba8f0f4
-    m_ActionName: Player2/Y
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 747b00af-291a-4e8e-a2c2-0a058b45b7db
-    m_ActionName: Player2/RightTrigger
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 923638b2-57a1-4daa-9534-8a1b693c4c8f
-    m_ActionName: 'Player3/Move[/SwitchProControllerHID/leftStick,/SwitchProControllerHID2/leftStick,/SwitchProControllerHID1/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/PowerA
-      PowerA Advantage Wired Controller for Nintendo Switch 2/stick]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 2cd09567-8fb0-4c3c-90d1-c76adb5a87ae
-    m_ActionName: 'Player3/Look[/SwitchProControllerHID/rightStick,/SwitchProControllerHID2/rightStick,/SwitchProControllerHID1/rightStick,/Mouse/delta,/Touchscreen/delta]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: c6851374-1dac-48e7-bdb6-481436036ffb
-    m_ActionName: 'Player3/A[/SwitchProControllerHID/buttonEast,/SwitchProControllerHID2/buttonEast,/SwitchProControllerHID1/buttonEast,/Mouse/leftButton,/PowerA
-      PowerA Advantage Wired Controller for Nintendo Switch 2/button3]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 093bfa27-329f-47c0-8aed-efb15254bfcc
-    m_ActionName: 'Player3/B[/SwitchProControllerHID/buttonSouth,/SwitchProControllerHID2/buttonSouth,/SwitchProControllerHID1/buttonSouth,/PowerA
-      PowerA Advantage Wired Controller for Nintendo Switch 2/button2]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 7142e267-86bf-4814-9d3e-d3ffa6c9800b
-    m_ActionName: 'Player3/X[/SwitchProControllerHID/buttonNorth,/SwitchProControllerHID2/buttonNorth,/SwitchProControllerHID1/buttonNorth]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 695f8102-ef5a-40e4-ab62-d22d680684bf
-    m_ActionName: 'Player3/Y[/SwitchProControllerHID/buttonWest,/SwitchProControllerHID2/buttonWest,/SwitchProControllerHID1/buttonWest]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 95531ed1-5387-4f02-921f-a6e3cc0a3fff
-    m_ActionName: 'Player3/RightTrigger[/SwitchProControllerHID/rightTrigger,/SwitchProControllerHID2/rightTrigger,/SwitchProControllerHID1/rightTrigger]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 0c1984c1-025f-494a-a55a-85fe3cdf8f36
-    m_ActionName: 'Player4/Move[/SwitchProControllerHID/leftStick,/SwitchProControllerHID2/leftStick,/SwitchProControllerHID1/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/PowerA
-      PowerA Advantage Wired Controller for Nintendo Switch 2/stick]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: f3024e52-9d68-4b6a-86a2-52d99d382c86
-    m_ActionName: 'Player4/Look[/SwitchProControllerHID/rightStick,/SwitchProControllerHID2/rightStick,/SwitchProControllerHID1/rightStick,/Mouse/delta,/Touchscreen/delta]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: bf3df625-e4f6-4a4f-96a8-86c45edfd1a7
-    m_ActionName: 'Player4/A[/SwitchProControllerHID/buttonEast,/SwitchProControllerHID2/buttonEast,/SwitchProControllerHID1/buttonEast,/Mouse/leftButton,/PowerA
-      PowerA Advantage Wired Controller for Nintendo Switch 2/button3]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 3d43c912-a303-42f7-80bb-66017e0b0614
-    m_ActionName: 'Player4/B[/SwitchProControllerHID/buttonSouth,/SwitchProControllerHID2/buttonSouth,/SwitchProControllerHID1/buttonSouth,/PowerA
-      PowerA Advantage Wired Controller for Nintendo Switch 2/button2]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: f058af92-9183-4db1-9dd4-1169430ca293
-    m_ActionName: 'Player4/X[/SwitchProControllerHID/buttonNorth,/SwitchProControllerHID2/buttonNorth,/SwitchProControllerHID1/buttonNorth]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 93374026-7e86-4ce5-bfc1-3a99a59c5292
-    m_ActionName: 'Player4/Y[/SwitchProControllerHID/buttonWest,/SwitchProControllerHID2/buttonWest,/SwitchProControllerHID1/buttonWest]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 18b84037-902d-4537-9b6b-1be00536f62d
-    m_ActionName: 'Player4/RightTrigger[/SwitchProControllerHID/rightTrigger,/SwitchProControllerHID2/rightTrigger,/SwitchProControllerHID1/rightTrigger]'
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Gamepad
-  m_DefaultActionMap: Player1
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!1 &1326064798
 GameObject:
   m_ObjectHideFlags: 0
@@ -2868,6 +4860,81 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1366620194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1366620195}
+  - component: {fileID: 1366620197}
+  - component: {fileID: 1366620196}
+  m_Layer: 5
+  m_Name: Knight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1366620195
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366620194}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.95, y: 0.95, z: 0.95}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1255191368}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.372, y: 0.16666667}
+  m_AnchorMax: {x: 0.619, y: 0.8316667}
+  m_AnchoredPosition: {x: 0.9796982, y: -32}
+  m_SizeDelta: {x: -10.0406, y: -6.6050987}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1366620196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366620194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: bc6b8592c2885c84cbbd143b4e8c2111, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1366620197
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366620194}
+  m_CullTransparentMesh: 1
 --- !u!1 &1370910766
 GameObject:
   m_ObjectHideFlags: 0
@@ -3329,6 +5396,467 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1375708625}
   m_CullTransparentMesh: 1
+--- !u!1 &1482759163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1482759164}
+  - component: {fileID: 1482759166}
+  - component: {fileID: 1482759165}
+  m_Layer: 5
+  m_Name: Queen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1482759164
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482759163}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.95, y: 0.95, z: 0.95}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1782617626}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.372, y: 0.16666667}
+  m_AnchorMax: {x: 0.619, y: 0.8316667}
+  m_AnchoredPosition: {x: 0.9796982, y: -32}
+  m_SizeDelta: {x: -10.0406, y: -6.6050987}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1482759165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482759163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 108129e9b93675748831969b04f07575, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1482759166
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482759163}
+  m_CullTransparentMesh: 1
+--- !u!1 &1540025894
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1540025895}
+  - component: {fileID: 1540025899}
+  - component: {fileID: 1540025898}
+  - component: {fileID: 1540025897}
+  - component: {fileID: 1540025896}
+  m_Layer: 5
+  m_Name: P1/2 Hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1540025895
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540025894}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 370859811}
+  - {fileID: 2021949046}
+  - {fileID: 733546119}
+  - {fileID: 984540778}
+  m_Father: {fileID: 1041678607}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.0025024414, y: 0}
+  m_SizeDelta: {x: -0.0050049, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1540025896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540025894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74248f2d7f3b5e64ea4f92d2b5000c15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::test
+--- !u!82 &1540025897
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540025894}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 7cb75a3a0bd56ce46b22c1be4534d67e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.75
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1540025898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540025894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+  m_Actions: {fileID: -944628639613478452, guid: a609e50d64272f54ca987a2093dfe58c, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1540025899}
+        m_TargetAssemblyTypeName: CardHandUI, Assembly-CSharp
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 14a054d6-1f5a-4bcb-9e28-0981ec60dc48
+    m_ActionName: Player1/Move
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e17f9b81-47ec-4d67-884d-56f827b462da
+    m_ActionName: Player1/Look
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1540025899}
+        m_TargetAssemblyTypeName: CardHandUI, Assembly-CSharp
+        m_MethodName: OnA
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 16b69e57-af94-465c-b663-43b4db2fa288
+    m_ActionName: Player1/A
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 70cab098-0455-4bef-8940-981a790f33b5
+    m_ActionName: Player1/B
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 87955a21-30af-460d-ac8a-b505b3bf2aac
+    m_ActionName: Player1/X
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 933b1881-70cb-415b-9915-f499f22e29fe
+    m_ActionName: Player1/RightTrigger
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6a2606ed-1d46-4a58-b62c-ac5354e5e7cd
+    m_ActionName: UI/Navigate
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 40713e65-6b79-4a5f-ad0b-e13c6b4755c4
+    m_ActionName: UI/Submit
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 21b47d50-fc40-4c25-a11f-2c6613e6467c
+    m_ActionName: UI/Cancel
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e097ee3e-9229-42c0-b5fd-dc2fc5a33921
+    m_ActionName: UI/Point
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ec1ccd19-2ede-4886-9f69-a290c7b1aac8
+    m_ActionName: UI/Click
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b4f504e9-b754-4217-b3d4-d6aae00045a6
+    m_ActionName: UI/ScrollWheel
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 853693f7-aace-40c1-8d7b-57c105543e86
+    m_ActionName: UI/MiddleClick
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1b8a4a37-034e-42f3-a39f-4e6234a497a2
+    m_ActionName: UI/RightClick
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 42c4bbdd-1098-4eb2-97f0-803709aae84d
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 03487166-9535-4a5f-a301-19bc0a58c373
+    m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 892ff973-c47c-4ce5-b901-0bc7e9180429
+    m_ActionName: Player1/Y
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3ecfaf75-8770-41ca-93e2-219731ad93ad
+    m_ActionName: Player2/Move
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c2a275f9-8b08-493b-8e37-53460f4ac177
+    m_ActionName: Player2/Look
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1c195ad7-8685-41f2-969f-fad003e02d40
+    m_ActionName: Player2/A
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bf690975-d11b-4faa-a784-993dcca9011b
+    m_ActionName: Player2/B
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5f38f0f3-cbce-42ca-b348-f95b8f9286a3
+    m_ActionName: Player2/X
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: eff78e15-9354-4be2-8f66-3ffdcba8f0f4
+    m_ActionName: Player2/Y
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 747b00af-291a-4e8e-a2c2-0a058b45b7db
+    m_ActionName: Player2/RightTrigger
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 923638b2-57a1-4daa-9534-8a1b693c4c8f
+    m_ActionName: 'Player3/Move[/SwitchProControllerHID/leftStick,/SwitchProControllerHID2/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/stick]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2cd09567-8fb0-4c3c-90d1-c76adb5a87ae
+    m_ActionName: 'Player3/Look[/SwitchProControllerHID/rightStick,/SwitchProControllerHID2/rightStick,/Mouse/delta,/Touchscreen/delta]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c6851374-1dac-48e7-bdb6-481436036ffb
+    m_ActionName: 'Player3/A[/SwitchProControllerHID/buttonEast,/SwitchProControllerHID2/buttonEast,/Mouse/leftButton,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button3]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 093bfa27-329f-47c0-8aed-efb15254bfcc
+    m_ActionName: 'Player3/B[/SwitchProControllerHID/buttonSouth,/SwitchProControllerHID2/buttonSouth,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button2]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7142e267-86bf-4814-9d3e-d3ffa6c9800b
+    m_ActionName: 'Player3/X[/SwitchProControllerHID/buttonNorth,/SwitchProControllerHID2/buttonNorth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 695f8102-ef5a-40e4-ab62-d22d680684bf
+    m_ActionName: 'Player3/Y[/SwitchProControllerHID/buttonWest,/SwitchProControllerHID2/buttonWest]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 95531ed1-5387-4f02-921f-a6e3cc0a3fff
+    m_ActionName: 'Player3/RightTrigger[/SwitchProControllerHID/rightTrigger,/SwitchProControllerHID2/rightTrigger]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0c1984c1-025f-494a-a55a-85fe3cdf8f36
+    m_ActionName: 'Player4/Move[/SwitchProControllerHID/leftStick,/SwitchProControllerHID2/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/stick]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f3024e52-9d68-4b6a-86a2-52d99d382c86
+    m_ActionName: 'Player4/Look[/SwitchProControllerHID/rightStick,/SwitchProControllerHID2/rightStick,/Mouse/delta,/Touchscreen/delta]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bf3df625-e4f6-4a4f-96a8-86c45edfd1a7
+    m_ActionName: 'Player4/A[/SwitchProControllerHID/buttonEast,/SwitchProControllerHID2/buttonEast,/Mouse/leftButton,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button3]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3d43c912-a303-42f7-80bb-66017e0b0614
+    m_ActionName: 'Player4/B[/SwitchProControllerHID/buttonSouth,/SwitchProControllerHID2/buttonSouth,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button2]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f058af92-9183-4db1-9dd4-1169430ca293
+    m_ActionName: 'Player4/X[/SwitchProControllerHID/buttonNorth,/SwitchProControllerHID2/buttonNorth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 93374026-7e86-4ce5-bfc1-3a99a59c5292
+    m_ActionName: 'Player4/Y[/SwitchProControllerHID/buttonWest,/SwitchProControllerHID2/buttonWest]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 18b84037-902d-4537-9b6b-1be00536f62d
+    m_ActionName: 'Player4/RightTrigger[/SwitchProControllerHID/rightTrigger,/SwitchProControllerHID2/rightTrigger]'
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: Joystick
+  m_DefaultActionMap: Player1
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &1540025899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540025894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83b89914c46bcfc4b8cdd9971d3e40ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardHandUI
+  cards:
+  - {fileID: 370859811}
+  - {fileID: 2021949046}
+  - {fileID: 733546119}
+  - {fileID: 984540778}
+  fanSpacing: 235
+  raisedHeight: 40
+  moveThreshold: 0.3
+  playerName: Player1Data
+  objectToOn: {fileID: 1782617625}
 --- !u!1 &1592483904
 GameObject:
   m_ObjectHideFlags: 0
@@ -3374,6 +5902,467 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1621140992
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1621140993}
+  - component: {fileID: 1621140995}
+  - component: {fileID: 1621140994}
+  m_Layer: 5
+  m_Name: Page
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1621140993
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621140992}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.95, y: 0.95, z: 0.95}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1621397016}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.372, y: 0.16666667}
+  m_AnchorMax: {x: 0.619, y: 0.8316667}
+  m_AnchoredPosition: {x: 0.9796982, y: -32}
+  m_SizeDelta: {x: -10.0406, y: -6.6050987}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1621140994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621140992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 8634ed2145cb7d34e95b4366be5b14e7, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1621140995
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621140992}
+  m_CullTransparentMesh: 1
+--- !u!1 &1621397015
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1621397016}
+  - component: {fileID: 1621397020}
+  - component: {fileID: 1621397019}
+  - component: {fileID: 1621397018}
+  - component: {fileID: 1621397017}
+  m_Layer: 5
+  m_Name: P3/3Hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1621397016
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621397015}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1621140993}
+  - {fileID: 113170934}
+  - {fileID: 889059080}
+  - {fileID: 759539764}
+  m_Father: {fileID: 1041678607}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.0025024414, y: 0}
+  m_SizeDelta: {x: -0.0050049, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1621397017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621397015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74248f2d7f3b5e64ea4f92d2b5000c15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::test
+--- !u!82 &1621397018
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621397015}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 7cb75a3a0bd56ce46b22c1be4534d67e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.75
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1621397019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621397015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+  m_Actions: {fileID: -944628639613478452, guid: a609e50d64272f54ca987a2093dfe58c, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 14a054d6-1f5a-4bcb-9e28-0981ec60dc48
+    m_ActionName: Player1/Move
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e17f9b81-47ec-4d67-884d-56f827b462da
+    m_ActionName: Player1/Look
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 16b69e57-af94-465c-b663-43b4db2fa288
+    m_ActionName: Player1/A
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 70cab098-0455-4bef-8940-981a790f33b5
+    m_ActionName: Player1/B
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 87955a21-30af-460d-ac8a-b505b3bf2aac
+    m_ActionName: Player1/X
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 933b1881-70cb-415b-9915-f499f22e29fe
+    m_ActionName: Player1/RightTrigger
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6a2606ed-1d46-4a58-b62c-ac5354e5e7cd
+    m_ActionName: UI/Navigate
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 40713e65-6b79-4a5f-ad0b-e13c6b4755c4
+    m_ActionName: UI/Submit
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 21b47d50-fc40-4c25-a11f-2c6613e6467c
+    m_ActionName: UI/Cancel
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e097ee3e-9229-42c0-b5fd-dc2fc5a33921
+    m_ActionName: UI/Point
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ec1ccd19-2ede-4886-9f69-a290c7b1aac8
+    m_ActionName: UI/Click
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b4f504e9-b754-4217-b3d4-d6aae00045a6
+    m_ActionName: UI/ScrollWheel
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 853693f7-aace-40c1-8d7b-57c105543e86
+    m_ActionName: UI/MiddleClick
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1b8a4a37-034e-42f3-a39f-4e6234a497a2
+    m_ActionName: UI/RightClick
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 42c4bbdd-1098-4eb2-97f0-803709aae84d
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 03487166-9535-4a5f-a301-19bc0a58c373
+    m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 892ff973-c47c-4ce5-b901-0bc7e9180429
+    m_ActionName: Player1/Y
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3ecfaf75-8770-41ca-93e2-219731ad93ad
+    m_ActionName: Player2/Move
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c2a275f9-8b08-493b-8e37-53460f4ac177
+    m_ActionName: Player2/Look
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1c195ad7-8685-41f2-969f-fad003e02d40
+    m_ActionName: Player2/A
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bf690975-d11b-4faa-a784-993dcca9011b
+    m_ActionName: Player2/B
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5f38f0f3-cbce-42ca-b348-f95b8f9286a3
+    m_ActionName: Player2/X
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: eff78e15-9354-4be2-8f66-3ffdcba8f0f4
+    m_ActionName: Player2/Y
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 747b00af-291a-4e8e-a2c2-0a058b45b7db
+    m_ActionName: Player2/RightTrigger
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1621397020}
+        m_TargetAssemblyTypeName: CardHandUI, Assembly-CSharp
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 923638b2-57a1-4daa-9534-8a1b693c4c8f
+    m_ActionName: 'Player3/Move[/SwitchProControllerHID/leftStick,/SwitchProControllerHID2/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/stick]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2cd09567-8fb0-4c3c-90d1-c76adb5a87ae
+    m_ActionName: 'Player3/Look[/SwitchProControllerHID/rightStick,/SwitchProControllerHID2/rightStick,/Mouse/delta,/Touchscreen/delta]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1621397020}
+        m_TargetAssemblyTypeName: CardHandUI, Assembly-CSharp
+        m_MethodName: OnA
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c6851374-1dac-48e7-bdb6-481436036ffb
+    m_ActionName: 'Player3/A[/SwitchProControllerHID/buttonEast,/SwitchProControllerHID2/buttonEast,/Mouse/leftButton,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button3]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 093bfa27-329f-47c0-8aed-efb15254bfcc
+    m_ActionName: 'Player3/B[/SwitchProControllerHID/buttonSouth,/SwitchProControllerHID2/buttonSouth,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button2]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7142e267-86bf-4814-9d3e-d3ffa6c9800b
+    m_ActionName: 'Player3/X[/SwitchProControllerHID/buttonNorth,/SwitchProControllerHID2/buttonNorth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 695f8102-ef5a-40e4-ab62-d22d680684bf
+    m_ActionName: 'Player3/Y[/SwitchProControllerHID/buttonWest,/SwitchProControllerHID2/buttonWest]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 95531ed1-5387-4f02-921f-a6e3cc0a3fff
+    m_ActionName: 'Player3/RightTrigger[/SwitchProControllerHID/rightTrigger,/SwitchProControllerHID2/rightTrigger]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0c1984c1-025f-494a-a55a-85fe3cdf8f36
+    m_ActionName: 'Player4/Move[/SwitchProControllerHID/leftStick,/SwitchProControllerHID2/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/stick]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f3024e52-9d68-4b6a-86a2-52d99d382c86
+    m_ActionName: 'Player4/Look[/SwitchProControllerHID/rightStick,/SwitchProControllerHID2/rightStick,/Mouse/delta,/Touchscreen/delta]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bf3df625-e4f6-4a4f-96a8-86c45edfd1a7
+    m_ActionName: 'Player4/A[/SwitchProControllerHID/buttonEast,/SwitchProControllerHID2/buttonEast,/Mouse/leftButton,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button3]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3d43c912-a303-42f7-80bb-66017e0b0614
+    m_ActionName: 'Player4/B[/SwitchProControllerHID/buttonSouth,/SwitchProControllerHID2/buttonSouth,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button2]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f058af92-9183-4db1-9dd4-1169430ca293
+    m_ActionName: 'Player4/X[/SwitchProControllerHID/buttonNorth,/SwitchProControllerHID2/buttonNorth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 93374026-7e86-4ce5-bfc1-3a99a59c5292
+    m_ActionName: 'Player4/Y[/SwitchProControllerHID/buttonWest,/SwitchProControllerHID2/buttonWest]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 18b84037-902d-4537-9b6b-1be00536f62d
+    m_ActionName: 'Player4/RightTrigger[/SwitchProControllerHID/rightTrigger,/SwitchProControllerHID2/rightTrigger]'
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: Gamepad
+  m_DefaultActionMap: Player3
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &1621397020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621397015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83b89914c46bcfc4b8cdd9971d3e40ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardHandUI
+  cards:
+  - {fileID: 1621140993}
+  - {fileID: 113170934}
+  - {fileID: 889059080}
+  - {fileID: 759539764}
+  fanSpacing: 235
+  raisedHeight: 40
+  moveThreshold: 0.3
+  playerName: Player3Data
+  objectToOn: {fileID: 1370910766}
 --- !u!1 &1649292830
 GameObject:
   m_ObjectHideFlags: 0
@@ -3449,6 +6438,278 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649292830}
   m_CullTransparentMesh: 1
+--- !u!1 &1676331284
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1676331285}
+  - component: {fileID: 1676331286}
+  m_Layer: 0
+  m_Name: Selections
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1676331285
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676331284}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12.324402, y: -26.961609, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1320609712}
+  - {fileID: 1160852400}
+  m_Father: {fileID: 1041678607}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1676331286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676331284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+  m_Actions: {fileID: -944628639613478452, guid: a609e50d64272f54ca987a2093dfe58c, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 14a054d6-1f5a-4bcb-9e28-0981ec60dc48
+    m_ActionName: 'Player1/Move[/SwitchProControllerHID/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e17f9b81-47ec-4d67-884d-56f827b462da
+    m_ActionName: 'Player1/Look[/SwitchProControllerHID/rightStick,/Mouse/delta,/Touchscreen/delta]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 16b69e57-af94-465c-b663-43b4db2fa288
+    m_ActionName: 'Player1/A[/SwitchProControllerHID/buttonEast,/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 70cab098-0455-4bef-8940-981a790f33b5
+    m_ActionName: 'Player1/B[/SwitchProControllerHID/buttonSouth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 87955a21-30af-460d-ac8a-b505b3bf2aac
+    m_ActionName: 'Player1/X[/SwitchProControllerHID/buttonNorth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 892ff973-c47c-4ce5-b901-0bc7e9180429
+    m_ActionName: 'Player1/Y[/SwitchProControllerHID/buttonWest]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 933b1881-70cb-415b-9915-f499f22e29fe
+    m_ActionName: 'Player1/RightTrigger[/SwitchProControllerHID/rightTrigger,/Mouse/rightButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6a2606ed-1d46-4a58-b62c-ac5354e5e7cd
+    m_ActionName: 'UI/Navigate[/SwitchProControllerHID/leftStick/up,/SwitchProControllerHID/rightStick/up,/SwitchProControllerHID/leftStick/down,/SwitchProControllerHID/rightStick/down,/SwitchProControllerHID/leftStick/left,/SwitchProControllerHID/rightStick/left,/SwitchProControllerHID/leftStick/right,/SwitchProControllerHID/rightStick/right,/SwitchProControllerHID/dpad,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 40713e65-6b79-4a5f-ad0b-e13c6b4755c4
+    m_ActionName: 'UI/Submit[/Keyboard/enter,/SwitchProControllerHID/buttonEast]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 21b47d50-fc40-4c25-a11f-2c6613e6467c
+    m_ActionName: 'UI/Cancel[/Keyboard/escape,/SwitchProControllerHID/buttonSouth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e097ee3e-9229-42c0-b5fd-dc2fc5a33921
+    m_ActionName: 'UI/Point[/Mouse/position,/Touchscreen/touch0/position,/Touchscreen/touch1/position,/Touchscreen/touch2/position,/Touchscreen/touch3/position,/Touchscreen/touch4/position,/Touchscreen/touch5/position,/Touchscreen/touch6/position,/Touchscreen/touch7/position,/Touchscreen/touch8/position,/Touchscreen/touch9/position]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ec1ccd19-2ede-4886-9f69-a290c7b1aac8
+    m_ActionName: 'UI/Click[/Mouse/leftButton,/Touchscreen/touch0/press,/Touchscreen/touch1/press,/Touchscreen/touch2/press,/Touchscreen/touch3/press,/Touchscreen/touch4/press,/Touchscreen/touch5/press,/Touchscreen/touch6/press,/Touchscreen/touch7/press,/Touchscreen/touch8/press,/Touchscreen/touch9/press]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b4f504e9-b754-4217-b3d4-d6aae00045a6
+    m_ActionName: 'UI/ScrollWheel[/Mouse/scroll]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 853693f7-aace-40c1-8d7b-57c105543e86
+    m_ActionName: 'UI/MiddleClick[/Mouse/middleButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1b8a4a37-034e-42f3-a39f-4e6234a497a2
+    m_ActionName: 'UI/RightClick[/Mouse/rightButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 42c4bbdd-1098-4eb2-97f0-803709aae84d
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 03487166-9535-4a5f-a301-19bc0a58c373
+    m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3ecfaf75-8770-41ca-93e2-219731ad93ad
+    m_ActionName: 'Player2/Move[/SwitchProControllerHID/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c2a275f9-8b08-493b-8e37-53460f4ac177
+    m_ActionName: 'Player2/Look[/SwitchProControllerHID/rightStick,/Mouse/delta,/Touchscreen/delta]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1c195ad7-8685-41f2-969f-fad003e02d40
+    m_ActionName: 'Player2/A[/SwitchProControllerHID/buttonEast,/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bf690975-d11b-4faa-a784-993dcca9011b
+    m_ActionName: 'Player2/B[/SwitchProControllerHID/buttonSouth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5f38f0f3-cbce-42ca-b348-f95b8f9286a3
+    m_ActionName: 'Player2/X[/SwitchProControllerHID/buttonNorth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: eff78e15-9354-4be2-8f66-3ffdcba8f0f4
+    m_ActionName: 'Player2/Y[/SwitchProControllerHID/buttonWest]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 747b00af-291a-4e8e-a2c2-0a058b45b7db
+    m_ActionName: 'Player2/RightTrigger[/SwitchProControllerHID/rightTrigger]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 923638b2-57a1-4daa-9534-8a1b693c4c8f
+    m_ActionName: 'Player3/Move[/SwitchProControllerHID/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2cd09567-8fb0-4c3c-90d1-c76adb5a87ae
+    m_ActionName: 'Player3/Look[/SwitchProControllerHID/rightStick,/Mouse/delta,/Touchscreen/delta]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c6851374-1dac-48e7-bdb6-481436036ffb
+    m_ActionName: 'Player3/A[/SwitchProControllerHID/buttonEast,/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 093bfa27-329f-47c0-8aed-efb15254bfcc
+    m_ActionName: 'Player3/B[/SwitchProControllerHID/buttonSouth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7142e267-86bf-4814-9d3e-d3ffa6c9800b
+    m_ActionName: 'Player3/X[/SwitchProControllerHID/buttonNorth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 695f8102-ef5a-40e4-ab62-d22d680684bf
+    m_ActionName: 'Player3/Y[/SwitchProControllerHID/buttonWest]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 95531ed1-5387-4f02-921f-a6e3cc0a3fff
+    m_ActionName: 'Player3/RightTrigger[/SwitchProControllerHID/rightTrigger]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0c1984c1-025f-494a-a55a-85fe3cdf8f36
+    m_ActionName: 'Player4/Move[/SwitchProControllerHID/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f3024e52-9d68-4b6a-86a2-52d99d382c86
+    m_ActionName: 'Player4/Look[/SwitchProControllerHID/rightStick,/Mouse/delta,/Touchscreen/delta]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bf3df625-e4f6-4a4f-96a8-86c45edfd1a7
+    m_ActionName: 'Player4/A[/SwitchProControllerHID/buttonEast,/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3d43c912-a303-42f7-80bb-66017e0b0614
+    m_ActionName: 'Player4/B[/SwitchProControllerHID/buttonSouth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f058af92-9183-4db1-9dd4-1169430ca293
+    m_ActionName: 'Player4/X[/SwitchProControllerHID/buttonNorth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 93374026-7e86-4ce5-bfc1-3a99a59c5292
+    m_ActionName: 'Player4/Y[/SwitchProControllerHID/buttonWest]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 18b84037-902d-4537-9b6b-1be00536f62d
+    m_ActionName: 'Player4/RightTrigger[/SwitchProControllerHID/rightTrigger]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1160852404}
+        m_TargetAssemblyTypeName: GeneralCardHandUI, Assembly-CSharp
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4e040937-2e6b-475a-b05c-eaf79df54686
+    m_ActionName: 'CountSelection/Move[/SwitchProControllerHID/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1160852404}
+        m_TargetAssemblyTypeName: GeneralCardHandUI, Assembly-CSharp
+        m_MethodName: OnA
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: f64ced7c-098a-4208-9c81-89a216483bad
+    m_ActionName: 'CountSelection/A[/SwitchProControllerHID/buttonEast,/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1320609713}
+        m_TargetAssemblyTypeName: Selections, Assembly-CSharp
+        m_MethodName: OnA
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: e16a5c4c-3066-42e5-adcb-448a9384b22f
+    m_ActionName: 'Title/A[/SwitchProControllerHID/buttonEast,/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2778c312-eb6c-45a0-bc6c-cbf8bdfba0b9
+    m_ActionName: 'GameSelection/Move[/SwitchProControllerHID/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bb19490f-7b92-465b-8600-3b1f40de9c45
+    m_ActionName: 'GameSelection/A[/SwitchProControllerHID/buttonEast,/Mouse/leftButton]'
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Title
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1755991787
 GameObject:
   m_ObjectHideFlags: 0
@@ -3524,6 +6785,392 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1755991787}
   m_CullTransparentMesh: 1
+--- !u!1 &1782617625
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1782617626}
+  - component: {fileID: 1782617630}
+  - component: {fileID: 1782617629}
+  - component: {fileID: 1782617628}
+  - component: {fileID: 1782617627}
+  m_Layer: 5
+  m_Name: P2/2Hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1782617626
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782617625}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1177725848}
+  - {fileID: 1892432220}
+  - {fileID: 1482759164}
+  - {fileID: 935551924}
+  m_Father: {fileID: 1041678607}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.0025024414, y: 0}
+  m_SizeDelta: {x: -0.0050049, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1782617627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782617625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74248f2d7f3b5e64ea4f92d2b5000c15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::test
+--- !u!82 &1782617628
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782617625}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 7cb75a3a0bd56ce46b22c1be4534d67e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.75
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1782617629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782617625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+  m_Actions: {fileID: -944628639613478452, guid: a609e50d64272f54ca987a2093dfe58c, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 14a054d6-1f5a-4bcb-9e28-0981ec60dc48
+    m_ActionName: Player1/Move
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e17f9b81-47ec-4d67-884d-56f827b462da
+    m_ActionName: Player1/Look
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 16b69e57-af94-465c-b663-43b4db2fa288
+    m_ActionName: Player1/A
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 70cab098-0455-4bef-8940-981a790f33b5
+    m_ActionName: Player1/B
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 87955a21-30af-460d-ac8a-b505b3bf2aac
+    m_ActionName: Player1/X
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 933b1881-70cb-415b-9915-f499f22e29fe
+    m_ActionName: Player1/RightTrigger
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6a2606ed-1d46-4a58-b62c-ac5354e5e7cd
+    m_ActionName: UI/Navigate
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 40713e65-6b79-4a5f-ad0b-e13c6b4755c4
+    m_ActionName: UI/Submit
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 21b47d50-fc40-4c25-a11f-2c6613e6467c
+    m_ActionName: UI/Cancel
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e097ee3e-9229-42c0-b5fd-dc2fc5a33921
+    m_ActionName: UI/Point
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ec1ccd19-2ede-4886-9f69-a290c7b1aac8
+    m_ActionName: UI/Click
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b4f504e9-b754-4217-b3d4-d6aae00045a6
+    m_ActionName: UI/ScrollWheel
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 853693f7-aace-40c1-8d7b-57c105543e86
+    m_ActionName: UI/MiddleClick
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1b8a4a37-034e-42f3-a39f-4e6234a497a2
+    m_ActionName: UI/RightClick
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 42c4bbdd-1098-4eb2-97f0-803709aae84d
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 03487166-9535-4a5f-a301-19bc0a58c373
+    m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 892ff973-c47c-4ce5-b901-0bc7e9180429
+    m_ActionName: Player1/Y
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1782617630}
+        m_TargetAssemblyTypeName: CardHandUI, Assembly-CSharp
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3ecfaf75-8770-41ca-93e2-219731ad93ad
+    m_ActionName: Player2/Move
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c2a275f9-8b08-493b-8e37-53460f4ac177
+    m_ActionName: Player2/Look
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1782617630}
+        m_TargetAssemblyTypeName: CardHandUI, Assembly-CSharp
+        m_MethodName: OnA
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1c195ad7-8685-41f2-969f-fad003e02d40
+    m_ActionName: Player2/A
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bf690975-d11b-4faa-a784-993dcca9011b
+    m_ActionName: Player2/B
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5f38f0f3-cbce-42ca-b348-f95b8f9286a3
+    m_ActionName: Player2/X
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: eff78e15-9354-4be2-8f66-3ffdcba8f0f4
+    m_ActionName: Player2/Y
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 747b00af-291a-4e8e-a2c2-0a058b45b7db
+    m_ActionName: Player2/RightTrigger
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 923638b2-57a1-4daa-9534-8a1b693c4c8f
+    m_ActionName: 'Player3/Move[/SwitchProControllerHID/leftStick,/SwitchProControllerHID2/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/stick]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2cd09567-8fb0-4c3c-90d1-c76adb5a87ae
+    m_ActionName: 'Player3/Look[/SwitchProControllerHID/rightStick,/SwitchProControllerHID2/rightStick,/Mouse/delta,/Touchscreen/delta]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c6851374-1dac-48e7-bdb6-481436036ffb
+    m_ActionName: 'Player3/A[/SwitchProControllerHID/buttonEast,/SwitchProControllerHID2/buttonEast,/Mouse/leftButton,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button3]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 093bfa27-329f-47c0-8aed-efb15254bfcc
+    m_ActionName: 'Player3/B[/SwitchProControllerHID/buttonSouth,/SwitchProControllerHID2/buttonSouth,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button2]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7142e267-86bf-4814-9d3e-d3ffa6c9800b
+    m_ActionName: 'Player3/X[/SwitchProControllerHID/buttonNorth,/SwitchProControllerHID2/buttonNorth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 695f8102-ef5a-40e4-ab62-d22d680684bf
+    m_ActionName: 'Player3/Y[/SwitchProControllerHID/buttonWest,/SwitchProControllerHID2/buttonWest]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 95531ed1-5387-4f02-921f-a6e3cc0a3fff
+    m_ActionName: 'Player3/RightTrigger[/SwitchProControllerHID/rightTrigger,/SwitchProControllerHID2/rightTrigger]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0c1984c1-025f-494a-a55a-85fe3cdf8f36
+    m_ActionName: 'Player4/Move[/SwitchProControllerHID/leftStick,/SwitchProControllerHID2/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/stick]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f3024e52-9d68-4b6a-86a2-52d99d382c86
+    m_ActionName: 'Player4/Look[/SwitchProControllerHID/rightStick,/SwitchProControllerHID2/rightStick,/Mouse/delta,/Touchscreen/delta]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bf3df625-e4f6-4a4f-96a8-86c45edfd1a7
+    m_ActionName: 'Player4/A[/SwitchProControllerHID/buttonEast,/SwitchProControllerHID2/buttonEast,/Mouse/leftButton,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button3]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3d43c912-a303-42f7-80bb-66017e0b0614
+    m_ActionName: 'Player4/B[/SwitchProControllerHID/buttonSouth,/SwitchProControllerHID2/buttonSouth,/PowerA
+      PowerA Advantage Wired Controller for Nintendo Switch 2/button2]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f058af92-9183-4db1-9dd4-1169430ca293
+    m_ActionName: 'Player4/X[/SwitchProControllerHID/buttonNorth,/SwitchProControllerHID2/buttonNorth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 93374026-7e86-4ce5-bfc1-3a99a59c5292
+    m_ActionName: 'Player4/Y[/SwitchProControllerHID/buttonWest,/SwitchProControllerHID2/buttonWest]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 18b84037-902d-4537-9b6b-1be00536f62d
+    m_ActionName: 'Player4/RightTrigger[/SwitchProControllerHID/rightTrigger,/SwitchProControllerHID2/rightTrigger]'
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: Gamepad
+  m_DefaultActionMap: Player2
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &1782617630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782617625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83b89914c46bcfc4b8cdd9971d3e40ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardHandUI
+  cards:
+  - {fileID: 1177725848}
+  - {fileID: 1892432220}
+  - {fileID: 1482759164}
+  - {fileID: 935551924}
+  fanSpacing: 235
+  raisedHeight: 40
+  moveThreshold: 0.3
+  playerName: Player2Data
+  objectToOn: {fileID: 770595878}
 --- !u!1 &1787825784
 GameObject:
   m_ObjectHideFlags: 0
@@ -3569,6 +7216,231 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1792984849
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1792984850}
+  - component: {fileID: 1792984852}
+  - component: {fileID: 1792984851}
+  m_Layer: 5
+  m_Name: Page
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1792984850
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792984849}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.95, y: 0.95, z: 0.95}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 30009026}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.372, y: 0.16666667}
+  m_AnchorMax: {x: 0.619, y: 0.8316667}
+  m_AnchoredPosition: {x: 0.9796982, y: -32}
+  m_SizeDelta: {x: -10.0406, y: -6.6050987}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1792984851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792984849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 108129e9b93675748831969b04f07575, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1792984852
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792984849}
+  m_CullTransparentMesh: 1
+--- !u!1 &1892432219
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1892432220}
+  - component: {fileID: 1892432222}
+  - component: {fileID: 1892432221}
+  m_Layer: 5
+  m_Name: Knight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1892432220
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892432219}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.95, y: 0.95, z: 0.95}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1782617626}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.372, y: 0.16666667}
+  m_AnchorMax: {x: 0.619, y: 0.8316667}
+  m_AnchoredPosition: {x: 0.9796982, y: -32}
+  m_SizeDelta: {x: -10.0406, y: -6.6050987}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1892432221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892432219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 108129e9b93675748831969b04f07575, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1892432222
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892432219}
+  m_CullTransparentMesh: 1
+--- !u!1 &2021949045
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2021949046}
+  - component: {fileID: 2021949048}
+  - component: {fileID: 2021949047}
+  m_Layer: 5
+  m_Name: Knight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2021949046
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021949045}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.95, y: 0.95, z: 0.95}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1540025895}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.372, y: 0.16666667}
+  m_AnchorMax: {x: 0.619, y: 0.8316667}
+  m_AnchoredPosition: {x: 0.9796982, y: -32}
+  m_SizeDelta: {x: -10.0406, y: -6.6050987}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2021949047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021949045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: bc6b8592c2885c84cbbd143b4e8c2111, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2021949048
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021949045}
+  m_CullTransparentMesh: 1
 --- !u!1 &2036672584
 GameObject:
   m_ObjectHideFlags: 0
@@ -3733,7 +7605,7 @@ GameObject:
   - component: {fileID: 2117926232}
   - component: {fileID: 2117926233}
   m_Layer: 5
-  m_Name: P1 Hand
+  m_Name: P1/4 Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4105,6 +7977,81 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74248f2d7f3b5e64ea4f92d2b5000c15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::test
+--- !u!1 &2140072513
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2140072514}
+  - component: {fileID: 2140072516}
+  - component: {fileID: 2140072515}
+  m_Layer: 5
+  m_Name: Two
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2140072514
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140072513}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.95, y: 0.95, z: 0.95}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1160852400}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.372, y: 0.16666667}
+  m_AnchorMax: {x: 0.619, y: 0.8316667}
+  m_AnchoredPosition: {x: 0.9796982, y: -32}
+  m_SizeDelta: {x: -10.0406, y: -6.6050987}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2140072515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140072513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: c199249b4e29dc442bafef0b45ebcdb5, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2140072516
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140072513}
+  m_CullTransparentMesh: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -8,11 +8,14 @@ public class Dragon : MonoBehaviour
     [SerializeField] float maxX = 60f;
 
     Animator anim;
+
+    
     
     void Start()
     {
         anim = GetComponent<Animator>();
         StartCoroutine(Attack());
+        
     }
 
     IEnumerator Attack()
@@ -24,4 +27,6 @@ public class Dragon : MonoBehaviour
             anim.SetTrigger("Attack");
         }
     }
+
+    
 }

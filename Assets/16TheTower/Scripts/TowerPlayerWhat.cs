@@ -9,25 +9,30 @@ public class TowerPlayerWhat : MonoBehaviour
     [SerializeField] string playerName;
     [SerializeField] float lightningPauseTime = 1f;
 
+    bool perfect = false;
+
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         movement = GetComponent<PlatformerMovement>();
-        //player = GameManager.Instance.GetPlayer(playerName);
+        player = GameObject.FindGameObjectWithTag(playerName).GetComponent<PlayerData>();
     }
 
     void Update()
     {
         if (transform.position.y < -25)
         {
-            //player.SetBufferState(3);
-            //this.GameObject.SetActive(false);
+            player.SetBufferState(3);
+            this.gameObject.SetActive(false);
         }
-        if (transform.position.y > 500)
+        if (perfect)
         {
-            //player.SetBufferState(1);
-            //this.GameObject.SetActive(false);
+            player.SetBufferState(1);
+        }
+        else
+        {
+            player.SetBufferState(2);
         }
     }
 
@@ -37,6 +42,10 @@ public class TowerPlayerWhat : MonoBehaviour
         {
             StartCoroutine(pauseMovement(lightningPauseTime));
             Debug.Log("Hit by lightning");
+        }
+        if (other.CompareTag("Item"))
+        {
+            perfect = true;
         }
     }
 

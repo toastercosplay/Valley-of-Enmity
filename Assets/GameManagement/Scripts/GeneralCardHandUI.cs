@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Users;
 using UnityEngine.UI;
 
-public class CardHandUI : MonoBehaviour
+public class GeneralCardHandUI : MonoBehaviour
 {
     //cards from left to right
     [SerializeField] private RectTransform[] cards;
@@ -17,23 +17,22 @@ public class CardHandUI : MonoBehaviour
     private float moveCooldown = 0.2f;
     private float moveTimer;
 
-    [SerializeField] string playerName = "";
-    PlayerData playerData;
+    GameManager gameManager;
+    [SerializeField] string myType = "";
 
     [SerializeField] GameObject objectToOn;
 
-    PlayerInput playerInput;
+    [SerializeField] PlayerInput playerInput;
 
     AudioSource audioSource;
 
     void Start()
     {
-        //set playerdata to first object with the tag playerName
-        playerData = GameObject.FindGameObjectWithTag(playerName).GetComponent<PlayerData>();
-        audioSource = GetComponent<AudioSource>();
+        //game manager
+        gameManager = GameManager.Instance;
 
-        playerInput = GetComponent<PlayerInput>();
-        Debug.Log(playerInput.user.id);
+        //playerInput = GetComponent<PlayerInput>();
+        Debug.Log("PlayerInput component: " + playerInput);
 
         UpdateLayout();
     }
@@ -64,31 +63,45 @@ public class CardHandUI : MonoBehaviour
         //card selection
 
         //FIX THIS LATERRRRRR !!!!!!!!!!!!!!!!!!
-        if (selectedIndex == 0)
+        if (myType == "Count")
         {
-            playerData.SetCharacter(0);
+            if (selectedIndex == 0)
+            {
+                gameManager.SetNumberOfPlayers(2);
+            }
+            else if (selectedIndex == 1)
+            {
+                gameManager.SetNumberOfPlayers(3);
+            }
+            else if (selectedIndex == 2)
+            {
+                gameManager.SetNumberOfPlayers(4);
+            }
         }
-        else if (selectedIndex == 1)
+        if (myType == "Spread")
         {
-            playerData.SetCharacter(0);
-        }
-        else if (selectedIndex == 2)
-        {
-            playerData.SetCharacter(0);
-        }
-        else if (selectedIndex == 3)
-        {
-            playerData.SetCharacter(0);
+            if (selectedIndex == 0)
+            {
+                gameManager.SetNumberOfGames(3);
+            }
+            else if (selectedIndex == 1)
+            {
+                gameManager.SetNumberOfGames(5);
+            }
+            else if (selectedIndex == 2)
+            {
+                gameManager.SetNumberOfGames(7); 
+            }
         }
 
         //andrew spent hours here- fix this john later
-        if (playerName == "Player4Data")
-        {
-            foreach (var user in InputUser.all)
-            {
-                user.UnpairDevices();
-            }
-        }
+
+        // foreach (var user in InputUser.all)
+        // {
+        //     user.UnpairDevices();
+        // }
+        playerInput.SwitchCurrentActionMap("Player1");
+
         objectToOn.SetActive(true);
         //stop rendering the children
         for (int i = 0; i < cards.Length; i++)
@@ -117,12 +130,12 @@ public class CardHandUI : MonoBehaviour
             float y = (i == selectedIndex) ? raisedHeight : 0f;
 
             cards[i].anchoredPosition = new Vector2(x, y);
-            cards[i].SetAsLastSibling(); // ensures selected renders on top
+            cards[i].SetAsLastSibling(); //ensures selected renders on top
         }
     }
 
     public void PlaySound()
     {
-        audioSource.Play();
+        //audioSource.Play();
     }
 }
