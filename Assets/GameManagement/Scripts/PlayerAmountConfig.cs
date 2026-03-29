@@ -9,11 +9,19 @@ public class PlayerAmountConfig : MonoBehaviour
     [SerializeField] GameObject ThreePlayers;
     [SerializeField] GameObject FourPlayers;
 
+    public bool testing = false;
+    public int testingAmount = 2;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         gameManager = GameManager.Instance;
         amount = gameManager.GetNumberOfPlayers();
+
+        if (testing)
+        {
+            amount = testingAmount;
+        }
 
         if (amount == 2)
         {
