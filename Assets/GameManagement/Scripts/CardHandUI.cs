@@ -22,7 +22,7 @@ public class CardHandUI : MonoBehaviour
 
     [SerializeField] GameObject objectToOn;
 
-    PlayerInput playerInput;
+    [SerializeField] PlayerInput playerInput;
 
     AudioSource audioSource;
 
@@ -32,8 +32,10 @@ public class CardHandUI : MonoBehaviour
         playerData = GameObject.FindGameObjectWithTag(playerName).GetComponent<PlayerData>();
         audioSource = GetComponent<AudioSource>();
 
-        playerInput = GetComponent<PlayerInput>();
-        Debug.Log(playerInput.user.id);
+        //playerInput = GetComponent<PlayerInput>();
+        //Debug.Log(playerInput.user.id);
+        Debug.Log("gameobject name: " + gameObject.name);
+        Debug.Log("player input user id: " + playerInput.user.id);
 
         UpdateLayout();
     }

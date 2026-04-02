@@ -227,6 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c63b273f16e6d9e49806e70f18a59ef7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  playerConfig: {fileID: 0}
   player1: {fileID: 1932800217}
   player2: {fileID: 600349473}
   player3: {fileID: 0}
@@ -634,6 +635,26 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 18b84037-902d-4537-9b6b-1be00536f62d
     m_ActionName: Player4/RightTrigger
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4e040937-2e6b-475a-b05c-eaf79df54686
+    m_ActionName: 'CountSelection/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f64ced7c-098a-4208-9c81-89a216483bad
+    m_ActionName: 'CountSelection/A[/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e16a5c4c-3066-42e5-adcb-448a9384b22f
+    m_ActionName: 'Title/A[/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2778c312-eb6c-45a0-bc6c-cbf8bdfba0b9
+    m_ActionName: 'GameSelection/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bb19490f-7b92-465b-8600-3b1f40de9c45
+    m_ActionName: 'GameSelection/A[/Mouse/leftButton]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player4
@@ -1780,6 +1801,26 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 18b84037-902d-4537-9b6b-1be00536f62d
     m_ActionName: Player4/RightTrigger
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4e040937-2e6b-475a-b05c-eaf79df54686
+    m_ActionName: 'CountSelection/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f64ced7c-098a-4208-9c81-89a216483bad
+    m_ActionName: 'CountSelection/A[/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e16a5c4c-3066-42e5-adcb-448a9384b22f
+    m_ActionName: 'Title/A[/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2778c312-eb6c-45a0-bc6c-cbf8bdfba0b9
+    m_ActionName: 'GameSelection/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bb19490f-7b92-465b-8600-3b1f40de9c45
+    m_ActionName: 'GameSelection/A[/Mouse/leftButton]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player3
@@ -2346,6 +2387,59 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1493047281
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1493047283}
+  - component: {fileID: 1493047282}
+  m_Layer: 0
+  m_Name: amountconfig
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1493047282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493047281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e280ee2066f50a54289a44be1ea64430, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAmountConfig
+  TwoPStage: {fileID: 0}
+  ThreePStage: {fileID: 0}
+  FourPStage: {fileID: 0}
+  Player1: {fileID: 653645253}
+  Player2: {fileID: 475379448}
+  Player3: {fileID: 717625446}
+  Player4: {fileID: 400972207}
+  testing: 0
+  testingAmount: 4
+--- !u!4 &1493047283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493047281}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 436.23837, y: 292.36398, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1557395870
 GameObject:
   m_ObjectHideFlags: 0
@@ -2421,8 +2515,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::shootingtitle
   toTurnOn:
   - {fileID: 850891197}
-  - {fileID: 653645253}
-  - {fileID: 475379448}
+  - {fileID: 1493047281}
 --- !u!114 &1557395874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2723,3 +2816,4 @@ SceneRoots:
   - {fileID: 178936231}
   - {fileID: 1932800218}
   - {fileID: 600349474}
+  - {fileID: 1493047283}

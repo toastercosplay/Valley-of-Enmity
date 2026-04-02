@@ -5,9 +5,16 @@ public class PlayerAmountConfig : MonoBehaviour
     int amount = 0;
     GameManager gameManager;
 
-    [SerializeField] GameObject TwoPlayers;
-    [SerializeField] GameObject ThreePlayers;
-    [SerializeField] GameObject FourPlayers;
+    //only one stage
+    [SerializeField] GameObject TwoPStage;
+    [SerializeField] GameObject ThreePStage;
+    [SerializeField] GameObject FourPStage;
+
+    //players just get enabled additionally
+    [SerializeField] GameObject Player1;
+    [SerializeField] GameObject Player2;
+    [SerializeField] GameObject Player3;
+    [SerializeField] GameObject Player4;
 
     public bool testing = false;
     public int testingAmount = 2;
@@ -23,23 +30,40 @@ public class PlayerAmountConfig : MonoBehaviour
             amount = testingAmount;
         }
 
-        if (amount == 2)
+        if (TwoPStage != null && ThreePStage != null && FourPStage != null)
         {
-            TwoPlayers.SetActive(true);
-            ThreePlayers.SetActive(false);
-            FourPlayers.SetActive(false);
+            if (amount == 2)
+            {
+                TwoPStage.SetActive(true);
+                ThreePStage.SetActive(false);
+                FourPStage.SetActive(false);
+            }
+            else if (amount == 3)
+            {
+                TwoPStage.SetActive(false);
+                ThreePStage.SetActive(true);
+                FourPStage.SetActive(false);
+            }
+            else if (amount == 4)
+            {
+                TwoPStage.SetActive(false);
+                ThreePStage.SetActive(false);
+                FourPStage.SetActive(true);
+            }
         }
-        else if (amount == 3)
+
+        Player1.SetActive(true);
+        if (amount >= 2)
         {
-            ThreePlayers.SetActive(true);
-            TwoPlayers.SetActive(false);
-            FourPlayers.SetActive(false);
+            Player2.SetActive(true);
         }
-        else if (amount == 4)
+        if (amount >= 3)
         {
-            FourPlayers.SetActive(true);
-            TwoPlayers.SetActive(false);
-            ThreePlayers.SetActive(false);
+            Player3.SetActive(true);
+        }
+        if (amount >= 4)
+        {
+            Player4.SetActive(true);
         }
 
     }
