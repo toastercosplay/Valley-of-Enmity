@@ -11,7 +11,7 @@ public class test : MonoBehaviour
 
         foreach (var device in playerInput.devices)
         {
-            //Debug.Log("Player device: " + device.displayName + " : " + device.layout);
+            Debug.Log("Player device: " + device.displayName + " : " + device.layout);
         }
     }
 }

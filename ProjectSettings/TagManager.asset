@@ -11,6 +11,7 @@ TagManager:
   - Lightning
   - Player3Data
   - Player4Data
+  - Projectile
   layers:
   - Default
   - TransparentFX
