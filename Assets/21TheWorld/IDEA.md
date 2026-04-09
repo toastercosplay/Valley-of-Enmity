@@ -1,0 +1,7 @@
+I want to create herding scene. In this scene, the player can control a player object, which will walk around and herd cows. The way this works is that there will be some configurable static number of starting cow object. When the player walks around and a cow becomes within the player's radius, the cow follow the player around. Once all cows are following the player, the game is won. 
+
+Parameters I need include walking boundaries, starting number of cows. The cows should be randomly placed within the boundaries, with spread being encouraged.
+
+The game should support 2 to 4 players, with the number of players being sourced from file Valley-of-Enmity/Assets/GameManagement/Scripts/GameManager.cs. Each player gets their own instantiation of the game (i.e. own field with own cows). When players finish the game, their ranking order should be displayed with the number seconds it took them to finish. 
+
+When implementing this game, opt for code simplicity by instructing me to do work in the Unity inspector when possible. In other words, if a part of the game can be implemented via Unity inspector rather than code, prefer that and give detailed instructions for me to follow. Ask clarifying questions as necessary.

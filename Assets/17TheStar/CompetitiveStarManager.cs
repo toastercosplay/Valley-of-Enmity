@@ -143,27 +143,19 @@ public class CompetitiveStarManager : MonoBehaviour
 
     Rect[] GetViewportRects(int count)
     {
-        Rect[] rects = new Rect[count];
-
-        switch (count)
+        Rect[] fullGrid = new Rect[]
         {
-            case 2:
-                rects[0] = new Rect(0f, 0.5f, 1f, 0.5f);    // P1: top
-                rects[1] = new Rect(0f, 0f, 1f, 0.5f);       // P2: bottom
-                break;
-            case 3:
-                rects[0] = new Rect(0f, 0.5f, 1f, 0.5f);     // P1: top
-                rects[1] = new Rect(0f, 0f, 0.5f, 0.5f);     // P2: bottom-left
-                rects[2] = new Rect(0.5f, 0f, 0.5f, 0.5f);   // P3: bottom-right
-                break;
-            case 4:
-                rects[0] = new Rect(0f, 0.5f, 0.5f, 0.5f);   // P1: upper-left
-                rects[1] = new Rect(0.5f, 0.5f, 0.5f, 0.5f); // P2: upper-right
-                rects[2] = new Rect(0f, 0f, 0.5f, 0.5f);     // P3: lower-left
-                rects[3] = new Rect(0.5f, 0f, 0.5f, 0.5f);   // P4: lower-right
-                break;
-        }
+            new Rect(0f, 0.5f, 0.5f, 0.5f),   // P1: upper-left
+            new Rect(0.5f, 0.5f, 0.5f, 0.5f), // P2: upper-right
+            new Rect(0f, 0f, 0.5f, 0.5f),     // P3: lower-left
+            new Rect(0.5f, 0f, 0.5f, 0.5f)    // P4: lower-right
+        };
 
+        Rect[] rects = new Rect[count];
+        for (int i = 0; i < count; i++)
+        {
+            rects[i] = fullGrid[i];
+        }
         return rects;
     }
 
