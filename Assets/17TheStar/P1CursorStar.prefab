@@ -100,6 +100,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P1CursorStar
       objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: Joystick
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

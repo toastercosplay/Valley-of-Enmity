@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     private int numberOfPlayers = 0;
     private int numberOfGames = 3;
     private int gamesPlayed = 0;
+    public GameObject playerConfig;
 
     [SerializeField] public PlayerData player1;
     [SerializeField] public PlayerData player2;
@@ -143,5 +144,10 @@ public class GameManager : MonoBehaviour
     public void PlaySound()
     {
         audioSource.Play();
+    }
+
+    public int GetNumberOfPlayers()
+    {
+        return numberOfPlayers;
     }
 }
