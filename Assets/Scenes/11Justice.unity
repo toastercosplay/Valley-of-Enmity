@@ -1032,6 +1032,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::KeyMovement
   velocity: 7.5
   playerIndex: 1
+  justice: {fileID: 0}
 --- !u!58 &294549303
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1943,6 +1944,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::KeyMovement
   velocity: 7.5
   playerIndex: 2
+  justice: {fileID: 0}
 --- !u!58 &753581364
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2360,6 +2362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::KeyMovement
   velocity: 7.5
   playerIndex: 2
+  justice: {fileID: 1062602640}
 --- !u!58 &877806280
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2543,6 +2546,50 @@ MonoBehaviour:
   spawnInterval: 1.6
   heightRange: 6
   pipePreFab: {fileID: 25041805468200518, guid: df2d9a6d6452749d1b1ab7baf0238998, type: 3}
+--- !u!1 &1062602639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1062602641}
+  - component: {fileID: 1062602640}
+  m_Layer: 0
+  m_Name: JusticeObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1062602640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062602639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6acdb99d0d2e404993294aad122b7fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Justice
+--- !u!4 &1062602641
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062602639}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1157.8043, y: 818.21747, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1085739888
 GameObject:
   m_ObjectHideFlags: 0
@@ -3337,6 +3384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::KeyMovement
   velocity: 7.5
   playerIndex: 0
+  justice: {fileID: 1062602640}
 --- !u!58 &1540264739
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3907,6 +3955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::KeyMovement
   velocity: 7.5
   playerIndex: 3
+  justice: {fileID: 1062602640}
 --- !u!58 &1896640081
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4229,6 +4278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::KeyMovement
   velocity: 7.5
   playerIndex: 1
+  justice: {fileID: 1062602640}
 --- !u!58 &1981662242
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4531,6 +4581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::KeyMovement
   velocity: 7.5
   playerIndex: 3
+  justice: {fileID: 0}
 --- !u!58 &2104197548
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4810,3 +4861,4 @@ SceneRoots:
   - {fileID: 478918845}
   - {fileID: 1301606086}
   - {fileID: 1357610689}
+  - {fileID: 1062602641}

@@ -5,19 +5,20 @@ public class Justice : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private Rigidbody2D rigidBody;
     private float yBound;
-    public PlayerData player1Data;
-    public PlayerData player2Data;
+    //public PlayerData player1Data;
+    //public PlayerData player2Data;
 
-    [SerializeField]GameObject player1;
-    [SerializeField]GameObject player2;
-    
+    //[SerializeField]GameObject player1;
+    //[SerializeField]GameObject player2;
+    private bool[] dead = {false, false, false, false};
+
     GameManager gameManager;
 
     void Start()
     {
         gameManager = GameManager.Instance;
-        player1Data = GameObject.FindGameObjectWithTag("Player1Data").GetComponent<PlayerData>();
-        player2Data = GameObject.FindGameObjectWithTag("Player2Data").GetComponent<PlayerData>();
+        //player1Data = GameObject.FindGameObjectWithTag("Player1Data").GetComponent<PlayerData>();
+        //player2Data = GameObject.FindGameObjectWithTag("Player2Data").GetComponent<PlayerData>();
         
         //loss = False;
     }
@@ -41,6 +42,16 @@ public class Justice : MonoBehaviour
     public void GameOver()
     {
         Time.timeScale = 0f;
+    }
+
+    public void PlayerDied(int playerIndex)
+    {
+        dead[playerIndex] = true;
+        if ((dead[0] == true) && (dead[1] == true) && (dead[2] == true) && (dead[3] == true))
+        {
+            GameOver();
+        }
+
     }
     
 }

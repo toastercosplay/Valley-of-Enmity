@@ -5,7 +5,10 @@ public class KeyMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] private float velocity = 6.5f;
     private Rigidbody2D key;
-    public int playerIndex = 0; 
+    public int playerIndex = 0;
+    private bool isAlive = true; 
+    [SerializeField] Justice justice;
+
 
     void Start()
     {
@@ -25,7 +28,10 @@ public class KeyMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //add end game stuff
-        Time.timeScale = 0f;
+        isAlive = false;
+        GetComponent<Rigidbody2D>().simulated = false;
+        GetComponent<Collider2D>().enabled = false;
+        justice.PlayerDied(playerIndex);
     }
 
     public void Fly(){
