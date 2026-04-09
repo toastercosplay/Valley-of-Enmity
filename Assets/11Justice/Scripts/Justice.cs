@@ -18,7 +18,7 @@ public class Justice : MonoBehaviour
         gameManager = GameManager.Instance;
         player1Data = GameObject.FindGameObjectWithTag("Player1Data").GetComponent<PlayerData>();
         player2Data = GameObject.FindGameObjectWithTag("Player2Data").GetComponent<PlayerData>();
-
+        
         //loss = False;
     }
 

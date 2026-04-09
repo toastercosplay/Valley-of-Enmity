@@ -52,7 +52,7 @@ public class ScoringText : MonoBehaviour
         }
         else if (playerIndex == 3)
         {
-            player3ScoreText.text = scores[3].ToString();
+            player4ScoreText.text = scores[3].ToString();
         }
     }
 }
