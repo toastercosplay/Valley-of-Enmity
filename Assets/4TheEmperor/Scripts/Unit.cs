@@ -7,7 +7,6 @@ public class Unit : MonoBehaviour
     private float splineLength;
     private float distanceTraveled = 0f;
     
-    // Growth Settings (Passed from the Attacker)
     private float minSize, maxSize, growthSpeed;
     private float minSpeed, maxSpeed;
     
@@ -17,8 +16,6 @@ public class Unit : MonoBehaviour
 
     private int currentHP;
 
-
-    // We pass all the "rules" of this unit here
     public void StartCharging(SplineContainer spline, float minS, float maxS, float growS, float minV, float maxV)
     {
         targetSpline = spline;
@@ -33,11 +30,11 @@ public class Unit : MonoBehaviour
         currentScale = minSize;
         transform.localScale = Vector3.one * currentScale;
         
-        // Snap to start of path
+        //start of path snapping
         transform.position = (Vector3)targetSpline.EvaluatePosition(0);
         
         isCharging = true;
-        currentHP = 1;
+        currentHP = 10;
     }
 
     public void Release()
@@ -45,14 +42,12 @@ public class Unit : MonoBehaviour
         isCharging = false;
         isReleased = true;
 
-        // Calculate speed based on final scale
-        // Bigger = Slower
+        // bigger and slower
         float t = Mathf.InverseLerp(minSize, maxSize, currentScale);
         float finalSpeed = Mathf.Lerp(maxSpeed, minSpeed, t);
 
-        currentHP = Mathf.RoundToInt(Mathf.Lerp(1, 5, t));
+        currentHP = Mathf.RoundToInt(Mathf.Lerp(1, 8, t));
         
-        // Store speed for movement logic
         growthSpeed = finalSpeed; 
         
     }
@@ -79,14 +74,12 @@ public class Unit : MonoBehaviour
     {
         if (targetSpline == null) return;
 
-        distanceTraveled += growthSpeed * Time.deltaTime; // Using growthSpeed variable as actual speed now
+        distanceTraveled += growthSpeed * Time.deltaTime;
         float t = Mathf.Clamp01(distanceTraveled / splineLength);
 
-        // 2D Position (Forcing Z to 0)
         Vector3 pos = targetSpline.EvaluatePosition(t);
         transform.position = new Vector3(pos.x, pos.y, 0f);
 
-        // 2D Rotation
         Vector3 tangent = targetSpline.EvaluateTangent(t);
         if (tangent != Vector3.zero)
         {
@@ -97,13 +90,12 @@ public class Unit : MonoBehaviour
         if (t >= 1f) Destroy(gameObject);
     }
 
-    void OnTriggerEnter2D(Collider2D other) // Changed to Enter so it doesn't take 60dmg/sec
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Projectile"))
         {
             TakeDamage(1);
             
-            // Usually you'd want to destroy the projectile here too:
             // Destroy(other.gameObject); 
         }
     }
@@ -113,7 +105,6 @@ public class Unit : MonoBehaviour
         currentHP -= amount;
         if (currentHP <= 0)
         {
-            // Add death effects here if you want!
             Destroy(gameObject);
         }
     }
