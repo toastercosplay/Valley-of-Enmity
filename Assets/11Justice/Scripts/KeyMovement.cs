@@ -18,10 +18,10 @@ public class KeyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-           Fly(); 
-        }
+        // if (Input.GetKeyDown(KeyCode.Space))
+        // {
+           //Fly(); 
+        //}
         //make into Fly function and then use using button script and attach player/fly function together
     }
 
