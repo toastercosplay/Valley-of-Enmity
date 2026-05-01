@@ -21,4 +21,9 @@ public class HORSE : MonoBehaviour
     {
         
     }
+
+    void GameOver()
+    {
+        
+    }
 }
