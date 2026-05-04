@@ -12,6 +12,7 @@ TagManager:
   - Player3Data
   - Player4Data
   - Projectile
+  - Key
   layers:
   - Default
   - TransparentFX

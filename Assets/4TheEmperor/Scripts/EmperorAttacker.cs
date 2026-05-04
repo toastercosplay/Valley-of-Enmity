@@ -18,17 +18,15 @@ public class EmperorAttacker : MonoBehaviour
         {
             //Debug.Log("Spawning unit...");
             
-            
             GameObject go = Instantiate(unitPrefab);
             currentUnit = go.GetComponent<Unit>();
             
-            // Pass all settings to the unit immediately
             currentUnit.StartCharging(path, minSize, maxSize, growthSpeed, minMoveSpeed, maxMoveSpeed);
         }
 
         if (context.canceled && currentUnit != null)
         {
-            Debug.Log("Releasing unit with final size: " + currentUnit.transform.localScale.x);
+            //Debug.Log("Releasing unit with final size: " + currentUnit.transform.localScale.x);
             
             currentUnit.Release();
             currentUnit = null;
