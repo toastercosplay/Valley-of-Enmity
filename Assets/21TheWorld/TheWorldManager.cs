@@ -5,6 +5,11 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
+// top-level controller for "the world" minigame. each player gets their own
+// instanced arena, camera viewport, and cow herd. arenas live at the same
+// world-space coordinates but on different layers, so a per-camera culling
+// mask makes each player only see their own arena. this lets us run n
+// independent races on one scene without spatial separation.
 public class TheWorldManager : MonoBehaviour
 {
     [Header("Prefabs")]
@@ -31,16 +36,20 @@ public class TheWorldManager : MonoBehaviour
     public float spawnScaleMultiplier = 0.2f;
 
     [Header("Layers (must match Project Settings)")]
+    // these must exist in project settings → tags and layers. each player's
+    // arena and camera get assigned the matching layer to isolate visuals/physics.
     public string[] playerLayerNames = { "WorldP1", "WorldP2", "WorldP3", "WorldP4" };
 
     private int playerCount;
     private PlayerHerdInstance[] playerInstances;
+    // Append-only finish log used to compute placement (1st/2nd/...) by index.
     private readonly List<(int playerIndex, float time)> finishOrder = new List<(int, float)>();
     private TMP_Text rankingText;
     private bool allFinished;
 
     void Start()
     {
+        // player count resolution priority: inspector override (test path) → live gamemanager → safe default.
         if (playerCountOverride > 0)
         {
             playerCount = playerCountOverride;
@@ -56,6 +65,8 @@ public class TheWorldManager : MonoBehaviour
 
         playerCount = Mathf.Clamp(playerCount, 2, 4);
 
+        // the scene's default main camera would render every layer at full screen
+        // and overwrite the split-screen viewports, so we destroy it before spawning per-player cameras.
         Camera mainCam = Camera.main;
         if (mainCam != null)
         {
@@ -72,6 +83,8 @@ public class TheWorldManager : MonoBehaviour
         }
     }
 
+    // gamemanager exposes player slots as nullable references whose activeself
+    // tells us how many joined in the lobby. p1/p2 are always assumed present.
     int GetPlayerCountFromGameManager()
     {
         int count = 2;
@@ -88,6 +101,8 @@ public class TheWorldManager : MonoBehaviour
         return count;
     }
 
+    // builds the per-player slice of the scene: arena prefab, walls, isolated
+    // camera, the player avatar, and a fresh herd of cows tied to that player.
     void SetupPlayer(int playerIndex, Rect viewportRect)
     {
         int layer = LayerMask.NameToLayer(playerLayerNames[playerIndex]);
@@ -115,6 +130,7 @@ public class TheWorldManager : MonoBehaviour
             return;
         }
 
+        // all arenas are spawned at the origin; layer-based culling keeps them visually separate.
         GameObject arena = Instantiate(herdArenaPrefab, Vector3.zero, Quaternion.identity);
         arena.name = $"HerdArena_P{playerIndex + 1}";
         SetLayerRecursive(arena, layer);
@@ -125,6 +141,7 @@ public class TheWorldManager : MonoBehaviour
         cam.orthographicSize = CalculateOrthoSizeToFitField(viewportRect);
         cam.transform.position = new Vector3(0f, 0f, -10f);
         cam.rect = viewportRect;
+        // bitmask with only this player's layer set — camera renders nothing else.
         cam.cullingMask = 1 << layer;
         cam.clearFlags = CameraClearFlags.SolidColor;
         cam.backgroundColor = new Color(0.3f, 0.5f, 0.2f);
@@ -138,6 +155,7 @@ public class TheWorldManager : MonoBehaviour
             return;
         }
 
+        // each player binds to a dedicated action map (player1..player4) so input devices don't cross over.
         PlayerInput playerInput = playerGO.GetComponent<PlayerInput>();
         if (playerInput != null)
         {
@@ -152,6 +170,7 @@ public class TheWorldManager : MonoBehaviour
 
         CowController[] cows = SpawnCows(arena.transform, playerGO, layer);
 
+        // playerherdinstance is attached at runtime so all per-player state lives on the arena root.
         PlayerHerdInstance instance = arena.AddComponent<PlayerHerdInstance>();
         instance.playerIndex = playerIndex;
         instance.myCows = cows;
@@ -159,6 +178,8 @@ public class TheWorldManager : MonoBehaviour
         playerInstances[playerIndex] = instance;
     }
 
+    // builds the four invisible boundary colliders that keep player and cows
+    // inside the arena. walls overlap at corners so there's no diagonal gap.
     void SpawnBoundaryWalls(Transform parent, int layer)
     {
         float t = wallThickness;
@@ -180,11 +201,17 @@ public class TheWorldManager : MonoBehaviour
         SetLayerRecursive(wall, layer);
     }
 
+    // distributes cowcount cows roughly evenly across the field using a
+    // shuffled grid (jittered cells) so spawns are non-clumpy but reproducibly
+    // spread out. each cow also receives a unique angularoffset so they fan
+    // out into a ring once recruited.
     CowController[] SpawnCows(Transform parent, GameObject playerGO, int layer)
     {
+        // square-ish grid that's at least large enough to hold cowcount cells.
         int cols = Mathf.CeilToInt(Mathf.Sqrt(cowCount));
         int rows = Mathf.CeilToInt((float)cowCount / cols);
         int actualCowCount = Mathf.Min(cowCount, cols * rows);
+        // clamp padding so a misconfigured value can't push spawn bounds inside-out.
         float safeSpawnPaddingX = Mathf.Clamp(cowSpawnBorderPadding, 0f, Mathf.Max(0f, fieldHalfWidth - 0.01f));
         float safeSpawnPaddingY = Mathf.Clamp(cowSpawnBorderPadding, 0f, Mathf.Max(0f, fieldHalfHeight - 0.01f));
 
@@ -197,6 +224,8 @@ public class TheWorldManager : MonoBehaviour
             cellIndices.Add(i);
         }
 
+        // fisher-yates shuffle so when actualcowcount < cell count, the
+        // unused cells are random rather than always the last few in row-major order.
         for (int i = cellIndices.Count - 1; i > 0; i--)
         {
             int j = Random.Range(0, i + 1);
@@ -210,6 +239,7 @@ public class TheWorldManager : MonoBehaviour
             int c = cellIndex % cols;
             int r = cellIndex / cols;
 
+            // place at cell center plus jitter (±30% of cell size), then clamp to the safe spawn rectangle.
             float x = -fieldHalfWidth + c * cellW + cellW * 0.5f + Random.Range(-cellW * 0.3f, cellW * 0.3f);
             float y = -fieldHalfHeight + r * cellH + cellH * 0.5f + Random.Range(-cellH * 0.3f, cellH * 0.3f);
             x = Mathf.Clamp(x, -fieldHalfWidth + safeSpawnPaddingX, fieldHalfWidth - safeSpawnPaddingX);
@@ -226,6 +256,7 @@ public class TheWorldManager : MonoBehaviour
                 continue;
             }
 
+            // evenly distribute angles around the player so the herd forms a full ring.
             cow.angularOffset = (Mathf.PI * 2f * i) / actualCowCount;
             cow.Init(playerGO.transform);
             cows[i] = cow;
@@ -234,6 +265,8 @@ public class TheWorldManager : MonoBehaviour
         return cows;
     }
 
+    // returns normalized (0..1) viewport rectangles for split-screen layouts.
+    // 2 players: vertical split. 3 players: top half split in two, bottom full-width. 4 players: 2x2 grid.
     Rect[] GetViewportRects(int count)
     {
         if (count == 2)
@@ -264,23 +297,30 @@ public class TheWorldManager : MonoBehaviour
         };
     }
 
+    // picks an ortho size big enough that the entire field (plus walls) is
+    // visible in the given viewport regardless of its aspect ratio. narrow
+    // viewports (e.g. half-screen) need a larger ortho size to fit width.
     float CalculateOrthoSizeToFitField(Rect viewportRect)
     {
         float viewportAspect = GetViewportAspect(viewportRect);
         float safeAspect = Mathf.Max(0.0001f, viewportAspect);
         float targetHalfWidth = fieldHalfWidth + wallThickness;
         float targetHalfHeight = fieldHalfHeight + wallThickness;
+        // ortho size is half-height; convert width into the equivalent half-height via aspect.
         float requiredForWidth = targetHalfWidth / safeAspect;
         return Mathf.Max(cameraOrthoSize, targetHalfHeight, requiredForWidth);
     }
 
     float GetViewportAspect(Rect viewportRect)
     {
+        // mathf.max guards against zero-pixel viewports causing divide-by-zero downstream.
         float viewportPixelWidth = Mathf.Max(1f, Screen.width * viewportRect.width);
         float viewportPixelHeight = Mathf.Max(1f, Screen.height * viewportRect.height);
         return viewportPixelWidth / viewportPixelHeight;
     }
 
+    // callback registered on each playerherdinstance. order of arrival
+    // dictates placement, and once everyone has finished we kick off the end-of-round flow.
     void OnPlayerFinished(int playerIndex, float time)
     {
         finishOrder.Add((playerIndex, time));
@@ -291,6 +331,7 @@ public class TheWorldManager : MonoBehaviour
 
         UpdateRankingDisplay();
 
+        // guard against the unlikely double-fire while the end coroutine is queued.
         if (finishOrder.Count >= playerCount && !allFinished)
         {
             allFinished = true;
@@ -298,11 +339,14 @@ public class TheWorldManager : MonoBehaviour
         }
     }
 
+    // builds a single screen-space-overlay canvas that floats above all
+    // player viewports and shows finishing places as players complete.
     void CreateRankingUI()
     {
         GameObject overlayCanvas = new GameObject("RankingCanvas");
         Canvas canvas = overlayCanvas.AddComponent<Canvas>();
         canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+        // high sorting order keeps the leaderboard above any per-player ui.
         canvas.sortingOrder = 100;
 
         CanvasScaler scaler = overlayCanvas.AddComponent<CanvasScaler>();
@@ -345,6 +389,7 @@ public class TheWorldManager : MonoBehaviour
         }
     }
 
+    // brief pause after the last finisher so players can see the final ranking before the scene transitions.
     IEnumerator EndGameRoutine()
     {
         UpdateRankingDisplay();
@@ -360,6 +405,8 @@ public class TheWorldManager : MonoBehaviour
         }
     }
 
+    // walks the hierarchy and assigns the same layer to every child. necessary
+    // because per-player culling masks rely on the whole arena/player tree being on one layer.
     void SetLayerRecursive(GameObject obj, int layer)
     {
         obj.layer = layer;
@@ -369,6 +416,8 @@ public class TheWorldManager : MonoBehaviour
         }
     }
 
+    // multiplies the prefab's authored scale rather than overwriting it, so any
+    // non-uniform scaling baked into the prefab (e.g. flipped sprites) is preserved.
     void ApplySpawnScale(GameObject spawnedObject)
     {
         if (spawnedObject == null)
