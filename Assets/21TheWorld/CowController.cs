@@ -7,6 +7,8 @@ using UnityEngine;
 public class CowController : MonoBehaviour
 {
     // distance at which an idle cow notices the player and starts following.
+    // must be larger than (cow collider radius + player collider radius) or the
+    // player's collider will physically push the cow away before this fires.
     [SerializeField] private float triggerRadius = 2.5f;
     // base movement speed when chasing the assigned slot in the herd.
     [SerializeField] private float followSpeed = 4f;
@@ -17,15 +19,24 @@ public class CowController : MonoBehaviour
     // player speed (squared via threshold * threshold) below which we treat the player as stopped.
     [SerializeField] private float stationarySpeedThreshold = 0.05f;
     // minimum dot product between the player's velocity and the cow direction
-    // before the cow considers itself "in the way" and backs up.
-    [SerializeField] private float approachDotThreshold = 0.25f;
+    // before the cow considers itself "in the way" and backs up. zero means
+    // "anything not directly behind the player counts as in front of motion".
+    [SerializeField] private float approachDotThreshold = 0f;
     // how far past the normal follow distance to retreat when dodging the player.
     [SerializeField] private float backupDistance = 1f;
     // speed multiplier while backing up — moves faster than normal follow so it can clear out.
     [SerializeField] private float backupSpeedMultiplier = 1.3f;
     // extra range beyond followDistance where the back-up reaction can still trigger.
     [SerializeField] private float backupTriggerBuffer = 0.6f;
-    // per-cow angle (radians) around the player; assigned by the spawner so the herd fans out evenly.
+    // half-width of the corridor (perpendicular to player motion) inside which a
+    // cow ahead of the player is considered "in the swept path" and yields.
+    [SerializeField] private float backupCorridorHalfWidth = 0.8f;
+    // distance at which a following cow gives up and returns to idle. must be
+    // larger than triggerRadius so a cow on the edge of recruitment range doesn't
+    // flicker between idle and following each frame.
+    [SerializeField] private float maxFollowDistance = 5f;
+    // per-cow absolute angle (radians) on the herd ring around the player,
+    // measured from world +X. assigned by the spawner so the herd fans out evenly.
     [HideInInspector] public float angularOffset = 0f;
 
     private Transform playerTransform;
@@ -54,14 +65,30 @@ public class CowController : MonoBehaviour
 
     void Update()
     {
-        // once recruited, the cow stays recruited; nothing to check.
-        if (isFollowing || playerTransform == null)
+        if (playerTransform == null)
         {
             return;
         }
 
+        float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
+
+        if (isFollowing)
+        {
+            // dropped too far behind — give up and idle. zero velocity so the cow
+            // doesn't coast once FixedUpdate stops driving it.
+            if (distanceToPlayer > maxFollowDistance)
+            {
+                isFollowing = false;
+                if (rb != null)
+                {
+                    rb.linearVelocity = Vector2.zero;
+                }
+            }
+            return;
+        }
+
         // proximity-based recruitment: walking near a cow adds it to the herd.
-        if (Vector2.Distance(transform.position, playerTransform.position) <= triggerRadius)
+        if (distanceToPlayer <= triggerRadius)
         {
             isFollowing = true;
         }
@@ -74,44 +101,28 @@ public class CowController : MonoBehaviour
             return;
         }
 
-        // direction from the player to this cow's current position. this is
-        // the baseline angle we'll rotate by angularoffset to get our slot.
-        Vector2 dirFromPlayer = (Vector2)(transform.position - playerTransform.position);
-        if (dirFromPlayer.sqrMagnitude < 0.0001f)
-        {
-            // avoid normalizing a zero vector when the cow is sitting on top of the player.
-            dirFromPlayer = Vector2.right;
-        }
-        else
-        {
-            dirFromPlayer.Normalize();
-        }
-
-        // rotate dirfromplayer by angularoffset (2d rotation matrix) so each
-        // cow targets a different angle around the player and the herd spreads out.
-        float cos = Mathf.Cos(angularOffset);
-        float sin = Mathf.Sin(angularOffset);
-        Vector2 rotatedDir = new Vector2(
-            dirFromPlayer.x * cos - dirFromPlayer.y * sin,
-            dirFromPlayer.x * sin + dirFromPlayer.y * cos
-        );
+        // angularOffset is the cow's absolute slot angle on the ring (world +X = 0).
+        // computing the slot direction directly — instead of rotating the cow's
+        // current direction-from-player — gives every cow a stable, fixed target
+        // so the herd settles into a ring instead of spiraling around the player.
+        Vector2 slotDir = new Vector2(Mathf.Cos(angularOffset), Mathf.Sin(angularOffset));
 
         // when the player stops, widen the follow ring so cows settle a bit further out instead of bumping into the player.
         bool playerIsStationary = playerRb == null || playerRb.linearVelocity.sqrMagnitude <= stationarySpeedThreshold * stationarySpeedThreshold;
         float targetFollowDistance = playerIsStationary ? followDistance + stationaryFollowBuffer : followDistance;
 
         Vector2 playerPos = playerTransform.position;
-        Vector2 targetPos = playerPos + rotatedDir * targetFollowDistance;
+        Vector2 targetPos = playerPos + slotDir * targetFollowDistance;
 
-        // if the player is barreling toward this cow, override the slot target
-        // and instead aim for a position further along the direct away vector.
+        // if the player is heading toward (or past) this cow, override the slot
+        // target and aim for a position further along the direct away vector.
         bool shouldBackUp = ShouldBackUp(playerPos);
         if (shouldBackUp)
         {
             Vector2 awayFromPlayer = rb.position - playerPos;
             if (awayFromPlayer.sqrMagnitude < 0.0001f)
             {
-                awayFromPlayer = rotatedDir;
+                awayFromPlayer = slotDir;
             }
             else
             {
@@ -122,12 +133,16 @@ public class CowController : MonoBehaviour
         }
 
         Vector2 toTarget = targetPos - rb.position;
+        float distToTarget = toTarget.magnitude;
         float moveSpeed = followSpeed * (shouldBackUp ? backupSpeedMultiplier : 1f);
 
         // small deadband prevents jitter when the cow is essentially in position.
-        if (toTarget.magnitude > 0.05f)
+        // clamp velocity so we never overshoot the slot in a single physics step,
+        // which was a secondary source of ringing/jitter at slot boundaries.
+        if (distToTarget > 0.05f)
         {
-            rb.linearVelocity = toTarget.normalized * moveSpeed;
+            float stepLimit = distToTarget / Mathf.Max(Time.fixedDeltaTime, 0.0001f);
+            rb.linearVelocity = (toTarget / distToTarget) * Mathf.Min(moveSpeed, stepLimit);
         }
         else
         {
@@ -136,7 +151,9 @@ public class CowController : MonoBehaviour
     }
 
     // returns true when the player is moving fast enough, is close enough,
-    // and is heading toward this cow — i.e. about to collide with it.
+    // and is heading toward (or past) this cow — i.e. about to collide with it
+    // OR about to brush past it in a way that would otherwise leave the cow
+    // standing in the player's path.
     bool ShouldBackUp(Vector2 playerPos)
     {
         if (!isFollowing || playerRb == null)
@@ -168,8 +185,26 @@ public class CowController : MonoBehaviour
             return false;
         }
 
-        // dot product > threshold means the player's velocity points toward this cow.
-        float approachingDot = Vector2.Dot(playerVelocity.normalized, playerToCow.normalized);
-        return approachingDot > approachDotThreshold;
+        Vector2 playerVelDir = playerVelocity.normalized;
+        Vector2 playerToCowDir = playerToCow / currentDistance;
+
+        // direct head-on: player velocity points roughly toward this cow.
+        float approachingDot = Vector2.Dot(playerVelDir, playerToCowDir);
+        if (approachingDot > approachDotThreshold)
+        {
+            return true;
+        }
+
+        // corridor check: cow is ahead of the player along motion (parallel > 0)
+        // and within a narrow swept lane (perpendicular distance small). this
+        // covers the "flanking cow blocking the path" case the head-on dot misses.
+        float parallel = Vector2.Dot(playerToCow, playerVelDir);
+        if (parallel <= 0f)
+        {
+            return false;
+        }
+
+        Vector2 perpendicular = playerToCow - playerVelDir * parallel;
+        return perpendicular.magnitude <= backupCorridorHalfWidth;
     }
 }

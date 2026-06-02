@@ -35,6 +35,9 @@ public class TheWorldManager : MonoBehaviour
     [Tooltip("Multiplier applied to player and cow prefab scale on spawn.")]
     public float spawnScaleMultiplier = 0.2f;
 
+    [Tooltip("Rigidbody2D mass applied to the player on spawn so a clustered herd can't shove them around. Set <=0 to leave the prefab value untouched.")]
+    public float playerMassOverride = 50f;
+
     [Header("Layers (must match Project Settings)")]
     // these must exist in project settings → tags and layers. each player's
     // arena and camera get assigned the matching layer to isolate visuals/physics.
@@ -167,6 +170,18 @@ public class TheWorldManager : MonoBehaviour
         ApplySpawnScale(playerGO);
         playerGO.name = $"P{playerIndex + 1}";
         SetLayerRecursive(playerGO, layer);
+
+        // overriding mass per-spawn (instead of editing the shared player prefab)
+        // keeps the Herd-only behavior — a heavy player that can wade through cows
+        // — from leaking into other minigames that use the same prefab.
+        if (playerMassOverride > 0f)
+        {
+            Rigidbody2D playerRb = playerGO.GetComponent<Rigidbody2D>();
+            if (playerRb != null)
+            {
+                playerRb.mass = playerMassOverride;
+            }
+        }
 
         CowController[] cows = SpawnCows(arena.transform, playerGO, layer);
 

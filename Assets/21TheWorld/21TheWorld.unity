@@ -248,12 +248,13 @@ MonoBehaviour:
   - {fileID: 4081739848675294911, guid: dc87b3f82f23272498a639e7a09ce167, type: 3}
   fieldHalfWidth: 10
   fieldHalfHeight: 7
-  cowCount: 8
+  cowCount: 12
   wallThickness: 0.5
-  cowSpawnBorderPadding: 4
+  cowSpawnBorderPadding: 3
   cameraOrthoSize: 9
   playerCountOverride: 3
   spawnScaleMultiplier: 0.15
+  playerMassOverride: 1
   playerLayerNames:
   - WorldP1
   - WorldP2
