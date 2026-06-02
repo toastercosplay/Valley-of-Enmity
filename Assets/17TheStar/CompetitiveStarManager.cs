@@ -44,7 +44,7 @@ public class CompetitiveStarManager : MonoBehaviour
             Destroy(mainCam.gameObject);
 
         // Create background camera (renders behind all player cameras)
-        // CreateBackgroundCamera();
+        CreateBackgroundCamera();
 
         // Create ranking UI overlay
         CreateRankingUI();
@@ -239,7 +239,10 @@ public class CompetitiveStarManager : MonoBehaviour
 
     void CreateBackgroundCamera()
     {
-        // Background camera renders first at depth -1, full screen
+        // Background camera renders first at depth -1, full screen. It clears the
+        // entire screen to a solid light-blue so empty regions (when there are
+        // fewer than 4 players) sit below the gameplay views instead of showing
+        // leftover render data from the other viewports.
         GameObject bgCamObj = new GameObject("BackgroundCamera");
         Camera bgCam = bgCamObj.AddComponent<Camera>();
         bgCam.orthographic = true;
@@ -248,33 +251,8 @@ public class CompetitiveStarManager : MonoBehaviour
         bgCam.rect = new Rect(0f, 0f, 1f, 1f);
         bgCam.depth = -1;
         bgCam.clearFlags = CameraClearFlags.SolidColor;
-        bgCam.backgroundColor = new Color(0.192f, 0.302f, 0.475f);
-        bgCam.cullingMask = 1 << 0; // Default layer only
-
-        if (backgroundImage != null)
-        {
-            // Create sprite on Default layer (player cameras don't see Default)
-            GameObject bgObj = new GameObject("BackgroundSprite");
-            bgObj.layer = 0;
-            SpriteRenderer sr = bgObj.AddComponent<SpriteRenderer>();
-            sr.sprite = backgroundImage;
-            sr.sortingOrder = -1000;
-
-            // Scale sprite to fill the camera view
-            float camHeight = bgCam.orthographicSize * 2f;
-            float camWidth = camHeight * bgCam.aspect;
-            Vector2 spriteSize = sr.sprite.bounds.size;
-            float scaleX = camWidth / spriteSize.x;
-            float scaleY = camHeight / spriteSize.y;
-            float scale = Mathf.Max(scaleX, scaleY); // cover entire screen
-            Vector3 backgroundScale = new Vector3(scale, scale, 1f);
-            bgObj.transform.localScale = backgroundScale;
-
-            // Center the rendered sprite, even if the imported sprite pivot is not centered.
-            Vector3 cameraCenter = bgCam.transform.position + new Vector3(0f, 0f, 10f);
-            Vector3 spriteCenterOffset = Vector3.Scale(sr.sprite.bounds.center, backgroundScale);
-            bgObj.transform.position = cameraCenter - spriteCenterOffset;
-        }
+        bgCam.backgroundColor = new Color(0.42f, 0.52f, 0.6f); // darker, overcast/cloudy blue-grey
+        bgCam.cullingMask = 0; // render nothing; only used to clear the screen
     }
 
     void SetLayerRecursive(GameObject obj, int layer)

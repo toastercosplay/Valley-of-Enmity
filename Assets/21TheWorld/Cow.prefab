@@ -156,7 +156,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 8
+  m_Radius: 3
 --- !u!114 &1665775747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,13 +169,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4ab22b7303c24570a6177985e61ebcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CowController
-  triggerRadius: 2.5
+  triggerRadius: 3.5
   followSpeed: 3
   followDistance: 3
   stationaryFollowBuffer: 2
   stationarySpeedThreshold: 0.05
-  approachDotThreshold: 0.25
+  approachDotThreshold: 0
   backupDistance: 1
   backupSpeedMultiplier: 1.3
   backupTriggerBuffer: 0.6
+  backupCorridorHalfWidth: 0.8
+  maxFollowDistance: 6
   angularOffset: 0
