@@ -1,19 +1,35 @@
 using UnityEngine;
+using System.Collections;
 
-
-//what a stupid script this is; i wish i didnt have to make this. 
 public class ShuffleAndDraw : MonoBehaviour
 {
     GameManager gameManager;
     
+    [SerializeField] float pauseBeforeDraw = 2.0f; 
+    
     void Start()
     {
         gameManager = GameManager.Instance;
+        
+        StartCoroutine(AutoDrawRoutine());
+    }
+
+    IEnumerator AutoDrawRoutine()
+    {
+        yield return new WaitForSeconds(pauseBeforeDraw);
+        
+        Draw();
     }
 
     public void Draw()
     {
-      gameManager.MakeSelection();
-      //Debug.Log("Draw button pressed");
+        if (gameManager != null)
+        {
+            gameManager.MakeSelection();
+        }
+        else
+        {
+            Debug.LogError("GameManager is missing!");
+        }
     }
 }

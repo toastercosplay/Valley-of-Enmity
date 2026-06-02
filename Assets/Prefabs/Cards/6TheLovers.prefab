@@ -105,3 +105,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Card
   cardName: 6TheLovers
+  cardFace: {fileID: 21300000, guid: 68be14880eee6fd49a9429ec43f70b39, type: 3}
+  cardBack: {fileID: 21300000, guid: fc0fe6f174c8ffe46a247a8800f135c8, type: 3}

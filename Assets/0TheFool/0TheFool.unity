@@ -408,7 +408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FadeAfterDuration
   duration: 2
-  elapsed: -1
+  elapsed: -2
 --- !u!114 &88795270 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3439513331204734064, guid: d00d2a740adc70c4f886bf3607129df7, type: 3}
@@ -478,7 +478,7 @@ MonoBehaviour:
   Player2: {fileID: 88795266}
   Player3: {fileID: 1618608831}
   Player4: {fileID: 266132400}
-  testing: 0
+  testing: 1
   testingAmount: 2
 --- !u!4 &120761634
 Transform:
@@ -691,7 +691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FadeAfterDuration
   duration: 2
-  elapsed: -1
+  elapsed: -2
 --- !u!95 &266132403
 Animator:
   serializedVersion: 7
@@ -1097,6 +1097,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   spawnDelay: 5
+  selectionsMenu: {fileID: 0}
+  characterSelectScreens: []
 --- !u!4 &1340779812
 Transform:
   m_ObjectHideFlags: 0
@@ -1641,7 +1643,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FadeAfterDuration
   duration: 2
-  elapsed: -1
+  elapsed: -2
 --- !u!95 &1618608834
 Animator:
   serializedVersion: 7
@@ -2244,7 +2246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FadeAfterDuration
   duration: 2
-  elapsed: -1
+  elapsed: -2
 --- !u!114 &2044710288
 MonoBehaviour:
   m_ObjectHideFlags: 0

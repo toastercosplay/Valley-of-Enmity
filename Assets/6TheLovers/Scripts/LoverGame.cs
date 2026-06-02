@@ -15,8 +15,8 @@ public class LoverGame : MonoBehaviour
     [SerializeField] GameObject display3;
     [SerializeField] GameObject display4;
 
-    [SerializeField]GameObject player1;
-    [SerializeField]GameObject player2;
+    // [SerializeField]GameObject player1;
+    // [SerializeField]GameObject player2;
 
     [SerializeField] GameObject loverImage1;
     [SerializeField] GameObject loverImage2;
@@ -24,16 +24,16 @@ public class LoverGame : MonoBehaviour
     [SerializeField] float gravity = 9.8f;
 
     GameManager gameManager;
-    PlayerData player1Data;
-    PlayerData player2Data;
+    [SerializeField] LoverPlayer player1;
+    [SerializeField] LoverPlayer player2;
+    [SerializeField] LoverPlayer player3;
+    [SerializeField] LoverPlayer player4;
     
     Animator anim;
 
     void Start()
     {
-        //gameManager = GameManager.Instance;
-        //player1Data = GameObject.FindGameObjectWithTag("Player1Data").GetComponent<PlayerData>();
-        //player2Data = GameObject.FindGameObjectWithTag("Player2Data").GetComponent<PlayerData>();
+        gameManager = GameManager.Instance;
 
         Physics.gravity = new Vector3(0, -gravity, 0);
 
@@ -93,6 +93,24 @@ public class LoverGame : MonoBehaviour
         display2.GetComponent<ItemUIDisplay>().SetItem(necessary2);
         display3.GetComponent<ItemUIDisplay>().SetItem(necessary3);
         display4.GetComponent<ItemUIDisplay>().SetItem(necessary4);
+    }
+
+    public void EndGame()
+    {
+        player1.CheckCorrectness();
+        player2.CheckCorrectness();
+        
+        if (player3 != null)
+        {
+            player3.CheckCorrectness();
+        }
+
+        if (player4 != null)
+        {
+            player4.CheckCorrectness();
+        }
+
+        gameManager.FinishMinigame();
     }
 
 }

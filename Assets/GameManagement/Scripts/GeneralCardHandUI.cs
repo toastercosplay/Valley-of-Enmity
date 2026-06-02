@@ -92,6 +92,7 @@ public class GeneralCardHandUI : MonoBehaviour
             {
                 gameManager.SetNumberOfGames(7); 
             }
+            gameManager.StartGame();
         }
 
         //andrew spent hours here- fix this john later
@@ -104,11 +105,12 @@ public class GeneralCardHandUI : MonoBehaviour
 
         objectToOn.SetActive(true);
         //stop rendering the children
-        for (int i = 0; i < cards.Length; i++)
-        {
-            cards[i].GetComponent<Image>().enabled = false;
-        }
+        // for (int i = 0; i < cards.Length; i++)
+        // {
+        //     cards[i].GetComponent<Image>().enabled = false;
+        // }
         //
+        this.gameObject.SetActive(false);
 
     }
 

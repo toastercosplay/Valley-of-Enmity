@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 14b72f8963f801f42a3f5258d3ec7925
+guid: f0e9dcedd40d39a41a88bd90d1d16eab
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 319196992355658239
-    second: Untitled_Artwork (78)_0
+      213: 3038048109167362100
+    second: Loverbackground_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Untitled_Artwork (78)_0
+      name: Loverbackground_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 960
-        height: 600
+        width: 1920
+        height: 1356
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ff96bbe29f30e6400800000000000000
-      internalID: 319196992355658239
+      spriteID: 430c775b8a0592a20800000000000000
+      internalID: 3038048109167362100
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Untitled_Artwork (78)_0: 319196992355658239
+      Loverbackground_0: 3038048109167362100
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

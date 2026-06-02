@@ -2,45 +2,36 @@ using UnityEngine;
 
 public class DepositBox : MonoBehaviour
 {
-    [SerializeField] public int boxIndex;
-
-    public Collectible holding = null;
-
+    public int boxIndex;
+    public LoverItem heldItem = null;
     [SerializeField] LoverPlayer loverPlayer;
 
-    public bool playerIsOverhead = false;
+    // A quick check to see if we have room
+    public bool IsEmpty => heldItem == null;
 
-    // Update is called once per frame
-    void Update()
+    public void PlaceItem(LoverItem item)
     {
-        if (holding != null)
+        heldItem = item;
+        item.AssignToParent(this.transform);
+        
+        if (loverPlayer != null)
         {
-            holding.BePickedUp(transform.position, this.gameObject);
+            loverPlayer.inLetter[boxIndex] = item;
         }
     }
 
-    public void PlaceItem(Collectible item)
+    public LoverItem TakeItem()
     {
-        holding = item;
-        loverPlayer.inLetter[boxIndex] = item;
-    }
+        if (heldItem == null) return null;
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player")) playerIsOverhead = true;
-    }
+        LoverItem itemToTake = heldItem;
+        heldItem = null;
 
-    void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player")) playerIsOverhead = false;
-
-        // If an item is pulled out of the box by the player
-        if (other.gameObject.CompareTag("Item") && !loverPlayer.isHoldingItem)
+        if (loverPlayer != null)
         {
-            holding = null;
             loverPlayer.inLetter[boxIndex] = null;
         }
+
+        return itemToTake;
     }
-
-
 }

@@ -18,6 +18,7 @@ public class CardHandUI : MonoBehaviour
     private float moveTimer;
 
     [SerializeField] string playerName = "";
+    public int myNumber;
     PlayerData playerData;
 
     [SerializeField] GameObject objectToOn;
@@ -34,8 +35,8 @@ public class CardHandUI : MonoBehaviour
 
         //playerInput = GetComponent<PlayerInput>();
         //Debug.Log(playerInput.user.id);
-        Debug.Log("gameobject name: " + gameObject.name);
-        Debug.Log("player input user id: " + playerInput.user.id);
+        //Debug.Log("gameobject name: " + gameObject.name);
+        //Debug.Log("player input user id: " + playerInput.user.id);
 
         UpdateLayout();
     }
@@ -83,20 +84,23 @@ public class CardHandUI : MonoBehaviour
             playerData.SetCharacter(0);
         }
 
-        //andrew spent hours here- fix this john later
-        if (playerName == "Player4Data")
+        playerInput.SwitchCurrentActionMap("UI");
+
+        //problem HERE
+        if (myNumber == GameManager.Instance.GetNumberOfPlayers())
         {
-            foreach (var user in InputUser.all)
-            {
-                user.UnpairDevices();
-            }
+            // foreach (var user in InputUser.all)
+            // {
+            //     user.UnpairDevices();
+            //     Debug.Log("done");
+            // }
+            // playerInput.SwitchCurrentActionMap("GameSelection");
+            // Debug.Log("done");
+            //GameManager.Instance.CompleteCharacterSelection();
         }
         objectToOn.SetActive(true);
-        //stop rendering the children
-        for (int i = 0; i < cards.Length; i++)
-        {
-            cards[i].GetComponent<Image>().enabled = false;
-        }
+        //turn self off
+        this.gameObject.SetActive(false);
         //
 
     }

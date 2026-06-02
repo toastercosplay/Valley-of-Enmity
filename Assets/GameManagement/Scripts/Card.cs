@@ -8,7 +8,10 @@ public class Card : MonoBehaviour
     Transform cardTransform;
     SpriteRenderer cardSpriteRenderer;
 
-    void Start()
+    [SerializeField] Sprite cardFace;
+    [SerializeField] Sprite cardBack;
+
+    void Awake()
     {
         cardTransform = GetComponent<Transform>();
         cardSpriteRenderer = GetComponent<SpriteRenderer>();
@@ -49,6 +52,16 @@ public class Card : MonoBehaviour
             cardTransform.localPosition = new Vector3(6, -.6f, 0);
         }
 
+    }
+
+    public void SetFaceDown()
+    {
+        cardSpriteRenderer.sprite = cardBack;
+    }
+
+    public void SetFaceUp()
+    {
+        cardSpriteRenderer.sprite = cardFace;
     }
 
     public string getCardName()

@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 public class MazeGenerator : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class MazeGenerator : MonoBehaviour
     public int height = 21;
 
     public int berryamount = 5;
+    private int uncollectedAmount;
 
     public int startX { get; private set; }
     public int startY { get; private set; }
@@ -18,6 +20,12 @@ public class MazeGenerator : MonoBehaviour
 
     private int[,] maze;
     private GameObject[,] spawnedTiles;
+
+    public List <MazePlayer> playerList;
+    int maxBerries = 0;
+    int minBerries = 100;
+    int winnerIndex = 0;
+    int loserIndex = 0;
 
     void Start()
     {
@@ -31,11 +39,51 @@ public class MazeGenerator : MonoBehaviour
         ClearCenter();
         SprinkleBerries();
         DrawMaze();
+
+        uncollectedAmount = berryamount;
     }
     
     void Update()
     {
-        
+        maxBerries = -1;
+        minBerries = int.MaxValue;
+
+        for (int i = 0; i < playerList.Count; i++)
+        {
+            MazePlayer player = playerList[i];
+
+            if (player.berriesCollected > maxBerries)
+            {
+                maxBerries = player.berriesCollected;
+                winnerIndex = i;
+            }
+            
+            if (player.berriesCollected < minBerries)
+            {
+                minBerries = player.berriesCollected;
+                loserIndex = i;
+            }
+        }
+
+        if (uncollectedAmount == 0)
+        {
+            for (int i = 0; i < playerList.Count; i++)
+            {
+                MazePlayer player = playerList[i];
+                player.playerData.SetBufferState(2); 
+
+                if (i == winnerIndex)
+                {
+                    player.playerData.SetBufferState(1);
+                }
+                if (i == loserIndex)
+                {
+                    player.playerData.SetBufferState(3);
+                }
+            }
+            
+            GameManager.Instance.FinishMinigame();
+        }
     }
 
     void GenerateMaze()
@@ -198,6 +246,11 @@ public class MazeGenerator : MonoBehaviour
                 Destroy(spawnedTiles[x, y]); // Remove the visual berry
             }
         }
+    }
+
+    public void UpdateCollection()
+    {
+        uncollectedAmount -= 1;
     }
 
 }

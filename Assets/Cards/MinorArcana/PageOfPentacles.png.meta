@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 834a06725ef0b374e91843ef7c8a46d7
+guid: a8cb8734bb161214184c9a296c367472
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6260933061296516845
-    second: Untitled_Artwork (80)_0
+      213: -187076906560850216
+    second: PageOfPentacles_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Untitled_Artwork (80)_0
+      name: PageOfPentacles_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 960
-        height: 600
+        width: 825
+        height: 1425
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: deee319827d43e650800000000000000
-      internalID: 6260933061296516845
+      spriteID: 8d6f2ce6b8e576df0800000000000000
+      internalID: -187076906560850216
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Untitled_Artwork (80)_0: 6260933061296516845
+      PageOfPentacles_0: -187076906560850216
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

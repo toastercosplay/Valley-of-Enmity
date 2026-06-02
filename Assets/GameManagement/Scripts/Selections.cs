@@ -5,28 +5,40 @@ using UnityEngine.UI;
 
 public class Selections : MonoBehaviour
 {
-    Animator anim;
     GameManager gameManager;
+    [SerializeField] GameObject TitleObject;
     [SerializeField] GameObject CountSelectionObject;
+    [SerializeField] GameObject GameModeSelectionObject;
+    
     [SerializeField] PlayerInput playerInput;
+
+    int currentState = 0;
 
     void Start()
     {
-        anim = GetComponent<Animator>();
         gameManager = GameManager.Instance;
 
-        //Debug.Log("Game Manager instance: " + gameManager);
+        TitleObject.SetActive(true);
+        CountSelectionObject.SetActive(false);
+        GameModeSelectionObject.SetActive(false);
+        playerInput.SwitchCurrentActionMap("Title");
     }
 
     public void OnA(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
-            
+            TitleObject.SetActive(false);
             CountSelectionObject.SetActive(true);
-            this.gameObject.SetActive(false);
-
             playerInput.SwitchCurrentActionMap("CountSelection");
         }
+    }
+
+    public void ShowGameModeSelect()
+    {
+        this.gameObject.SetActive(true);
+        CountSelectionObject.SetActive(false);
+        GameModeSelectionObject.SetActive(true);
+        playerInput.SwitchCurrentActionMap("GameSelection");
     }
 }

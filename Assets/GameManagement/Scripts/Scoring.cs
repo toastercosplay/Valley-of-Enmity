@@ -1,218 +1,158 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.Linq;
 
 public class Scoring : MonoBehaviour
 {
-    
-    PlayerData swordsPlayerData;
-    [SerializeField] TMP_Text swordsTotalText;
-    [SerializeField] TMP_Text swordsGainedText;
-    int swordsState = 0;
-    int swordsTotal = 0; //total score 
-    int swordsScore = 0; //points just earned
+    [System.Serializable]
+    public class PlayerScoreUI
+    {
+        public string playerTag;
+        public RectTransform uiRoot;
+        public TMP_Text totalText;
+        public TMP_Text gainedText;
 
-    PlayerData wandsPlayerData;
-    [SerializeField] TMP_Text wandsTotalText;
-    [SerializeField] TMP_Text wandsGainedText;
-    int wandsState = 0;
-    int wandsTotal = 0;
-    int wandsScore = 0;
+        [HideInInspector] public PlayerData playerData;
+        [HideInInspector] public int initialScore;
+        [HideInInspector] public int gainedScore;
+        [HideInInspector] public int finalScore;
+    }
 
-    PlayerData cupsPlayerData;
-    [SerializeField] TMP_Text cupsTotalText;
-    [SerializeField] TMP_Text cupsGainedText;
-    int cupsState = 0;
-    int cupsTotal = 0;
-    int cupsScore = 0;
+    public List<PlayerScoreUI> allPlayers;
 
-    PlayerData pentaclesPlayerData;
-    [SerializeField] TMP_Text pentaclesTotalText;
-    [SerializeField] TMP_Text pentaclesGainedText;
-    int pentaclesState = 0;
-    int pentaclesTotal = 0;
-    int pentaclesScore = 0;
 
-    int updateTimer = 0;
+    public float bottomY = -300f;
+    public float topY = 300f;
+    public float minScale = 0.5f;
+    public float maxScale = 1.5f;
 
-    GameManager gameManager;
-    AudioSource audioSource;
+    public float revealDelay = 0.8f;
+    public float tickSpeed = 0.05f;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private GameManager gameManager;
+    private AudioSource audioSource;
+    private List<PlayerScoreUI> activePlayers = new List<PlayerScoreUI>();
+
     void Start()
     {
-        swordsPlayerData = GameObject.FindGameObjectWithTag("Player1Data").GetComponent<PlayerData>();
-        wandsPlayerData = GameObject.FindGameObjectWithTag("Player2Data").GetComponent<PlayerData>();
-        cupsPlayerData = GameObject.FindGameObjectWithTag("Player3Data").GetComponent<PlayerData>();
-        pentaclesPlayerData = GameObject.FindGameObjectWithTag("Player4Data").GetComponent<PlayerData>();
+        gameManager = GameManager.Instance;
         audioSource = GetComponent<AudioSource>();
 
-        swordsTotal = swordsPlayerData.GetTotalScore();
-        wandsTotal = wandsPlayerData.GetTotalScore(); //these will display initial scores
-        cupsTotal = cupsPlayerData.GetTotalScore();
-        pentaclesTotal = pentaclesPlayerData.GetTotalScore();
-
-        gameManager = GameManager.Instance;
-
-        retrieveFromBuffer();
-        DrawScoreCards();
+        InitializePlayers();
+        StartCoroutine(RevealAndScoreSequence());
     }
 
-    // Update is called once per frame
-    void Update()
-    {  
-        //update scores once a second
-        updateTimer++;
-        if (updateTimer <= 30)
-        {
-            return;
-        }
-
-        swordsTotalText.text = "" + swordsTotal;
-        swordsGainedText.text = "+" + swordsScore;
-
-        wandsTotalText.text = "" + wandsTotal;
-        wandsGainedText.text = "+" + wandsScore;  
-
-        cupsTotalText.text = "" + cupsTotal;
-        cupsGainedText.text = "+" + cupsScore;
-
-        pentaclesTotalText.text = "" + pentaclesTotal;
-        pentaclesGainedText.text = "+" + pentaclesScore;
-
-        updateTimer = 0;
-
-        //CHANGE LATER TO RANDOMIZE FROM THREE
-        //PlaySound();
-        
-        //update totals one by one
-        if (swordsTotal < swordsPlayerData.GetTotalScore())
-        {
-            swordsTotal++;
-            //swordsScore--;
-        }
-        if (wandsTotal < wandsPlayerData.GetTotalScore())
-        {
-            wandsTotal++;
-            //wandsScore--;
-        }
-        if (cupsTotal < cupsPlayerData.GetTotalScore())
-        {
-            cupsTotal++;
-            //cupsScore--;
-        }
-        if (pentaclesTotal < pentaclesPlayerData.GetTotalScore())
-        {
-            pentaclesTotal++;
-            //pentaclesScore--;
-        }
-
-
-        swordsScore--;
-        wandsScore--;
-        cupsScore--;
-        pentaclesScore--;
-
-        if (swordsScore < 1)
-        {
-            swordsGainedText.text = "";
-        }
-        if (wandsScore < 1)
-        {
-            wandsGainedText.text = "";
-        }
-        if (cupsScore < 1)
-        {
-            cupsGainedText.text = "";
-        }
-        if (pentaclesScore < 1)
-        {
-            pentaclesGainedText.text = "";
-        }
-
-        if (wandsScore < -2 && swordsScore < -2 && cupsScore < -2 && pentaclesScore < -2)
-        {
-            //both done updating
-            gameManager.BackToTable();
-        }
-
-    }
-
-    public void retrieveFromBuffer()
+    void InitializePlayers()
     {
-        swordsState = swordsPlayerData.GetBufferState();
-        wandsState = wandsPlayerData.GetBufferState();
-        cupsState = cupsPlayerData.GetBufferState();
-        pentaclesState = pentaclesPlayerData.GetBufferState();
+        foreach (var p in allPlayers)
+        {
+            GameObject playerObj = GameObject.FindGameObjectWithTag(p.playerTag);
+            if (playerObj != null)
+            {
+                p.playerData = playerObj.GetComponent<PlayerData>();
+                p.uiRoot.gameObject.SetActive(false);
+
+                p.initialScore = p.playerData.GetTotalScore();
+                p.gainedScore = CalculateGainedScore(p.playerData);
+                p.finalScore = p.initialScore + p.gainedScore;
+
+                p.playerData.SetBufferState(0);
+                p.playerData.SetTotalScore(p.finalScore);
+
+                p.totalText.text = p.initialScore.ToString();
+                p.gainedText.text = "+" + p.gainedScore.ToString();
+
+                activePlayers.Add(p);
+            }
+        }
+
+        activePlayers = activePlayers.OrderBy(p => p.finalScore).ToList();
     }
 
-    public void DrawScoreCards()
+    int CalculateGainedScore(PlayerData data)
     {
-        if (swordsState == 1)
-        {
-            swordsScore = swordsPlayerData.Success();
-        }
-        else if (swordsState == 2)
-        {
-            swordsScore = swordsPlayerData.Neutral();
-        }
-        else if (swordsState == 3)
-        {
-            swordsScore = swordsPlayerData.Failure();
-        }
-        swordsPlayerData.SetBufferState(0);
-        swordsPlayerData.SetTotalScore(swordsTotal + swordsScore);
-
-        //wands player
-        if (wandsState == 1)
-        {
-            wandsScore = wandsPlayerData.Success();
-        }
-        else if (wandsState == 2)
-        {
-            wandsScore = wandsPlayerData.Neutral();
-        }
-        else if (wandsState == 3)
-        {
-            wandsScore = wandsPlayerData.Failure();
-        }
-        wandsPlayerData.SetBufferState(0);
-        wandsPlayerData.SetTotalScore(wandsTotal + wandsScore);
-
-        //cups player
-        if (cupsState == 1)
-        {
-            cupsScore = cupsPlayerData.Success();
-        }
-        else if (cupsState == 2)
-        {
-            cupsScore = cupsPlayerData.Neutral();
-        }
-        else if (cupsState == 3)
-        {
-            cupsScore = cupsPlayerData.Failure();
-        }
-        cupsPlayerData.SetBufferState(0);
-        cupsPlayerData.SetTotalScore(cupsTotal + cupsScore);
-
-        //pentacles player
-        if (pentaclesState == 1)
-        {
-            pentaclesScore = pentaclesPlayerData.Success();
-        }
-        else if (pentaclesState == 2)
-        {
-            pentaclesScore = pentaclesPlayerData.Neutral();
-        }
-        else if (pentaclesState == 3)
-        {
-            pentaclesScore = pentaclesPlayerData.Failure();
-        }
-        pentaclesPlayerData.SetBufferState(0);
-        pentaclesPlayerData.SetTotalScore(pentaclesTotal + pentaclesScore);
+        int state = data.GetBufferState();
+        if (state == 1) return data.Success();
+        if (state == 2) return data.Neutral();
+        if (state == 3) return data.Failure();
+        return 0;
     }
 
-    public void PlaySound()
+    IEnumerator RevealAndScoreSequence()
     {
-        audioSource.Play();
+        yield return new WaitForSeconds(0.5f);
+
+        int playerCount = activePlayers.Count;
+        int currentRank = 0;
+        int previousScore = -9999;
+
+        for (int i = 0; i < activePlayers.Count; i++)
+        {
+            var p = activePlayers[i];
+
+            if (i == 0 || p.finalScore > previousScore)
+            {
+                currentRank = i; 
+            }
+            previousScore = p.finalScore;
+
+            float t = playerCount > 1 ? (float)currentRank / (playerCount - 1) : 1f;
+
+            float targetScale = Mathf.Lerp(minScale, maxScale, t);
+            float targetY = Mathf.Lerp(bottomY, topY, t);
+
+            p.uiRoot.anchoredPosition = new Vector2(p.uiRoot.anchoredPosition.x, targetY);
+
+            p.uiRoot.localScale = Vector3.zero;
+            p.uiRoot.gameObject.SetActive(true);
+            
+            if (audioSource != null) audioSource.Play();
+
+            float elapsed = 0f;
+            float popDuration = 0.3f;
+            while (elapsed < popDuration)
+            {
+                elapsed += Time.deltaTime;
+                float easeOut = Mathf.Sin((elapsed / popDuration) * Mathf.PI * 0.5f);
+                p.uiRoot.localScale = Vector3.Lerp(Vector3.zero, Vector3.one * targetScale, easeOut);
+                yield return null;
+            }
+            p.uiRoot.localScale = Vector3.one * targetScale;
+
+            yield return new WaitForSeconds(revealDelay);
+        }
+
+        yield return new WaitForSeconds(1.0f);
+
+        bool isTicking = true;
+        while (isTicking)
+        {
+            isTicking = false;
+            
+            foreach (var p in activePlayers)
+            {
+                if (p.gainedScore > 0)
+                {
+                    isTicking = true;
+                    
+                    p.initialScore++;
+                    p.gainedScore--;
+
+                    p.totalText.text = p.initialScore.ToString();
+                    
+                    if (p.gainedScore > 0)
+                        p.gainedText.text = "+" + p.gainedScore.ToString();
+                    else
+                        p.gainedText.text = "";
+                }
+            }
+
+            yield return new WaitForSeconds(tickSpeed);
+        }
+
+        yield return new WaitForSeconds(1.5f);
+        gameManager.BackToTable();
     }
 }

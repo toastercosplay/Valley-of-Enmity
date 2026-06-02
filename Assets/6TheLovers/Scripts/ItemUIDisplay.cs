@@ -43,7 +43,7 @@ public class ItemUIDisplay : MonoBehaviour
        {
             GetComponent<Image>().sprite = itemSprites[7];
        }
-       else if (itemName == "Mustache")
+       else if (itemName == "Vest")
        {
             GetComponent<Image>().sprite = itemSprites[8];
        }

@@ -349,7 +349,7 @@ GameObject:
   - component: {fileID: 303228744}
   m_Layer: 0
   m_Name: DECK
-  m_TagString: Untagged
+  m_TagString: DECK
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -366,6 +366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dba9273f7e6cc1949a8b781d0c683cfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShuffleAndDraw
+  pauseBeforeDraw: 2
 --- !u!95 &303228745
 Animator:
   serializedVersion: 7
@@ -1894,6 +1895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c63b273f16e6d9e49806e70f18a59ef7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  playerConfig: {fileID: 0}
   player1: {fileID: 425162548}
   player2: {fileID: 839881351}
   player3: {fileID: 0}
@@ -1902,7 +1904,11 @@ MonoBehaviour:
   - {fileID: 7709118123446550073, guid: 18cdc974fc75be64b943f3d67f6708de, type: 3}
   - {fileID: 4392925064412045008, guid: 25578793c1b34284cad1c5e49df44e8e, type: 3}
   - {fileID: 1442807215313116753, guid: e287f0fef40069549bc37e39c3352c80, type: 3}
+  drawSpeed: 0.4
+  flipSpeed: 0.3
   spawnDelay: 5
+  selectionsMenu: {fileID: 0}
+  characterSelectScreens: []
 --- !u!4 &2051189325
 Transform:
   m_ObjectHideFlags: 0

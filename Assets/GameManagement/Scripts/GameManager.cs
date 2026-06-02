@@ -10,14 +10,19 @@ public class GameManager : MonoBehaviour
     private int numberOfPlayers = 0;
     private int numberOfGames = 3;
     private int gamesPlayed = 0;
-    //public GameObject playerConfig;
+    public GameObject playerConfig;
 
     [SerializeField] public PlayerData player1;
     [SerializeField] public PlayerData player2;
     [SerializeField] public PlayerData player3;
     [SerializeField] public PlayerData player4;
 
+    
+    [Header("Deck things")]
     public List<GameObject> cardList;
+     Transform deckTransform;
+    public float drawSpeed = 0.4f;
+    public float flipSpeed = 0.3f;
     public float spawnDelay = 5f;
 
     AudioSource audioSource;
@@ -29,6 +34,8 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
+        
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
@@ -71,7 +78,11 @@ public class GameManager : MonoBehaviour
 
     public void MakeSelection()
     {
-        //Debug.Log("AH HELL NAW");
+        if (deckTransform == null)
+        {
+            deckTransform = GameObject.FindGameObjectWithTag("DECK").GetComponent<Transform>();
+        }
+        
         
         if (gamesPlayed >= numberOfGames)
         {
@@ -105,10 +116,19 @@ public class GameManager : MonoBehaviour
     {
         int index = Random.Range(0, cardList.Count);
         GameObject selectedCardObject = cardList[index];
-        Card selectedCard = selectedCardObject.GetComponent<Card>();
+
+        if (deckTransform != null)
+        {
+            Vector3 originalDeckPos = deckTransform.position;
+            for (int i = 0; i < 5; i++)
+            {
+                deckTransform.position = originalDeckPos + (Vector3)UnityEngine.Random.insideUnitCircle * 0.1f;
+                yield return new WaitForSeconds(0.04f);
+            }
+            deckTransform.position = originalDeckPos;
+        }
 
         Vector3 spawnPosition = Vector3.zero;
-
         int ermmm = numberOfGames * 10 + (gamesPlayed + 1);
         //tens digit: total games
         //ones digit: current game 
@@ -130,11 +150,48 @@ public class GameManager : MonoBehaviour
         else if (ermmm == 55)
             spawnPosition = new Vector3(7.5f, -1.5f, 0);
 
+        Vector3 startPos = deckTransform != null ? deckTransform.position : Vector3.zero;
+        GameObject spawnedCardObj = Instantiate(selectedCardObject, startPos, Quaternion.identity);
+        Card selectedCard = spawnedCardObj.GetComponent<Card>();
 
-        Instantiate(selectedCardObject, spawnPosition, Quaternion.identity);
-        PlaySound();
-
+        selectedCard.SetFaceDown();
         cardList.RemoveAt(index);
+        //PlaySound();
+
+        float elapsed = 0f;
+        while (elapsed < drawSpeed)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / drawSpeed;
+            float smoothStep = t * t * (3f - 2f * t); 
+            
+            spawnedCardObj.transform.position = Vector3.Lerp(startPos, spawnPosition, smoothStep);
+            yield return null;
+        }
+        spawnedCardObj.transform.position = spawnPosition;
+
+        elapsed = 0f;
+        float halfFlipSpeed = flipSpeed / 2f;
+
+        while (elapsed < halfFlipSpeed)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / halfFlipSpeed;
+            spawnedCardObj.transform.rotation = Quaternion.Euler(0f, Mathf.Lerp(0f, 90f, t), 0f);
+            yield return null;
+        }
+
+        selectedCard.SetFaceUp();
+
+        elapsed = 0f;
+        while (elapsed < halfFlipSpeed)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / halfFlipSpeed;
+            spawnedCardObj.transform.rotation = Quaternion.Euler(0f, Mathf.Lerp(90f, 0f, t), 0f);
+            yield return null;
+        }
+        spawnedCardObj.transform.rotation = Quaternion.identity;
 
         yield return new WaitForSeconds(spawnDelay);
 
@@ -149,5 +206,23 @@ public class GameManager : MonoBehaviour
     public int GetNumberOfPlayers()
     {
         return numberOfPlayers;
+    }
+
+    public Selections selectionsMenu; // Drag your Selections object here in the inspector
+    public GameObject[] characterSelectScreens;
+    public void StartCharacterSelection()
+    {
+        // Turn on the correct number of character select screens based on player count
+        for (int i = 0; i < GetNumberOfPlayers(); i++)
+        {
+            characterSelectScreens[i].SetActive(true);
+        }
+    }
+
+    public void CompleteCharacterSelection()
+    {
+        Debug.Log("All players selected characters. Moving to Game Mode Select.");
+        // Call the method we just added to Selections.cs!
+        selectionsMenu.ShowGameModeSelect(); 
     }
 }

@@ -279,6 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   itemName: Sunflower
+  currentOwner: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!54 &18549276
@@ -420,6 +421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   itemName: Bad
+  currentOwner: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!54 &47425766
@@ -668,6 +670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   itemName: Wands
+  currentOwner: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!54 &82418145
@@ -809,6 +812,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   itemName: Bad
+  currentOwner: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!54 &90415712
@@ -1025,6 +1029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   itemName: Boots
+  currentOwner: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!54 &97536874
@@ -1165,9 +1170,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DepositBox
   boxIndex: 1
-  holding: {fileID: 0}
+  heldItem: {fileID: 0}
   loverPlayer: {fileID: 336262696}
-  playerIsOverhead: 0
 --- !u!54 &101850837
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1237,7 +1241,7 @@ GameObject:
   - component: {fileID: 146749828}
   - component: {fileID: 146749827}
   - component: {fileID: 146749826}
-  - component: {fileID: 146749825}
+  - component: {fileID: 146749830}
   m_Layer: 5
   m_Name: Wands
   m_TagString: Item
@@ -1264,21 +1268,6 @@ RectTransform:
   m_AnchoredPosition: {x: -69.741, y: 3.5}
   m_SizeDelta: {x: -351.04, y: -166}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &146749825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 146749823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cab228550c14294c8e7f1c545a21b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  itemName: Wands
-  offsetX: 0
-  offsetY: 0
 --- !u!54 &146749826
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1365,6 +1354,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 146749823}
   m_CullTransparentMesh: 1
+--- !u!114 &146749830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146749823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385f3bf5fb2fb6a419d32adc560b6ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoverItem
+  itemName: Wands
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &150433241
 GameObject:
   m_ObjectHideFlags: 0
@@ -1418,6 +1421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   itemName: Dragon
+  currentOwner: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!54 &150433244
@@ -1660,6 +1664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   itemName: Rose
+  currentOwner: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!54 &218948076
@@ -1761,7 +1766,7 @@ GameObject:
   - component: {fileID: 227684605}
   - component: {fileID: 227684604}
   - component: {fileID: 227684603}
-  - component: {fileID: 227684602}
+  - component: {fileID: 227684607}
   m_Layer: 5
   m_Name: Hat
   m_TagString: Item
@@ -1788,21 +1793,6 @@ RectTransform:
   m_AnchoredPosition: {x: -197.7, y: -106.81}
   m_SizeDelta: {x: -350.6, y: -165.0907}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &227684602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 227684600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cab228550c14294c8e7f1c545a21b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  itemName: Cat
-  offsetX: 0
-  offsetY: 0
 --- !u!54 &227684603
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1889,6 +1879,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 227684600}
   m_CullTransparentMesh: 1
+--- !u!114 &227684607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227684600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385f3bf5fb2fb6a419d32adc560b6ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoverItem
+  itemName: Hat
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1001 &237680116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2091,13 +2095,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ef0e16ff13aa124684f5a6362dab736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoverPlayer
-  isHoldingItem: 0
-  loverGame: {fileID: 0}
+  currentlyHolding: {fileID: 0}
   inLetter:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  interactionRadius: 1
+  holdPoint: {fileID: 0}
+  myGame: {fileID: 1366540272}
+  myName: Player4Data
 --- !u!1 &242786588
 GameObject:
   m_ObjectHideFlags: 0
@@ -2151,6 +2158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   itemName: Mustache
+  currentOwner: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!54 &242786591
@@ -2297,6 +2305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   itemName: Unicorn
+  currentOwner: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!54 &268145878
@@ -2535,7 +2544,7 @@ GameObject:
   - component: {fileID: 321951820}
   - component: {fileID: 321951819}
   - component: {fileID: 321951818}
-  - component: {fileID: 321951817}
+  - component: {fileID: 321951822}
   m_Layer: 5
   m_Name: Boots
   m_TagString: Item
@@ -2562,21 +2571,6 @@ RectTransform:
   m_AnchoredPosition: {x: -65.715, y: 90.166}
   m_SizeDelta: {x: -339.43, y: -164.38}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &321951817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 321951815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cab228550c14294c8e7f1c545a21b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  itemName: Boots
-  offsetX: 0
-  offsetY: 0
 --- !u!54 &321951818
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2663,6 +2657,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 321951815}
   m_CullTransparentMesh: 1
+--- !u!114 &321951822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321951815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385f3bf5fb2fb6a419d32adc560b6ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoverItem
+  itemName: Boots
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &329810764
 GameObject:
   m_ObjectHideFlags: 0
@@ -2937,13 +2945,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ef0e16ff13aa124684f5a6362dab736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoverPlayer
-  isHoldingItem: 0
-  loverGame: {fileID: 0}
+  currentlyHolding: {fileID: 0}
   inLetter:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  interactionRadius: 1
+  holdPoint: {fileID: 0}
+  myGame: {fileID: 1366540272}
+  myName: Player3Data
 --- !u!135 &336262697
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3018,6 +3029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   itemName: Bad
+  currentOwner: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!54 &337761000
@@ -3178,7 +3190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.754717, g: 0.7239964, b: 0.66571736, a: 1}
+  m_Color: {r: 0.2028302, g: 0.2028302, b: 0.2028302, a: 0.06666667}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3256,6 +3268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   itemName: Gun
+  currentOwner: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!54 &378636508
@@ -3357,7 +3370,7 @@ GameObject:
   - component: {fileID: 389420658}
   - component: {fileID: 389420657}
   - component: {fileID: 389420656}
-  - component: {fileID: 389420655}
+  - component: {fileID: 389420660}
   m_Layer: 5
   m_Name: Prof
   m_TagString: Item
@@ -3384,21 +3397,6 @@ RectTransform:
   m_AnchoredPosition: {x: -69.741, y: 3.5}
   m_SizeDelta: {x: -351.04, y: -166}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &389420655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 389420653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cab228550c14294c8e7f1c545a21b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  itemName: Bad
-  offsetX: 0
-  offsetY: 0
 --- !u!54 &389420656
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3485,6 +3483,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 389420653}
   m_CullTransparentMesh: 1
+--- !u!114 &389420660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389420653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385f3bf5fb2fb6a419d32adc560b6ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoverItem
+  itemName: Bad
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &412842688
 GameObject:
   m_ObjectHideFlags: 0
@@ -3537,9 +3549,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DepositBox
   boxIndex: 2
-  holding: {fileID: 0}
+  heldItem: {fileID: 0}
   loverPlayer: {fileID: 1859252137}
-  playerIsOverhead: 0
 --- !u!54 &412842691
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3648,9 +3659,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DepositBox
   boxIndex: 1
-  holding: {fileID: 0}
+  heldItem: {fileID: 0}
   loverPlayer: {fileID: 1859252137}
-  playerIsOverhead: 0
 --- !u!54 &420454489
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3759,9 +3769,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DepositBox
   boxIndex: 2
-  holding: {fileID: 0}
+  heldItem: {fileID: 0}
   loverPlayer: {fileID: 336262696}
-  playerIsOverhead: 0
 --- !u!54 &426696812
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3871,6 +3880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   itemName: Sunflower
+  currentOwner: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!54 &526016316
@@ -4054,6 +4064,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1440766988}
+  - {fileID: 1942878596}
   - {fileID: 1043213778}
   - {fileID: 95306989}
   - {fileID: 2055752788}
@@ -4424,9 +4435,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DepositBox
   boxIndex: 0
-  holding: {fileID: 0}
+  heldItem: {fileID: 0}
   loverPlayer: {fileID: 336262696}
-  playerIsOverhead: 0
 --- !u!54 &624741853
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4536,6 +4546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   itemName: Bad
+  currentOwner: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!54 &631333264
@@ -4677,6 +4688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   itemName: Whip
+  currentOwner: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!54 &654394141
@@ -4778,7 +4790,7 @@ GameObject:
   - component: {fileID: 663047572}
   - component: {fileID: 663047571}
   - component: {fileID: 663047570}
-  - component: {fileID: 663047569}
+  - component: {fileID: 663047574}
   m_Layer: 5
   m_Name: Cactus
   m_TagString: Item
@@ -4805,21 +4817,6 @@ RectTransform:
   m_AnchoredPosition: {x: -69.741, y: 3.5}
   m_SizeDelta: {x: -351.04, y: -166}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &663047569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 663047567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cab228550c14294c8e7f1c545a21b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  itemName: Bad
-  offsetX: 0
-  offsetY: 0
 --- !u!54 &663047570
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4906,6 +4903,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 663047567}
   m_CullTransparentMesh: 1
+--- !u!114 &663047574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663047567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385f3bf5fb2fb6a419d32adc560b6ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoverItem
+  itemName: Bad
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &680742230
 GameObject:
   m_ObjectHideFlags: 0
@@ -5014,9 +5025,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DepositBox
   boxIndex: 0
-  holding: {fileID: 0}
+  heldItem: {fileID: 0}
   loverPlayer: {fileID: 1859252137}
-  playerIsOverhead: 0
 --- !u!1 &684235920
 GameObject:
   m_ObjectHideFlags: 0
@@ -5030,7 +5040,7 @@ GameObject:
   - component: {fileID: 684235925}
   - component: {fileID: 684235924}
   - component: {fileID: 684235923}
-  - component: {fileID: 684235922}
+  - component: {fileID: 684235927}
   m_Layer: 5
   m_Name: Unicorn
   m_TagString: Item
@@ -5057,21 +5067,6 @@ RectTransform:
   m_AnchoredPosition: {x: 188.47, y: -93.263}
   m_SizeDelta: {x: -319.3826, y: -138}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &684235922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 684235920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cab228550c14294c8e7f1c545a21b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  itemName: Unicorn
-  offsetX: 0
-  offsetY: 0
 --- !u!54 &684235923
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5158,6 +5153,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 684235920}
   m_CullTransparentMesh: 1
+--- !u!114 &684235927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684235920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385f3bf5fb2fb6a419d32adc560b6ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoverItem
+  itemName: Unicorn
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &686080340
 GameObject:
   m_ObjectHideFlags: 0
@@ -5211,6 +5220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   itemName: Cat
+  currentOwner: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!54 &686080343
@@ -5312,7 +5322,7 @@ GameObject:
   - component: {fileID: 723770586}
   - component: {fileID: 723770585}
   - component: {fileID: 723770584}
-  - component: {fileID: 723770583}
+  - component: {fileID: 723770588}
   m_Layer: 5
   m_Name: Rose
   m_TagString: Item
@@ -5339,21 +5349,6 @@ RectTransform:
   m_AnchoredPosition: {x: 196.28, y: 0.000015258789}
   m_SizeDelta: {x: -335, y: -148}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &723770583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 723770581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cab228550c14294c8e7f1c545a21b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  itemName: Rose
-  offsetX: 0
-  offsetY: 0
 --- !u!54 &723770584
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5440,6 +5435,95 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 723770581}
   m_CullTransparentMesh: 1
+--- !u!114 &723770588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723770581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385f3bf5fb2fb6a419d32adc560b6ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoverItem
+  itemName: Rose
+  offset: {x: 0, y: 0, z: 0}
+--- !u!1 &795779864
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 795779865}
+  - component: {fileID: 795779867}
+  - component: {fileID: 795779866}
+  m_Layer: 5
+  m_Name: background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &795779865
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795779864}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.01, y: 1.01, z: 1.01}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 2012604959}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.5, y: 0}
+  m_SizeDelta: {x: -1, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &795779866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795779864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 3038048109167362100, guid: f0e9dcedd40d39a41a88bd90d1d16eab, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &795779867
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795779864}
+  m_CullTransparentMesh: 1
 --- !u!1 &829772304
 GameObject:
   m_ObjectHideFlags: 0
@@ -5493,6 +5577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   itemName: Clover
+  currentOwner: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!54 &829772307
@@ -5594,7 +5679,7 @@ GameObject:
   - component: {fileID: 861684282}
   - component: {fileID: 861684281}
   - component: {fileID: 861684280}
-  - component: {fileID: 861684279}
+  - component: {fileID: 861684284}
   m_Layer: 5
   m_Name: Clover
   m_TagString: Item
@@ -5621,21 +5706,6 @@ RectTransform:
   m_AnchoredPosition: {x: -24, y: -77}
   m_SizeDelta: {x: -285.5696, y: -105.4745}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &861684279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 861684277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cab228550c14294c8e7f1c545a21b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  itemName: Clover
-  offsetX: 0
-  offsetY: 0
 --- !u!54 &861684280
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5722,6 +5792,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 861684277}
   m_CullTransparentMesh: 1
+--- !u!114 &861684284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861684277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385f3bf5fb2fb6a419d32adc560b6ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoverItem
+  itemName: Clover
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &885159643 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3252647316656835357, guid: d00d2a740adc70c4f886bf3607129df7, type: 3}
@@ -5739,13 +5823,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ef0e16ff13aa124684f5a6362dab736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoverPlayer
-  isHoldingItem: 0
-  loverGame: {fileID: 1366540272}
+  currentlyHolding: {fileID: 0}
   inLetter:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  interactionRadius: 1
+  holdPoint: {fileID: 0}
+  myGame: {fileID: 1366540272}
+  myName: Player2Data
 --- !u!135 &885159649
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5767,6 +5854,59 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 45.032375
   m_Center: {x: 0.32053572, y: 0, z: 0}
+--- !u!1 &901439141
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 901439143}
+  - component: {fileID: 901439142}
+  m_Layer: 0
+  m_Name: CountManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &901439142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901439141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e280ee2066f50a54289a44be1ea64430, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAmountConfig
+  TwoPStage: {fileID: 0}
+  ThreePStage: {fileID: 0}
+  FourPStage: {fileID: 0}
+  Player1: {fileID: 340592087}
+  Player2: {fileID: 1437485299}
+  Player3: {fileID: 1495528010}
+  Player4: {fileID: 1761177220}
+  testing: 0
+  testingAmount: 2
+--- !u!4 &901439143
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901439141}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 469.2456, y: 297.97067, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &930059773
 GameObject:
   m_ObjectHideFlags: 0
@@ -5927,6 +6067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   itemName: Whip
+  currentOwner: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!54 &940718946
@@ -6068,6 +6209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   itemName: Wands
+  currentOwner: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!54 &948592731
@@ -6209,6 +6351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   itemName: Gun
+  currentOwner: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!54 &1026362344
@@ -6425,6 +6568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   itemName: Dragon
+  currentOwner: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!54 &1048594602
@@ -6526,7 +6670,7 @@ GameObject:
   - component: {fileID: 1058659998}
   - component: {fileID: 1058659997}
   - component: {fileID: 1058659996}
-  - component: {fileID: 1058659995}
+  - component: {fileID: 1058660000}
   m_Layer: 5
   m_Name: Boots
   m_TagString: Item
@@ -6553,21 +6697,6 @@ RectTransform:
   m_AnchoredPosition: {x: -65.715, y: 90.166}
   m_SizeDelta: {x: -339.43, y: -164.38}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1058659995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1058659993}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cab228550c14294c8e7f1c545a21b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  itemName: Boots
-  offsetX: 0
-  offsetY: 0
 --- !u!54 &1058659996
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6654,6 +6783,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1058659993}
   m_CullTransparentMesh: 1
+--- !u!114 &1058660000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058659993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385f3bf5fb2fb6a419d32adc560b6ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoverItem
+  itemName: Boots
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1074213828
 GameObject:
   m_ObjectHideFlags: 0
@@ -6667,7 +6810,7 @@ GameObject:
   - component: {fileID: 1074213833}
   - component: {fileID: 1074213832}
   - component: {fileID: 1074213831}
-  - component: {fileID: 1074213830}
+  - component: {fileID: 1074213835}
   m_Layer: 5
   m_Name: Gun
   m_TagString: Item
@@ -6694,21 +6837,6 @@ RectTransform:
   m_AnchoredPosition: {x: 25.374, y: 22.422}
   m_SizeDelta: {x: -349.9753, y: -164.38}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1074213830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1074213828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cab228550c14294c8e7f1c545a21b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  itemName: Gun
-  offsetX: 0
-  offsetY: 0
 --- !u!54 &1074213831
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6795,6 +6923,150 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1074213828}
   m_CullTransparentMesh: 1
+--- !u!114 &1074213835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074213828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385f3bf5fb2fb6a419d32adc560b6ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoverItem
+  itemName: Gun
+  offset: {x: 0, y: 0, z: 0}
+--- !u!1001 &1076996054
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2012604959}
+    m_Modifications:
+    - target: {fileID: 1084845669659062196, guid: daa7024b9146db74fb29e0442870744d, type: 3}
+      propertyPath: totalTime
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1084845669659062196, guid: daa7024b9146db74fb29e0442870744d, type: 3}
+      propertyPath: 'mySprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 21300000, guid: a87dd688e08625841bfbedda2b992ba2, type: 3}
+    - target: {fileID: 1084845669659062196, guid: daa7024b9146db74fb29e0442870744d, type: 3}
+      propertyPath: 'mySprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 76b22483a5b7ae34e9c3e4e7cce2d663, type: 3}
+    - target: {fileID: 1084845669659062196, guid: daa7024b9146db74fb29e0442870744d, type: 3}
+      propertyPath: 'mySprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 2dd9c75cd923bdf4b925799e29514dcb, type: 3}
+    - target: {fileID: 1084845669659062196, guid: daa7024b9146db74fb29e0442870744d, type: 3}
+      propertyPath: onTimeEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1366540272}
+    - target: {fileID: 1084845669659062196, guid: daa7024b9146db74fb29e0442870744d, type: 3}
+      propertyPath: onTimeEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EndGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 1084845669659062196, guid: daa7024b9146db74fb29e0442870744d, type: 3}
+      propertyPath: onTimeEnd.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LoverGame, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611580829244595944, guid: daa7024b9146db74fb29e0442870744d, type: 3}
+      propertyPath: m_Name
+      value: Clock
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388215121370837799, guid: daa7024b9146db74fb29e0442870744d, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388215121370837799, guid: daa7024b9146db74fb29e0442870744d, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388215121370837799, guid: daa7024b9146db74fb29e0442870744d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.54700005
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388215121370837799, guid: daa7024b9146db74fb29e0442870744d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5766667
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388215121370837799, guid: daa7024b9146db74fb29e0442870744d, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.45145828
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388215121370837799, guid: daa7024b9146db74fb29e0442870744d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388215121370837799, guid: daa7024b9146db74fb29e0442870744d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 12.1203
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388215121370837799, guid: daa7024b9146db74fb29e0442870744d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 16.068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388215121370837799, guid: daa7024b9146db74fb29e0442870744d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388215121370837799, guid: daa7024b9146db74fb29e0442870744d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388215121370837799, guid: daa7024b9146db74fb29e0442870744d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388215121370837799, guid: daa7024b9146db74fb29e0442870744d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388215121370837799, guid: daa7024b9146db74fb29e0442870744d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388215121370837799, guid: daa7024b9146db74fb29e0442870744d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388215121370837799, guid: daa7024b9146db74fb29e0442870744d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388215121370837799, guid: daa7024b9146db74fb29e0442870744d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388215121370837799, guid: daa7024b9146db74fb29e0442870744d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388215121370837799, guid: daa7024b9146db74fb29e0442870744d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388215121370837799, guid: daa7024b9146db74fb29e0442870744d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388215121370837799, guid: daa7024b9146db74fb29e0442870744d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: daa7024b9146db74fb29e0442870744d, type: 3}
+--- !u!224 &1076996055 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5388215121370837799, guid: daa7024b9146db74fb29e0442870744d, type: 3}
+  m_PrefabInstance: {fileID: 1076996054}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1102834779
 GameObject:
   m_ObjectHideFlags: 0
@@ -6847,9 +7119,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DepositBox
   boxIndex: 3
-  holding: {fileID: 0}
+  heldItem: {fileID: 0}
   loverPlayer: {fileID: 237680120}
-  playerIsOverhead: 0
 --- !u!54 &1102834782
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6958,9 +7229,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DepositBox
   boxIndex: 2
-  holding: {fileID: 0}
+  heldItem: {fileID: 0}
   loverPlayer: {fileID: 237680120}
-  playerIsOverhead: 0
 --- !u!54 &1117555495
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7030,7 +7300,7 @@ GameObject:
   - component: {fileID: 1137347037}
   - component: {fileID: 1137347036}
   - component: {fileID: 1137347035}
-  - component: {fileID: 1137347034}
+  - component: {fileID: 1137347039}
   m_Layer: 5
   m_Name: Cactus
   m_TagString: Item
@@ -7057,21 +7327,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -351.04, y: -166}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1137347034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1137347032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cab228550c14294c8e7f1c545a21b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  itemName: Bad
-  offsetX: 0
-  offsetY: 0
 --- !u!54 &1137347035
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7158,6 +7413,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1137347032}
   m_CullTransparentMesh: 1
+--- !u!114 &1137347039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137347032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385f3bf5fb2fb6a419d32adc560b6ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoverItem
+  itemName: Bad
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1158458817
 GameObject:
   m_ObjectHideFlags: 0
@@ -7210,9 +7479,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DepositBox
   boxIndex: 0
-  holding: {fileID: 0}
+  heldItem: {fileID: 0}
   loverPlayer: {fileID: 237680120}
-  playerIsOverhead: 0
 --- !u!54 &1158458820
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7321,9 +7589,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DepositBox
   boxIndex: 3
-  holding: {fileID: 0}
+  heldItem: {fileID: 0}
   loverPlayer: {fileID: 1859252137}
-  playerIsOverhead: 0
 --- !u!54 &1163005822
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7433,6 +7700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   itemName: Boots
+  currentOwner: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!54 &1175973479
@@ -7573,9 +7841,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DepositBox
   boxIndex: 1
-  holding: {fileID: 0}
+  heldItem: {fileID: 0}
   loverPlayer: {fileID: 885159648}
-  playerIsOverhead: 0
 --- !u!54 &1183387986
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7685,6 +7952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   itemName: Unicorn
+  currentOwner: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!54 &1193145824
@@ -7786,7 +8054,7 @@ GameObject:
   - component: {fileID: 1201235001}
   - component: {fileID: 1201235000}
   - component: {fileID: 1201234999}
-  - component: {fileID: 1201234998}
+  - component: {fileID: 1201235003}
   m_Layer: 5
   m_Name: Hat
   m_TagString: Item
@@ -7813,21 +8081,6 @@ RectTransform:
   m_AnchoredPosition: {x: -197.7, y: -106.81}
   m_SizeDelta: {x: -350.6, y: -165.0907}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1201234998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1201234996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cab228550c14294c8e7f1c545a21b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  itemName: Cat
-  offsetX: 0
-  offsetY: 0
 --- !u!54 &1201234999
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7914,6 +8167,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1201234996}
   m_CullTransparentMesh: 1
+--- !u!114 &1201235003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201234996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385f3bf5fb2fb6a419d32adc560b6ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoverItem
+  itemName: Hat
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1226202293
 GameObject:
   m_ObjectHideFlags: 0
@@ -7927,7 +8194,7 @@ GameObject:
   - component: {fileID: 1226202298}
   - component: {fileID: 1226202297}
   - component: {fileID: 1226202296}
-  - component: {fileID: 1226202295}
+  - component: {fileID: 1226202300}
   m_Layer: 5
   m_Name: Clover
   m_TagString: Item
@@ -7954,21 +8221,6 @@ RectTransform:
   m_AnchoredPosition: {x: -24, y: -77}
   m_SizeDelta: {x: -285.5696, y: -105.4745}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1226202295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1226202293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cab228550c14294c8e7f1c545a21b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  itemName: Clover
-  offsetX: 0
-  offsetY: 0
 --- !u!54 &1226202296
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8055,6 +8307,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226202293}
   m_CullTransparentMesh: 1
+--- !u!114 &1226202300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226202293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385f3bf5fb2fb6a419d32adc560b6ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoverItem
+  itemName: Clover
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1260488097
 GameObject:
   m_ObjectHideFlags: 0
@@ -8068,7 +8334,7 @@ GameObject:
   - component: {fileID: 1260488102}
   - component: {fileID: 1260488101}
   - component: {fileID: 1260488100}
-  - component: {fileID: 1260488099}
+  - component: {fileID: 1260488104}
   m_Layer: 5
   m_Name: Wands
   m_TagString: Item
@@ -8095,21 +8361,6 @@ RectTransform:
   m_AnchoredPosition: {x: -69.741, y: 3.5}
   m_SizeDelta: {x: -351.04, y: -166}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1260488099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1260488097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cab228550c14294c8e7f1c545a21b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  itemName: Wands
-  offsetX: 0
-  offsetY: 0
 --- !u!54 &1260488100
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8196,6 +8447,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1260488097}
   m_CullTransparentMesh: 1
+--- !u!114 &1260488104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260488097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385f3bf5fb2fb6a419d32adc560b6ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoverItem
+  itemName: Wands
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1279194311
 GameObject:
   m_ObjectHideFlags: 0
@@ -8306,7 +8571,7 @@ GameObject:
   - component: {fileID: 1287635159}
   - component: {fileID: 1287635158}
   - component: {fileID: 1287635157}
-  - component: {fileID: 1287635156}
+  - component: {fileID: 1287635161}
   m_Layer: 5
   m_Name: Whip
   m_TagString: Item
@@ -8333,21 +8598,6 @@ RectTransform:
   m_AnchoredPosition: {x: -171.01888, y: 38}
   m_SizeDelta: {x: -341.9245, y: -148}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1287635156
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1287635154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cab228550c14294c8e7f1c545a21b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  itemName: Whip
-  offsetX: 0
-  offsetY: 0
 --- !u!54 &1287635157
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8434,6 +8684,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1287635154}
   m_CullTransparentMesh: 1
+--- !u!114 &1287635161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287635154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385f3bf5fb2fb6a419d32adc560b6ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoverItem
+  itemName: Whip
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1318875892
 GameObject:
   m_ObjectHideFlags: 0
@@ -8447,7 +8711,7 @@ GameObject:
   - component: {fileID: 1318875897}
   - component: {fileID: 1318875896}
   - component: {fileID: 1318875895}
-  - component: {fileID: 1318875894}
+  - component: {fileID: 1318875899}
   m_Layer: 5
   m_Name: Vest
   m_TagString: Item
@@ -8474,21 +8738,6 @@ RectTransform:
   m_AnchoredPosition: {x: 113.08, y: 70.809}
   m_SizeDelta: {x: -333.72, y: -156.38}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1318875894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1318875892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cab228550c14294c8e7f1c545a21b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  itemName: Mustache
-  offsetX: 0
-  offsetY: 0
 --- !u!54 &1318875895
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8575,6 +8824,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1318875892}
   m_CullTransparentMesh: 1
+--- !u!114 &1318875899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318875892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385f3bf5fb2fb6a419d32adc560b6ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoverItem
+  itemName: Vest
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1320049847
 GameObject:
   m_ObjectHideFlags: 0
@@ -8588,7 +8851,7 @@ GameObject:
   - component: {fileID: 1320049852}
   - component: {fileID: 1320049851}
   - component: {fileID: 1320049850}
-  - component: {fileID: 1320049849}
+  - component: {fileID: 1320049854}
   m_Layer: 5
   m_Name: Snake
   m_TagString: Item
@@ -8615,21 +8878,6 @@ RectTransform:
   m_AnchoredPosition: {x: -69.741, y: 3.5}
   m_SizeDelta: {x: -351.04, y: -166}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1320049849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1320049847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cab228550c14294c8e7f1c545a21b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  itemName: Bad
-  offsetX: 0
-  offsetY: 0
 --- !u!54 &1320049850
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8716,6 +8964,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1320049847}
   m_CullTransparentMesh: 1
+--- !u!114 &1320049854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320049847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385f3bf5fb2fb6a419d32adc560b6ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoverItem
+  itemName: Bad
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1366540269
 GameObject:
   m_ObjectHideFlags: 0
@@ -8787,7 +9049,7 @@ MonoBehaviour:
   - Cat
   - Hat
   - Boots
-  - Mustache
+  - Vest
   - Gun
   - Whip
   - Wand
@@ -8799,11 +9061,13 @@ MonoBehaviour:
   display2: {fileID: 1998237042}
   display3: {fileID: 207088159}
   display4: {fileID: 548348886}
-  player1: {fileID: 0}
-  player2: {fileID: 0}
   loverImage1: {fileID: 1043213777}
   loverImage2: {fileID: 95306988}
   gravity: 19.6
+  player1: {fileID: 1859252137}
+  player2: {fileID: 885159648}
+  player3: {fileID: 336262696}
+  player4: {fileID: 237680120}
 --- !u!1 &1396645935
 GameObject:
   m_ObjectHideFlags: 0
@@ -8857,6 +9121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   itemName: Rose
+  currentOwner: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!54 &1396645938
@@ -8963,7 +9228,7 @@ GameObject:
   - component: {fileID: 1420190957}
   - component: {fileID: 1420190956}
   - component: {fileID: 1420190955}
-  - component: {fileID: 1420190954}
+  - component: {fileID: 1420190959}
   m_Layer: 5
   m_Name: Whiskey
   m_TagString: Item
@@ -8990,21 +9255,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -351.04, y: -166}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1420190954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1420190952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cab228550c14294c8e7f1c545a21b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  itemName: Bad
-  offsetX: 0
-  offsetY: 0
 --- !u!54 &1420190955
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9091,6 +9341,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1420190952}
   m_CullTransparentMesh: 1
+--- !u!114 &1420190959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420190952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385f3bf5fb2fb6a419d32adc560b6ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoverItem
+  itemName: Bad
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1425740788
 GameObject:
   m_ObjectHideFlags: 0
@@ -9104,7 +9368,7 @@ GameObject:
   - component: {fileID: 1425740793}
   - component: {fileID: 1425740792}
   - component: {fileID: 1425740791}
-  - component: {fileID: 1425740790}
+  - component: {fileID: 1425740795}
   m_Layer: 5
   m_Name: Vest
   m_TagString: Item
@@ -9131,21 +9395,6 @@ RectTransform:
   m_AnchoredPosition: {x: 113.08, y: 70.809}
   m_SizeDelta: {x: -333.72, y: -156.38}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1425740790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1425740788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cab228550c14294c8e7f1c545a21b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  itemName: Mustache
-  offsetX: 0
-  offsetY: 0
 --- !u!54 &1425740791
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9232,6 +9481,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1425740788}
   m_CullTransparentMesh: 1
+--- !u!114 &1425740795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425740788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385f3bf5fb2fb6a419d32adc560b6ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoverItem
+  itemName: Vest
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1437485299
 GameObject:
   m_ObjectHideFlags: 0
@@ -9304,7 +9567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.754717, g: 0.7239964, b: 0.66571736, a: 1}
+  m_Color: {r: 0.20392157, g: 0.20392157, b: 0.20392157, a: 0.06666667}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9386,7 +9649,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 320528361752747132, guid: e4aca09a52a39784eaac94a591c169e1, type: 3}
+  m_Sprite: {fileID: 3038048109167362100, guid: f0e9dcedd40d39a41a88bd90d1d16eab, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9554,6 +9817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   itemName: Bad
+  currentOwner: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!54 &1471188905
@@ -9655,7 +9919,7 @@ GameObject:
   - component: {fileID: 1476121917}
   - component: {fileID: 1476121916}
   - component: {fileID: 1476121915}
-  - component: {fileID: 1476121914}
+  - component: {fileID: 1476121919}
   m_Layer: 5
   m_Name: Sunflower
   m_TagString: Item
@@ -9682,21 +9946,6 @@ RectTransform:
   m_AnchoredPosition: {x: -124.3, y: -81.001}
   m_SizeDelta: {x: -336.81, y: -140}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1476121914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1476121912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cab228550c14294c8e7f1c545a21b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  itemName: Sunflower
-  offsetX: 0
-  offsetY: 0
 --- !u!54 &1476121915
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9783,6 +10032,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1476121912}
   m_CullTransparentMesh: 1
+--- !u!114 &1476121919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476121912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385f3bf5fb2fb6a419d32adc560b6ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoverItem
+  itemName: Sunflower
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1495528010
 GameObject:
   m_ObjectHideFlags: 0
@@ -9855,7 +10118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.754717, g: 0.7239964, b: 0.66571736, a: 1}
+  m_Color: {r: 0.20392157, g: 0.20392157, b: 0.20392157, a: 0.06666667}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9893,7 +10156,7 @@ GameObject:
   - component: {fileID: 1507097642}
   - component: {fileID: 1507097641}
   - component: {fileID: 1507097640}
-  - component: {fileID: 1507097639}
+  - component: {fileID: 1507097644}
   m_Layer: 5
   m_Name: Dragon
   m_TagString: Item
@@ -9920,21 +10183,6 @@ RectTransform:
   m_AnchoredPosition: {x: 79, y: -85.362}
   m_SizeDelta: {x: -312.942, y: -131.2778}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1507097639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1507097637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cab228550c14294c8e7f1c545a21b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  itemName: Dragon
-  offsetX: 0
-  offsetY: 0
 --- !u!54 &1507097640
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10021,6 +10269,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1507097637}
   m_CullTransparentMesh: 1
+--- !u!114 &1507097644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507097637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385f3bf5fb2fb6a419d32adc560b6ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoverItem
+  itemName: Dragon
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1515171706
 GameObject:
   m_ObjectHideFlags: 0
@@ -10073,9 +10335,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DepositBox
   boxIndex: 0
-  holding: {fileID: 0}
+  heldItem: {fileID: 0}
   loverPlayer: {fileID: 885159648}
-  playerIsOverhead: 0
 --- !u!54 &1515171709
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10185,6 +10446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   itemName: Bad
+  currentOwner: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!54 &1540053010
@@ -10325,9 +10587,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DepositBox
   boxIndex: 3
-  holding: {fileID: 0}
+  heldItem: {fileID: 0}
   loverPlayer: {fileID: 885159648}
-  playerIsOverhead: 0
 --- !u!54 &1544138463
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10437,6 +10698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   itemName: Clover
+  currentOwner: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!54 &1611993172
@@ -10538,7 +10800,7 @@ GameObject:
   - component: {fileID: 1640854436}
   - component: {fileID: 1640854435}
   - component: {fileID: 1640854434}
-  - component: {fileID: 1640854433}
+  - component: {fileID: 1640854438}
   m_Layer: 5
   m_Name: Sunflower
   m_TagString: Item
@@ -10565,21 +10827,6 @@ RectTransform:
   m_AnchoredPosition: {x: -124.3, y: -81.001}
   m_SizeDelta: {x: -336.81, y: -140}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1640854433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1640854431}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cab228550c14294c8e7f1c545a21b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  itemName: Sunflower
-  offsetX: 0
-  offsetY: 0
 --- !u!54 &1640854434
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10666,6 +10913,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1640854431}
   m_CullTransparentMesh: 1
+--- !u!114 &1640854438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640854431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385f3bf5fb2fb6a419d32adc560b6ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoverItem
+  itemName: Sunflower
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1671085326
 GameObject:
   m_ObjectHideFlags: 0
@@ -10718,9 +10979,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DepositBox
   boxIndex: 2
-  holding: {fileID: 0}
+  heldItem: {fileID: 0}
   loverPlayer: {fileID: 885159648}
-  playerIsOverhead: 0
 --- !u!54 &1671085329
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10829,9 +11089,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DepositBox
   boxIndex: 1
-  holding: {fileID: 0}
+  heldItem: {fileID: 0}
   loverPlayer: {fileID: 237680120}
-  playerIsOverhead: 0
 --- !u!54 &1686608598
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10901,7 +11160,7 @@ GameObject:
   - component: {fileID: 1692953271}
   - component: {fileID: 1692953270}
   - component: {fileID: 1692953269}
-  - component: {fileID: 1692953268}
+  - component: {fileID: 1692953273}
   m_Layer: 5
   m_Name: Prof
   m_TagString: Item
@@ -10928,21 +11187,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -351.04, y: -166}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1692953268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1692953266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cab228550c14294c8e7f1c545a21b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  itemName: Bad
-  offsetX: 0
-  offsetY: 0
 --- !u!54 &1692953269
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11029,6 +11273,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692953266}
   m_CullTransparentMesh: 1
+--- !u!114 &1692953273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692953266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385f3bf5fb2fb6a419d32adc560b6ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoverItem
+  itemName: Bad
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1758576943
 GameObject:
   m_ObjectHideFlags: 0
@@ -11042,7 +11300,7 @@ GameObject:
   - component: {fileID: 1758576948}
   - component: {fileID: 1758576947}
   - component: {fileID: 1758576946}
-  - component: {fileID: 1758576945}
+  - component: {fileID: 1758576950}
   m_Layer: 5
   m_Name: Snake
   m_TagString: Item
@@ -11069,21 +11327,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -351.04, y: -166}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1758576945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1758576943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cab228550c14294c8e7f1c545a21b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  itemName: Bad
-  offsetX: 0
-  offsetY: 0
 --- !u!54 &1758576946
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11170,6 +11413,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1758576943}
   m_CullTransparentMesh: 1
+--- !u!114 &1758576950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758576943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385f3bf5fb2fb6a419d32adc560b6ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoverItem
+  itemName: Bad
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1761177220
 GameObject:
   m_ObjectHideFlags: 0
@@ -11242,7 +11499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.754717, g: 0.7239964, b: 0.66571736, a: 1}
+  m_Color: {r: 0.20392157, g: 0.20392157, b: 0.20392157, a: 0.06666667}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11595,6 +11852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   itemName: Bad
+  currentOwner: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!54 &1825599675
@@ -11696,7 +11954,7 @@ GameObject:
   - component: {fileID: 1834722496}
   - component: {fileID: 1834722495}
   - component: {fileID: 1834722494}
-  - component: {fileID: 1834722493}
+  - component: {fileID: 1834722498}
   m_Layer: 5
   m_Name: Whiskey
   m_TagString: Item
@@ -11723,21 +11981,6 @@ RectTransform:
   m_AnchoredPosition: {x: -69.741, y: 3.5}
   m_SizeDelta: {x: -351.04, y: -166}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1834722493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1834722491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cab228550c14294c8e7f1c545a21b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  itemName: Bad
-  offsetX: 0
-  offsetY: 0
 --- !u!54 &1834722494
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11824,6 +12067,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1834722491}
   m_CullTransparentMesh: 1
+--- !u!114 &1834722498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834722491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385f3bf5fb2fb6a419d32adc560b6ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoverItem
+  itemName: Bad
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1836651200
 GameObject:
   m_ObjectHideFlags: 0
@@ -11837,7 +12094,7 @@ GameObject:
   - component: {fileID: 1836651205}
   - component: {fileID: 1836651204}
   - component: {fileID: 1836651203}
-  - component: {fileID: 1836651202}
+  - component: {fileID: 1836651207}
   m_Layer: 5
   m_Name: Unicorn
   m_TagString: Item
@@ -11864,21 +12121,6 @@ RectTransform:
   m_AnchoredPosition: {x: 188.47, y: -93.263}
   m_SizeDelta: {x: -319.3826, y: -138}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1836651202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1836651200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cab228550c14294c8e7f1c545a21b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  itemName: Unicorn
-  offsetX: 0
-  offsetY: 0
 --- !u!54 &1836651203
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11965,6 +12207,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1836651200}
   m_CullTransparentMesh: 1
+--- !u!114 &1836651207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836651200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385f3bf5fb2fb6a419d32adc560b6ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoverItem
+  itemName: Unicorn
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1848864345
 GameObject:
   m_ObjectHideFlags: 0
@@ -12018,6 +12274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   itemName: Mustache
+  currentOwner: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!54 &1848864348
@@ -12252,7 +12509,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
       propertyPath: m_ActionEvents.Array.size
-      value: 38
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
       propertyPath: m_ActionEvents.Array.data[5].m_ActionId
@@ -12387,6 +12644,26 @@ PrefabInstance:
       value: 18b84037-902d-4537-9b6b-1be00536f62d
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[38].m_ActionId
+      value: 4e040937-2e6b-475a-b05c-eaf79df54686
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[39].m_ActionId
+      value: f64ced7c-098a-4208-9c81-89a216483bad
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[40].m_ActionId
+      value: e16a5c4c-3066-42e5-adcb-448a9384b22f
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[41].m_ActionId
+      value: 2778c312-eb6c-45a0-bc6c-cbf8bdfba0b9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[42].m_ActionId
+      value: bb19490f-7b92-465b-8600-3b1f40de9c45
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
       propertyPath: m_ActionEvents.Array.data[5].m_ActionName
       value: 'Player1/RightTrigger[/SwitchProControllerHID/rightTrigger]'
       objectReference: {fileID: 0}
@@ -12519,6 +12796,26 @@ PrefabInstance:
       value: Player4/RightTrigger
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[38].m_ActionName
+      value: 'CountSelection/Move[/SwitchProControllerHID/leftStick,/SwitchProControllerHID1/leftStick]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[39].m_ActionName
+      value: 'CountSelection/A[/SwitchProControllerHID/buttonEast,/SwitchProControllerHID1/buttonEast]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[40].m_ActionName
+      value: 'Title/A[/SwitchProControllerHID/buttonEast,/SwitchProControllerHID1/buttonEast]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[41].m_ActionName
+      value: 'GameSelection/Move[/SwitchProControllerHID/leftStick,/SwitchProControllerHID1/leftStick]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[42].m_ActionName
+      value: 'GameSelection/A[/SwitchProControllerHID/buttonEast,/SwitchProControllerHID1/buttonEast]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
       propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -12526,6 +12823,14 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1859252137}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
       propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -12535,8 +12840,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: dropOrPickUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
       propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnRightTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LoverPlayer, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8098449276718947951, guid: 9a1d88bdb63c91a48829603b0ce5ad48, type: 3}
       propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -12606,13 +12919,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ef0e16ff13aa124684f5a6362dab736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoverPlayer
-  isHoldingItem: 0
-  loverGame: {fileID: 0}
+  currentlyHolding: {fileID: 0}
   inLetter:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  interactionRadius: 1
+  holdPoint: {fileID: 0}
+  myGame: {fileID: 1366540272}
+  myName: Player1Data
 --- !u!1 &1878453562
 GameObject:
   m_ObjectHideFlags: 0
@@ -12666,6 +12982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   itemName: Cat
+  currentOwner: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!54 &1878453565
@@ -12986,12 +13303,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1932220932}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cab228550c14294c8e7f1c545a21b8f, type: 3}
+  m_Script: {fileID: 11500000, guid: 385f3bf5fb2fb6a419d32adc560b6ef8, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
+  m_EditorClassIdentifier: Assembly-CSharp::LoverItem
   itemName: Rose
-  offsetX: 0
-  offsetY: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1936213660
 GameObject:
   m_ObjectHideFlags: 0
@@ -13005,7 +13321,7 @@ GameObject:
   - component: {fileID: 1936213665}
   - component: {fileID: 1936213664}
   - component: {fileID: 1936213663}
-  - component: {fileID: 1936213662}
+  - component: {fileID: 1936213667}
   m_Layer: 5
   m_Name: Gun
   m_TagString: Item
@@ -13032,21 +13348,6 @@ RectTransform:
   m_AnchoredPosition: {x: 25.374, y: 22.422}
   m_SizeDelta: {x: -349.9753, y: -164.38}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1936213662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1936213660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cab228550c14294c8e7f1c545a21b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  itemName: Gun
-  offsetX: 0
-  offsetY: 0
 --- !u!54 &1936213663
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13133,6 +13434,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1936213660}
   m_CullTransparentMesh: 1
+--- !u!114 &1936213667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936213660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385f3bf5fb2fb6a419d32adc560b6ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoverItem
+  itemName: Gun
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1938248793
 GameObject:
   m_ObjectHideFlags: 0
@@ -13185,9 +13500,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DepositBox
   boxIndex: 3
-  holding: {fileID: 0}
+  heldItem: {fileID: 0}
   loverPlayer: {fileID: 336262696}
-  playerIsOverhead: 0
 --- !u!54 &1938248796
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13243,6 +13557,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1938248793}
+  m_CullTransparentMesh: 1
+--- !u!1 &1942878595
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1942878596}
+  - component: {fileID: 1942878598}
+  - component: {fileID: 1942878597}
+  m_Layer: 5
+  m_Name: background (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1942878596
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942878595}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.01, y: 1.01, z: 1.01}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 545482135}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.5, y: 0}
+  m_SizeDelta: {x: -1, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1942878597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942878595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 320528361752747132, guid: e4aca09a52a39784eaac94a591c169e1, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1942878598
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942878595}
   m_CullTransparentMesh: 1
 --- !u!1 &1950379822
 GameObject:
@@ -13354,7 +13743,7 @@ GameObject:
   - component: {fileID: 1962064802}
   - component: {fileID: 1962064801}
   - component: {fileID: 1962064800}
-  - component: {fileID: 1962064799}
+  - component: {fileID: 1962064804}
   m_Layer: 5
   m_Name: Cat
   m_TagString: Item
@@ -13381,21 +13770,6 @@ RectTransform:
   m_AnchoredPosition: {x: -201.13, y: -26.769}
   m_SizeDelta: {x: -315.86, y: -132.01}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1962064799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1962064797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cab228550c14294c8e7f1c545a21b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  itemName: Cat
-  offsetX: 0
-  offsetY: 0
 --- !u!54 &1962064800
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13482,6 +13856,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1962064797}
   m_CullTransparentMesh: 1
+--- !u!114 &1962064804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962064797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385f3bf5fb2fb6a419d32adc560b6ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoverItem
+  itemName: Cat
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1966831453
 GameObject:
   m_ObjectHideFlags: 0
@@ -13535,6 +13923,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   itemName: Cat
+  currentOwner: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!54 &1966831456
@@ -13636,7 +14025,7 @@ GameObject:
   - component: {fileID: 1987348226}
   - component: {fileID: 1987348225}
   - component: {fileID: 1987348224}
-  - component: {fileID: 1987348223}
+  - component: {fileID: 1987348228}
   m_Layer: 5
   m_Name: Cat
   m_TagString: Item
@@ -13663,21 +14052,6 @@ RectTransform:
   m_AnchoredPosition: {x: -201.13, y: -26.769}
   m_SizeDelta: {x: -315.86, y: -132.01}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1987348223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1987348221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cab228550c14294c8e7f1c545a21b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  itemName: Cat
-  offsetX: 0
-  offsetY: 0
 --- !u!54 &1987348224
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13764,6 +14138,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1987348221}
   m_CullTransparentMesh: 1
+--- !u!114 &1987348228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987348221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385f3bf5fb2fb6a419d32adc560b6ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoverItem
+  itemName: Cat
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1998237042
 GameObject:
   m_ObjectHideFlags: 0
@@ -13959,6 +14347,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 795779865}
   - {fileID: 340592088}
   - {fileID: 1437485300}
   - {fileID: 1495528011}
@@ -13969,6 +14358,7 @@ RectTransform:
   - {fileID: 329810765}
   - {fileID: 1950379823}
   - {fileID: 1926628868}
+  - {fileID: 1076996055}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -14090,7 +14480,7 @@ GameObject:
   - component: {fileID: 2057068409}
   - component: {fileID: 2057068408}
   - component: {fileID: 2057068407}
-  - component: {fileID: 2057068406}
+  - component: {fileID: 2057068411}
   m_Layer: 5
   m_Name: Dragon
   m_TagString: Item
@@ -14117,21 +14507,6 @@ RectTransform:
   m_AnchoredPosition: {x: 79, y: -85.362}
   m_SizeDelta: {x: -312.942, y: -131.2778}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2057068406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057068404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cab228550c14294c8e7f1c545a21b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  itemName: Dragon
-  offsetX: 0
-  offsetY: 0
 --- !u!54 &2057068407
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14218,6 +14593,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2057068404}
   m_CullTransparentMesh: 1
+--- !u!114 &2057068411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057068404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385f3bf5fb2fb6a419d32adc560b6ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoverItem
+  itemName: Dragon
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &2081209785
 GameObject:
   m_ObjectHideFlags: 0
@@ -14350,6 +14739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   itemName: Bad
+  currentOwner: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!54 &2099785212
@@ -14491,6 +14881,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   itemName: Cat
+  currentOwner: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!54 &2101581201
@@ -14592,7 +14983,7 @@ GameObject:
   - component: {fileID: 2112168715}
   - component: {fileID: 2112168714}
   - component: {fileID: 2112168713}
-  - component: {fileID: 2112168712}
+  - component: {fileID: 2112168717}
   m_Layer: 5
   m_Name: Whip
   m_TagString: Item
@@ -14619,21 +15010,6 @@ RectTransform:
   m_AnchoredPosition: {x: -171.01888, y: 38}
   m_SizeDelta: {x: -341.9245, y: -148}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2112168712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2112168710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cab228550c14294c8e7f1c545a21b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  itemName: Whip
-  offsetX: 0
-  offsetY: 0
 --- !u!54 &2112168713
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14720,6 +15096,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2112168710}
   m_CullTransparentMesh: 1
+--- !u!114 &2112168717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112168710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385f3bf5fb2fb6a419d32adc560b6ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoverItem
+  itemName: Whip
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -14729,3 +15119,4 @@ SceneRoots:
   - {fileID: 1366540270}
   - {fileID: 545482135}
   - {fileID: 2012604959}
+  - {fileID: 901439143}

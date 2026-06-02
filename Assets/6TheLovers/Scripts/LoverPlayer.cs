@@ -2,99 +2,156 @@ using UnityEngine;
 
 public class LoverPlayer : MonoBehaviour
 {
-    //this collectible class comes from the Temperance minigame, 
-    //might as well reuse :)
-    Collectible currentItem = null;
-    Collectible hoveredItem = null;
+    public LoverItem currentlyHolding = null;
+    public LoverItem[] inLetter = new LoverItem[4];
+    
+    [SerializeField] float interactionRadius = 1.0f;
+    
+    [SerializeField] Transform holdPoint; 
 
-    public bool isHoldingItem = false;
-    [SerializeField] LoverGame loverGame = null;
+    [SerializeField] LoverGame myGame;
+    PlayerData myData; 
+    [SerializeField] string myName; 
 
-    public Collectible[] inLetter = new Collectible[4];
-
-    void Update()
+    void Start()
     {
-        if (isHoldingItem && currentItem != null)
-        {
-            currentItem.BePickedUp(transform.position, this.gameObject);
-        }
+        myData = GameObject.FindGameObjectWithTag(myName).GetComponent<PlayerData>();
     }
+
+    public bool isHoldingItem => currentlyHolding != null;
 
     public void dropOrPickUp()
     {
+        //Debug.Log("done");
+        
         if (!isHoldingItem)
         {
-            //try to pick up item
-            if (hoveredItem == null)
+           DepositBox box = GetClosestBox();
+            if (box != null && !box.IsEmpty)
             {
+                currentlyHolding = box.TakeItem();
+                currentlyHolding.AssignToParent(holdPoint != null ? holdPoint : this.transform);
                 return;
             }
 
-            currentItem = hoveredItem.GetComponent<Collectible>();
-            if (currentItem == null)
+            LoverItem itemOnGround = GetClosestItemOnGround();
+            if (itemOnGround != null)
             {
-                Debug.LogError("Hovered item has no Collectible component!");
-                return;
+                Debug.Log("done");
+                currentlyHolding = itemOnGround;
+                currentlyHolding.AssignToParent(holdPoint != null ? holdPoint : this.transform);
             }
-
-            currentItem.BePickedUp(transform.position, this.gameObject);
-            isHoldingItem = true;
-            hoveredItem = null;
-            return;
         }
-        else if (isHoldingItem && currentItem != null)
+        else
         {
-            //drop item
-            DepositBox box = GetOverlappingBox();
-
-            if (box != null && box.holding == null)
+            DepositBox box = GetClosestBox();
+            
+            if (box != null && box.IsEmpty)
             {
-                box.PlaceItem(currentItem);
+                box.PlaceItem(currentlyHolding);
+                currentlyHolding = null;
             }
             else
             {
-                Vector2 dropOffset = new Vector2(0f, -1f);
-                Vector2 newItemPosition = (Vector2)transform.position + dropOffset;
-                currentItem.BePickedUp(newItemPosition, this.gameObject);
+                currentlyHolding.Detach();
+                currentlyHolding.transform.position = transform.position + new Vector3(0, -0.5f, 0); 
+                currentlyHolding = null;
             }
-
-            isHoldingItem = false;
-            currentItem = null;
-
-        }        
+        }
     }
 
-    void OnTriggerEnter(Collider other)
+    private DepositBox GetClosestBox()
     {
-        if (other.gameObject.CompareTag("Item") && !isHoldingItem)
+        Collider[] hits = Physics.OverlapSphere(transform.position, interactionRadius);
+        DepositBox closest = null;
+        float minDist = float.MaxValue;
+
+        foreach (var hit in hits)
         {
-            Collectible item = other.gameObject.GetComponent<Collectible>();
+            if (hit.TryGetComponent<DepositBox>(out var box))
+            {
+                float dist = Vector3.Distance(transform.position, box.transform.position);
+                if (dist < minDist)
+                {
+                    minDist = dist;
+                    closest = box;
+                }
+            }
+        }
+        return closest;
+    }
+
+    private LoverItem GetClosestItemOnGround()
+    {
+        Collider[] hits = Physics.OverlapSphere(transform.position, interactionRadius);
+        LoverItem closest = null;
+        float minDist = float.MaxValue;
+
+        foreach (var hit in hits)
+        {
+            Debug.Log(hit.gameObject.name);
             
-            // Only allow hovering if the item is currently unowned
-            if (item != null && item.currentOwner == null)
+            if (hit.TryGetComponent<LoverItem>(out var item))// && item.transform.parent == null)
             {
-                hoveredItem = item;
+                float dist = Vector3.Distance(transform.position, item.transform.position);
+                if (dist < minDist)
+                {
+                    minDist = dist;
+                    closest = item;
+                }
             }
         }
+        return closest;
     }
 
-    void OnTriggerExit(Collider other)
+    public void CheckCorrectness()
     {
-            hoveredItem = null;
-            return;
-    }
+        int points = 0;
+        
+        //check inLetter[].itemName...
+        //all items are unique, so no duplicates.
+        //match to necessary (regardless of order) is +1 point
+        //empty = 0 points 
+        //if inLetter[].itemName == "Bad", -1 point
+        //if all matched: myData.SetBufferState(1)
+        //if points >0 and <4, myData.SetBufferState(2)
+        //if points 0 or less, myData.SetBufferState(3)
 
-    private DepositBox GetOverlappingBox()
-    {
-        // You can use a small OverlapSphere or check a cached reference
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, 0.5f);
-        foreach (var hit in hitColliders)
+        for (int i = 0; i <= 3; i++)
         {
-            if (hit.TryGetComponent<DepositBox>(out DepositBox box))
+            if (inLetter[i].itemName == "Bad")
             {
-                return box;
+                points -= 1; 
+            }
+            else if (inLetter[i].itemName == myGame.necessary1)
+            {
+                points +=1; 
+            }
+            else if (inLetter[i].itemName == myGame.necessary2)
+            {
+                points +=1; 
+            }
+            else if (inLetter[i].itemName == myGame.necessary3)
+            {
+                points +=1; 
+            }
+            else if (inLetter[i].itemName == myGame.necessary4)
+            {
+                points +=1; 
             }
         }
-        return null;
+
+        if (points <= 0)
+        {
+            myData.SetBufferState(3);
+        }
+        else if (points > 3)
+        {
+            myData.SetBufferState(1);
+        }
+        else
+        {
+            myData.SetBufferState(2);
+        }
     }
 }

@@ -12,17 +12,49 @@ public class MazePlayer : MonoBehaviour
     private float nextMoveTime;
     private Vector2 inputDirection;
 
-    //
+    [SerializeField] int playerNumber;
+
+    public int berriesCollected = 0;
+    private bool hasBerry = false;
+    [SerializeField] GameObject berryIndicator;
+
+    [SerializeField] string playerName = "";
+    public PlayerData playerData;
+
+    [SerializeField] TextMeshProUGUI scoreText;
 
     void Start()
     {
+        playerData = GameObject.FindGameObjectWithTag(playerName).GetComponent<PlayerData>();
+        
         if (myMaze == null)
         {
             return;
         }
 
-        currentX = 1;// myMaze.startX;
-        currentY = 1;//myMaze.startY;
+        myMaze.playerList.Add(this);
+
+        if (playerNumber == 1)
+        {
+            currentX = 9;
+            currentY = 9; 
+        }
+        if (playerNumber == 2)
+        {
+            currentX = 11;
+            currentY = 11; 
+        }
+        if (playerNumber == 3)
+        {
+            currentX = 11;
+            currentY = 9; 
+        }
+        if (playerNumber == 4)
+        {
+            currentX = 9;
+            currentY = 11; 
+        }
+        
 
         UpdateVisualPosition();
     }
@@ -33,20 +65,32 @@ public class MazePlayer : MonoBehaviour
         {
             TryMove();
         }
+
+        if (hasBerry)
+        {
+            berryIndicator.SetActive(true);
+        }
+        else
+        {
+            berryIndicator.SetActive(false);
+        }
+
+        scoreText.text = berriesCollected.ToString();
+      
     }
 
     // Called by the Player Input component
-    void OnMove(InputValue value)
+    public void OnMove(InputAction.CallbackContext context)
     {
-        Debug.Log(value.Get<Vector2>().magnitude);
-
-        if (value.Get<Vector2>().magnitude <= .75)
+        Vector2 rawInput = context.ReadValue<Vector2>();
+    
+        if (rawInput.magnitude <= .75f)
         {
+            inputDirection = Vector2.zero; // Reset so they stop moving
             return;
         }
-        
-        inputDirection = value.Get<Vector2>();
-        //Debug.Log("AHHHHH");
+
+        inputDirection = rawInput;
     }
 
     void TryMove()
@@ -72,8 +116,21 @@ public class MazePlayer : MonoBehaviour
             // CHECK FOR BERRY
             if (myMaze.GetValue(targetX, targetY) == 2)
             {
-                myMaze.CollectBerry(currentX, currentY);
-                //Debug.Log("Nom nom nom!");
+                if (!hasBerry)
+                {
+                    myMaze.CollectBerry(currentX, currentY);
+                    hasBerry = true;
+                }
+            }
+
+            if (myMaze.GetValue(targetX, targetY) == 3)
+            {
+                if (hasBerry)
+                {
+                    myMaze.UpdateCollection();
+                    berriesCollected += 1;
+                    hasBerry = false;
+                }
             }
 
             UpdateVisualPosition();
